@@ -1,372 +1,405 @@
-<!DOCTYPE HTML>
-<!--
-    ZeroFour by HTML5 UP
-    Custom Dark Executive Analytics Edition
--->
-<html>
-    <head>
-        <title>Rashmi Leema | Revenue Management & Data Analyst</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <style>
-            /* Custom Dark Executive Theme Overrides */
-            body, #page-wrapper {
-                background-color: #0b1120 !important;
-                color: #cbd5e1 !important;
-            }
-            #header-wrapper {
-                background: linear-gradient(180deg, #070d19 0%, #0f172a 100%) !important;
-                border-bottom: 1px solid #1e293b;
-            }
-            #banner {
-                background: radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%) !important;
-            }
-            #banner h2 {
-                color: #f8fafc !important;
-                font-weight: 700;
-            }
-            #banner p {
-                color: #94a3b8 !important;
-            }
-            .wrapper.style1 {
-                background-color: #0f172a !important;
-                border-top: 1px solid #1e293b;
-                border-bottom: 1px solid #1e293b;
-            }
-            .wrapper.style2 {
-                background-color: #0b1120 !important;
-            }
-            .wrapper.style3 {
-                background-color: #0f172a !important;
-                border-top: 1px solid #1e293b;
-            }
-            .box {
-                background: #1e293b !important;
-                border: 1px solid #334155 !important;
-                border-radius: 8px !important;
-                color: #cbd5e1 !important;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-            }
-            .box.feature2 section {
-                background: #1e293b !important;
-                padding: 1.8em;
-                border-radius: 8px;
-                border: 1px solid #334155;
-            }
-            h1, h2, h3, h4 {
-                color: #f1f5f9 !important;
-            }
-            p, span, li, dt, dd {
-                color: #94a3b8 !important;
-            }
-            .button {
-                background-color: #2563eb !important;
-                color: #ffffff !important;
-                border-radius: 6px !important;
-                border: none !important;
-                box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3) !important;
-                transition: all 0.3s ease;
-            }
-            .button:hover {
-                background-color: #1d4ed8 !important;
-                transform: translateY(-2px);
-            }
-            .button.alt {
-                background-color: #334155 !important;
-                color: #f8fafc !important;
-                box-shadow: none !important;
-            }
-            .button.alt:hover {
-                background-color: #475569 !important;
-            }
-            .image.featured img {
-                border-radius: 6px 6px 0 0;
-                height: 230px;
-                object-fit: cover;
-                width: 100%;
-                filter: brightness(0.9);
-                transition: filter 0.3s ease;
-            }
-            .image.featured img:hover {
-                filter: brightness(1.05);
-            }
-            #footer-wrapper {
-                background-color: #070d19 !important;
-                border-top: 1px solid #1e293b;
-            }
-        </style>
-    </head>
-    <body class="homepage is-preload">
-        <div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Rashmi Leema | Revenue Management & Data Analyst</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
 
-            <!-- Header Wrapper -->
-                <div id="header-wrapper">
-                    <div class="container">
+  /* ============ TOKENS ============ */
+  :root{
+    --bg:        #0a0e1a;   /* deep space navy */
+    --panel:     #121a2c;   /* instrument panel */
+    --panel-2:   #0e1524;   /* recessed panel */
+    --line:      #223049;   /* panel seam */
+    --sky:       #4f93c9;   /* horizon sky, muted */
+    --ground:    #7a5a34;   /* horizon ground, muted */
+    --amber:     #d7a24a;   /* caution / signature accent */
+    --ivory:     #edf1f6;
+    --slate:     #93a3ba;
+    --slate-dim: #5b6a80;
 
-                        <!-- Header -->
-                            <header id="header">
-                                <div class="inner">
+    --display: "Space Grotesk", sans-serif;
+    --body:    "IBM Plex Sans", sans-serif;
+    --mono:    "IBM Plex Mono", monospace;
+  }
 
-                                    <!-- Logo -->
-                                        <h1><a href="index.html" id="logo">Rashmi Leema</a></h1>
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--slate);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  h1,h2,h3,h4{ font-family:var(--display); color:var(--ivory); margin:0 0 .4em; letter-spacing:-0.01em; }
+  p{ margin:0 0 1em; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  .eyebrow{
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--amber);
+  }
+  :focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 
-                                    <!-- Nav -->
-                                        <nav id="nav">
-                                            <ul>
-                                                <li class="current_page_item"><a href="index.html">Home</a></li>
-                                                <li><a href="#competencies">Core Capabilities</a></li>
-                                                <li><a href="#projects">Featured Projects</a></li>
-                                                <li><a href="#contact">Contact</a></li>
-                                            </ul>
-                                        </nav>
+  /* ============ SIGNATURE: ARTIFICIAL-HORIZON DIVIDER ============ */
+  .horizon{
+    height:2px; width:100%;
+    background:linear-gradient(90deg, transparent 0%, var(--sky) 18%, var(--amber) 50%, var(--ground) 82%, transparent 100%);
+    opacity:.55;
+  }
+  .horizon-mark{
+    display:flex; align-items:center; justify-content:center;
+    margin:-11px 0 0; pointer-events:none;
+  }
+  .horizon-mark svg{ display:block; }
 
-                                </div>
-                            </header>
+  /* ============ HEADER ============ */
+  header.site{
+    position:sticky; top:0; z-index:20;
+    background:rgba(10,14,26,.92); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-badge{
+    font-family:var(--mono); font-size:.75rem; font-weight:500;
+    color:var(--bg); background:var(--amber);
+    border-radius:4px; padding:4px 7px; letter-spacing:.04em;
+  }
+  .brand-name{ font-family:var(--display); font-weight:600; color:var(--ivory); font-size:1.02rem; }
+  nav.primary ul{ list-style:none; display:flex; gap:30px; margin:0; padding:0; flex-wrap:wrap; }
+  nav.primary a{
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--slate); transition:color .2s ease;
+  }
+  nav.primary a:hover{ color:var(--amber); }
 
-                        <!-- Banner -->
-                            <div id="banner">
-                                <h2><strong>Revenue Management & Data Analyst</strong>
-                                <br />
-                                Translating aviation, operational, and financial data into commercial strategy</h2>
-                                <p>Hands-on airline revenue planning experience at SriLankan Airlines, backed by 2+ years in business intelligence, SQL Server, Power BI, and advanced financial modeling.</p>
-                                <a href="#projects" class="button large icon solid fa-chart-line">Explore Featured Projects</a>
-                            </div>
+  /* ============ HERO ============ */
+  .hero{ padding:96px 0 64px; position:relative; overflow:hidden; }
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(ellipse 900px 420px at 50% -10%, rgba(79,147,201,.16), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-inner{ max-width:760px; position:relative; }
+  .hero h1{
+    font-size:clamp(2.1rem, 4.2vw, 3.1rem); font-weight:700; line-height:1.12;
+    margin-bottom:.5em;
+  }
+  .hero h1 span{ color:var(--sky); }
+  .hero p.lede{ font-size:1.08rem; color:var(--slate); max-width:56ch; }
+  .hero-actions{ display:flex; gap:16px; margin-top:2em; flex-wrap:wrap; }
 
-                    </div>
-                </div>
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--mono); font-size:.8rem; letter-spacing:.04em; text-transform:uppercase;
+    padding:13px 22px; border-radius:6px; border:1px solid transparent; transition:all .2s ease;
+  }
+  .btn-primary{ background:var(--amber); color:#1a1206; }
+  .btn-primary:hover{ background:#e5b466; transform:translateY(-1px); }
+  .btn-ghost{ border-color:var(--line); color:var(--ivory); }
+  .btn-ghost:hover{ border-color:var(--sky); color:var(--sky); }
 
-            <!-- Main Wrapper -->
-                <div id="main-wrapper">
-                    
-                    <!-- 1. Core Competencies Section -->
-                    <div class="wrapper style1" id="competencies">
-                        <div class="inner">
-                            <section class="container box feature1">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <header class="first major">
-                                            <h2>Core Competencies & Stack</h2>
-                                            <p>Combining quantitative rigor, commercial pricing acumen, and robust data engineering</p>
-                                        </header>
-                                    </div>
-                                    <div class="col-4 col-12-medium">
-                                        <section>
-                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Revenue Planning" /></a>
-                                            <header class="second icon solid fa-plane-departure">
-                                                <h3>Revenue & Yield Optimization</h3>
-                                                <p>Airline Planning & Forecasting</p>
-                                            </header>
-                                            <p>Deep domain expertise in monitoring route and station performance, passenger load factors, RASK/Yield trends, and inventory allocation to maximize unit revenue.</p>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-12-medium">
-                                        <section>
-                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Business Intelligence" /></a>
-                                            <header class="second icon solid fa-chart-bar">
-                                                <h3>Business Intelligence & BI</h3>
-                                                <p>Power BI, DAX & Executive Dashboards</p>
-                                            </header>
-                                            <p>Building automated reporting engines, interactive KPI scorecards, and financial models that streamline operational visibility and reduce report preparation time.</p>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-12-medium">
-                                        <section>
-                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Data Engineering" /></a>
-                                            <header class="second icon solid fa-database">
-                                                <h3>SQL & Data Architecture</h3>
-                                                <p>Query Optimization & Transformation</p>
-                                            </header>
-                                            <p>Expertise in relational database querying, multi-table joins, ETL pipelines, and structuring multi-source transactional datasets for seamless analytical reporting.</p>
-                                        </section>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    
-                    <!-- 2. All 4 Featured Projects (2x2 Grid) -->
-                    <div class="wrapper style2" id="projects">
-                        <div class="inner">
-                            <section class="container box feature2">
-                                <header class="major" style="text-align: center; margin-bottom: 2.5em;">
-                                    <h2>Featured Projects & Case Studies</h2>
-                                    <p>End-to-end analytical solutions spanning revenue optimization, enterprise BI, and corporate financial modeling</p>
-                                </header>
+  /* ============ SECTION SHELL ============ */
+  section{ padding:76px 0; }
+  section.alt{ background:var(--panel-2); }
+  .section-head{ max-width:640px; margin-bottom:48px; }
+  .section-head h2{ font-size:clamp(1.5rem,2.6vw,2rem); }
+  .section-head p{ color:var(--slate-dim); font-size:.98rem; }
 
-                                <!-- Row 1 -->
-                                <div class="row">
-                                    <!-- Project 1: Airline Revenue -->
-                                    <div class="col-6 col-12-medium">
-                                        <section>
-                                            <a href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Airline Route & Revenue Performance Model" /></a>
-                                            <header class="major">
-                                                <h2>Airline Route & Revenue Performance Model</h2>
-                                                <p>Commercial Network Analytics | SriLankan Airlines</p>
-                                            </header>
-                                            <p>Designed and deployed comprehensive analytical views evaluating passenger demand patterns, seasonal booking curves, and route-level yield performance. Enabled commercial teams to make data-backed pricing and capacity adjustments across key origin-and-destination (O&D) network routes.</p>
-                                            <footer>
-                                                <a href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" class="button medium icon solid fa-chart-line">View Route Analytics</a>
-                                            </footer>
-                                        </section>
-                                    </div>
+  /* ============ COMPETENCIES ============ */
+  .grid-3{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;
+  }
+  .strip-card{
+    display:flex; flex-direction:column; height:100%;
+    background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;
+  }
+  .strip-card .shot{ aspect-ratio:16/10; width:100%; overflow:hidden; background:var(--panel-2); }
+  .strip-card .shot img{ width:100%; height:100%; object-fit:cover; filter:saturate(.9) brightness(.92); }
+  .strip-card .body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .strip-card .code-row{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .strip-card .code{
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.1em;
+    color:var(--bg); background:var(--sky); border-radius:3px; padding:3px 6px;
+  }
+  .strip-card h3{ font-size:1.06rem; margin-bottom:.15em; }
+  .strip-card .kicker{ font-family:var(--mono); font-size:.74rem; color:var(--slate-dim); margin-bottom:.9em; }
+  .strip-card p{ font-size:.92rem; color:var(--slate); flex:1; }
 
-                                    <!-- Project 2: PMO Strategic Initiatives -->
-                                    <div class="col-6 col-12-medium">
-                                        <section>
-                                            <a href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Executive Strategic Initiatives Analytics Platform" /></a>
-                                            <header class="major">
-                                                <h2>Executive Strategic Initiatives Analytics Platform</h2>
-                                                <p>Enterprise BI Architecture & Risk Governance</p>
-                                            </header>
-                                            <p>Simulated an enterprise PMO analytics layer in SQL Server and Power BI to track multi-department initiative health, milestone delivery trajectories, budget burn variances, and operational bottleneck escalations.</p>
-                                            <footer>
-                                                <a href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" class="button medium icon solid fa-project-diagram">Explore PMO Platform</a>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                </div>
+  /* ============ PROJECTS ============ */
+  .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; align-items:stretch; }
+  .proj-card{
+    display:flex; flex-direction:column; height:100%;
+    background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .proj-card:hover{ border-color:var(--sky); transform:translateY(-2px); }
+  .proj-card .shot{ aspect-ratio:16/9; width:100%; overflow:hidden; background:var(--panel-2); }
+  .proj-card .shot img{ width:100%; height:100%; object-fit:cover; transition:filter .3s ease; filter:brightness(.88); }
+  .proj-card:hover .shot img{ filter:brightness(1); }
+  .proj-card .body{ padding:26px 26px 28px; display:flex; flex-direction:column; flex:1; }
+  .proj-card .tag{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; color:var(--amber); margin-bottom:.7em; }
+  .proj-card h3{ font-size:1.22rem; margin-bottom:.5em; }
+  .proj-card p{ font-size:.94rem; color:var(--slate); flex:1; margin-bottom:1.4em; }
+  .proj-card .go{
+    font-family:var(--mono); font-size:.78rem; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--ivory); display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
+    border-bottom:1px solid var(--line); padding-bottom:3px; transition:border-color .2s ease, color .2s ease;
+  }
+  .proj-card:hover .go{ color:var(--sky); border-color:var(--sky); }
 
-                                <hr style="margin: 3em 0; border-color: #334155;" />
+  /* ============ FOCUS / PHILOSOPHY ============ */
+  .focus-grid{ display:grid; grid-template-columns:1.5fr 1fr; gap:24px; align-items:stretch; }
+  .panel{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:30px 32px; height:100%; }
+  .focus-item{ padding-bottom:22px; margin-bottom:22px; border-bottom:1px solid var(--line); }
+  .focus-item:last-child{ border-bottom:none; margin-bottom:0; padding-bottom:0; }
+  .focus-item .eyebrow{ margin-bottom:.4em; }
+  .focus-item h4{ font-size:1.02rem; margin-bottom:.4em; }
+  .focus-item p{ font-size:.93rem; margin-bottom:0; }
+  .spotlight{ background:linear-gradient(160deg, var(--panel) 0%, #16233a 100%); }
+  .spotlight h4{ font-size:1.02rem; }
+  .spotlight .lede{ font-family:var(--mono); font-size:.75rem; color:var(--amber); margin-bottom:1em; letter-spacing:.03em; }
+  .spotlight p{ font-size:.93rem; margin-bottom:0; }
 
-                                <!-- Row 2 -->
-                                <div class="row">
-                                    <!-- Project 3: Uber x Lyft Valuation -->
-                                    <div class="col-6 col-12-medium">
-                                        <section>
-                                            <a href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Uber and Lyft Valuation Model" /></a>
-                                            <header class="major">
-                                                <h2>Uber × Lyft Acquisition & Valuation Analysis</h2>
-                                                <p>Corporate Valuation & Financial Modeling | Excel</p>
-                                            </header>
-                                            <p>Constructed a detailed 5-year Discounted Cash Flow (DCF) model and scenario sensitivity matrix in Microsoft Excel to evaluate transaction accretion, WACC assumptions, and operational synergy realization.</p>
-                                            <footer>
-                                                <a href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" class="button medium icon solid fa-calculator">View Valuation Model</a>
-                                            </footer>
-                                        </section>
-                                    </div>
+  /* ============ FOOTER ============ */
+  footer.site{ background:var(--panel-2); border-top:1px solid var(--line); padding:64px 0 28px; }
+  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; margin-bottom:48px; }
+  footer.site h2{ font-size:1.3rem; }
+  footer.site p{ font-size:.94rem; }
+  .readout{ list-style:none; margin:0; padding:0; }
+  .readout li{
+    display:flex; justify-content:space-between; gap:16px;
+    padding:11px 0; border-bottom:1px solid var(--line); font-size:.9rem;
+  }
+  .readout li:last-child{ border-bottom:none; }
+  .readout dt{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--slate-dim); }
+  .readout dd{ margin:0; color:var(--ivory); text-align:right; }
+  .copyright{
+    font-family:var(--mono); font-size:.74rem; color:var(--slate-dim);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+    padding-top:24px; border-top:1px solid var(--line);
+  }
+  .copyright a{ color:var(--slate-dim); }
+  .copyright a:hover{ color:var(--amber); }
 
-                                    <!-- Project 4: Financial BI Cube -->
-                                    <div class="col-6 col-12-medium">
-                                        <section>
-                                            <a href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Financial BI Cube" /></a>
-                                            <header class="major">
-                                                <h2>Multi-Source Financial & KPI Reporting Engine</h2>
-                                                <p>Business Intelligence Automation</p>
-                                            </header>
-                                            <p>Developed an automated Power BI & SQL reporting framework integrating multi-channel operational streams. Replaced manual spreadsheet aggregation with scheduled data pipelines and DAX measures, reducing regular executive report generation time by over 80%.</p>
-                                            <footer>
-                                                <a href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" class="button medium icon solid fa-database">Explore BI Architecture</a>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                </div>
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .grid-3{ grid-template-columns:1fr 1fr; }
+    .focus-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+    .grid-3, .grid-2{ grid-template-columns:1fr; }
+    .nav-row{ height:auto; flex-direction:column; align-items:flex-start; gap:14px; padding:14px 0; }
+    section{ padding:56px 0; }
+  }
+</style>
+</head>
+<body>
 
-                            </section>
-                        </div>
-                    </div>
+<header class="site">
+  <div class="wrap nav-row">
+    <div class="brand">
+      <span class="brand-badge">RL</span>
+      <span class="brand-name">Rashmi Leema</span>
+    </div>
+    <nav class="primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#competencies">Capabilities</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-                    <!-- 3. Professional Summary & Philosophy -->
-                    <div class="wrapper style3">
-                        <div class="inner">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-8 col-12-medium">
-                                        <section class="box article-list">
-                                            <h2 class="icon fa-briefcase">Professional Focus & Technical Depth</h2>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Revenue Management &amp; Data Analyst</p>
+    <h1>Route data becomes a <span>pricing decision</span> — that's the job.</h1>
+    <p class="lede">Hands-on revenue planning experience at SriLankan Airlines, paired with two-plus years building the SQL and Power BI systems that commercial teams actually run their week on.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">See the projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</section>
 
-                                            <article class="box excerpt">
-                                                <div>
-                                                    <header>
-                                                        <span class="date">Domain Focus</span>
-                                                        <h3>Aviation Commercial Planning & Pricing</h3>
-                                                    </header>
-                                                    <p>Comfortable steering independently across assigned commercial network segments, assessing competitive market trends, booking curves, and station-level throughput to advise revenue optimization strategies.</p>
-                                                </div>
-                                            </article>
+<div class="horizon"></div>
 
-                                            <article class="box excerpt">
-                                                <div>
-                                                    <header>
-                                                        <span class="date">Technical Stack</span>
-                                                        <h3>Advanced SQL, Power BI, and Data Modeling</h3>
-                                                    </header>
-                                                    <p>Proficient in dimensional modeling (star schemas), SQL queries, window functions, and DAX calculations to convert raw tabular data into intuitive visual dashboards.</p>
-                                                </div>
-                                            </article>
-                                        </section>
-                                    </div>
+<section id="competencies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Capabilities</p>
+      <h2>What I actually work in</h2>
+      <p>Three pillars, one habit: raw numbers only count once someone downstream can act on them.</p>
+    </div>
 
-                                    <div class="col-4 col-12-medium">
-                                        <section class="box spotlight">
-                                            <h2 class="icon fa-lightbulb">Core Philosophy</h2>
-                                            <article>
-                                                <header>
-                                                    <h3>Actionable Decision Support</h3>
-                                                    <p>Turning numbers into strategic narrative</p>
-                                                </header>
-                                                <p>Data analytics only achieves its true value when it drives proactive business decisions. Every dashboard, SQL model, and forecast is built with commercial stakeholder clarity as the primary objective.</p>
-                                            </article>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="grid-3">
 
-            <!-- Footer Wrapper -->
-                <div id="footer-wrapper">
-                    <footer id="footer" class="container" id="contact">
-                        <div class="row">
-                            <div class="col-6 col-12-medium">
-                                <section>
-                                    <h2><strong>Rashmi Leema</strong> | Revenue Management Analyst</h2>
-                                    <p>Experienced in airline revenue optimization, BI dashboard architecture, and commercial performance analytics. Open to connecting on analytics projects, aviation strategy, and BI implementations.</p>
-                                    <ul class="actions">
-                                        <li><a href="https://github.com/rashmileema-BI" target="_blank" class="button alt icon brands fa-github">GitHub Profile</a></li>
-                                    </ul>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-medium">
-                                <section>
-                                    <h2>Get In Touch</h2>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <dl class="contact">
-                                                    <dt>GitHub</dt>
-                                                    <dd><a href="https://github.com/rashmileema-BI" target="_blank">github.com/rashmileema-BI</a></dd>
-                                                    <dt>Role Focus</dt>
-                                                    <dd>Revenue Management & Data Analytics</dd>
-                                                    <dt>Location</dt>
-                                                    <dd>Colombo, Sri Lanka</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="col-12">
-                                <div id="copyright">
-                                    <ul class="menu">
-                                        <li>&copy; Rashmi Leema. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-
+      <article class="strip-card">
+        <div class="shot"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Aircraft wing above clouds" /></div>
+        <div class="body">
+          <div class="code-row"><span class="code">YLD</span></div>
+          <h3>Revenue &amp; Yield Optimization</h3>
+          <div class="kicker">Airline planning &amp; forecasting</div>
+          <p>Route and station performance, load factors, RASK and yield trends, fare-class inventory — read the way a network planner reads them, not just charted.</p>
         </div>
+      </article>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.dropotron.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+      <article class="strip-card">
+        <div class="shot"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analytics dashboard on screen" /></div>
+        <div class="body">
+          <div class="code-row"><span class="code">PBI</span></div>
+          <h3>Business Intelligence</h3>
+          <div class="kicker">Power BI, DAX &amp; scorecards</div>
+          <p>Automated reporting engines and executive scorecards built so a stakeholder gets the answer in the time it takes to open the file.</p>
+        </div>
+      </article>
 
-    </body>
+      <article class="strip-card">
+        <div class="shot"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80" alt="Rows of structured data on a monitor" /></div>
+        <div class="body">
+          <div class="code-row"><span class="code">SQL</span></div>
+          <h3>SQL &amp; Data Architecture</h3>
+          <div class="kicker">Modeling &amp; transformation</div>
+          <p>Star schemas, window functions, and ETL layers built to hold up when three departments are querying the same view at once.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="horizon"></div>
+
+<section class="alt" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Featured projects</h2>
+      <p>Four case studies spanning airline commercial planning, enterprise BI, and financial modeling.</p>
+    </div>
+
+    <div class="grid-2">
+
+      <article class="proj-card">
+        <a class="shot" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Airline route and revenue performance model" />
+        </a>
+        <div class="body">
+          <div class="tag">SriLankan Airlines · Commercial network</div>
+          <h3>Airline Route &amp; Revenue Performance Model</h3>
+          <p>Built the views commercial planners actually opened: demand by O&amp;D pair, seasonal booking curves, and route-level yield — used to adjust fares and capacity mid-season.</p>
+          <a class="go" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">View the route model →</a>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <a class="shot" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Executive strategic initiatives analytics platform" />
+        </a>
+        <div class="body">
+          <div class="tag">Simulated PMO · Enterprise BI</div>
+          <h3>Executive Strategic Initiatives Platform</h3>
+          <p>A SQL Server and Power BI layer tracking initiative health, budget burn, and milestone slippage across five departments, with automatic flags on anything falling behind.</p>
+          <a class="go" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">Open the PMO platform →</a>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <a class="shot" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Uber and Lyft valuation model" />
+        </a>
+        <div class="body">
+          <div class="tag">Corporate valuation · Excel</div>
+          <h3>Uber × Lyft Acquisition &amp; Valuation</h3>
+          <p>A five-year DCF and sensitivity matrix testing whether the deal pencils out under different WACC and synergy assumptions — built to survive being questioned line by line.</p>
+          <a class="go" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">Open the valuation model →</a>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <a class="shot" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Financial KPI reporting engine" />
+        </a>
+        <div class="body">
+          <div class="tag">BI automation · Power BI + SQL</div>
+          <h3>Multi-Source Financial Reporting Engine</h3>
+          <p>Replaced a manual spreadsheet rollup with a scheduled SQL-to-Power-BI pipeline and a shared DAX measure library, cutting report prep from hours to minutes each period.</p>
+          <a class="go" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">See the reporting engine →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="horizon"></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How I work</p>
+      <h2>Professional focus</h2>
+    </div>
+
+    <div class="focus-grid">
+      <div class="panel">
+        <div class="focus-item">
+          <p class="eyebrow">Domain</p>
+          <h4>Aviation commercial planning &amp; pricing</h4>
+          <p>Comfortable owning assigned network segments end to end — reading competitive fare moves, booking curves, and station throughput to recommend where a fare or an allocation should move.</p>
+        </div>
+        <div class="focus-item">
+          <p class="eyebrow">Stack</p>
+          <h4>SQL, Power BI, and dimensional modeling</h4>
+          <p>Star schemas, window functions, and DAX measures — the layer between a raw transactional table and a dashboard someone opens without being walked through it.</p>
+        </div>
+      </div>
+
+      <div class="panel spotlight">
+        <p class="lede">Core philosophy</p>
+        <h4>A model earns its place when it changes a decision</h4>
+        <p>Every dashboard, query, and forecast here is built for a specific reader making a specific call — not as a demonstration of technique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Let's talk revenue, BI, or aviation strategy</h2>
+        <p>Open to conversations on airline revenue optimization, dashboard architecture, and commercial performance analytics.</p>
+        <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener" class="btn btn-ghost">GitHub profile ↗</a>
+      </div>
+      <div>
+        <ul class="readout">
+          <li><dt>GitHub</dt><dd><a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener">rashmileema-BI</a></dd></li>
+          <li><dt>Focus</dt><dd>Revenue Management &amp; Analytics</dd></li>
+          <li><dt>Location</dt><dd>Colombo, Sri Lanka</dd></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© Rashmi Leema. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
 </html>
