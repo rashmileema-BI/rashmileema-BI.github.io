@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
     ZeroFour by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Custom Dark Executive Analytics Edition
 -->
 <html>
     <head>
@@ -10,6 +9,93 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Custom Dark Executive Theme Overrides */
+            body, #page-wrapper {
+                background-color: #0b1120 !important;
+                color: #cbd5e1 !important;
+            }
+            #header-wrapper {
+                background: linear-gradient(180deg, #070d19 0%, #0f172a 100%) !important;
+                border-bottom: 1px solid #1e293b;
+            }
+            #banner {
+                background: radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%) !important;
+            }
+            #banner h2 {
+                color: #f8fafc !important;
+                font-weight: 700;
+            }
+            #banner p {
+                color: #94a3b8 !important;
+            }
+            .wrapper.style1 {
+                background-color: #0f172a !important;
+                border-top: 1px solid #1e293b;
+                border-bottom: 1px solid #1e293b;
+            }
+            .wrapper.style2 {
+                background-color: #0b1120 !important;
+            }
+            .wrapper.style3 {
+                background-color: #0f172a !important;
+                border-top: 1px solid #1e293b;
+            }
+            .box {
+                background: #1e293b !important;
+                border: 1px solid #334155 !important;
+                border-radius: 8px !important;
+                color: #cbd5e1 !important;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+            }
+            .box.feature2 section {
+                background: #1e293b !important;
+                padding: 1.8em;
+                border-radius: 8px;
+                border: 1px solid #334155;
+            }
+            h1, h2, h3, h4 {
+                color: #f1f5f9 !important;
+            }
+            p, span, li, dt, dd {
+                color: #94a3b8 !important;
+            }
+            .button {
+                background-color: #2563eb !important;
+                color: #ffffff !important;
+                border-radius: 6px !important;
+                border: none !important;
+                box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3) !important;
+                transition: all 0.3s ease;
+            }
+            .button:hover {
+                background-color: #1d4ed8 !important;
+                transform: translateY(-2px);
+            }
+            .button.alt {
+                background-color: #334155 !important;
+                color: #f8fafc !important;
+                box-shadow: none !important;
+            }
+            .button.alt:hover {
+                background-color: #475569 !important;
+            }
+            .image.featured img {
+                border-radius: 6px 6px 0 0;
+                height: 230px;
+                object-fit: cover;
+                width: 100%;
+                filter: brightness(0.9);
+                transition: filter 0.3s ease;
+            }
+            .image.featured img:hover {
+                filter: brightness(1.05);
+            }
+            #footer-wrapper {
+                background-color: #070d19 !important;
+                border-top: 1px solid #1e293b;
+            }
+        </style>
     </head>
     <body class="homepage is-preload">
         <div id="page-wrapper">
@@ -66,7 +152,7 @@
                                     </div>
                                     <div class="col-4 col-12-medium">
                                         <section>
-                                            <a href="#projects" class="image featured"><img src="images/pic01.jpg" alt="Revenue Planning" /></a>
+                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Revenue Planning" /></a>
                                             <header class="second icon solid fa-plane-departure">
                                                 <h3>Revenue & Yield Optimization</h3>
                                                 <p>Airline Planning & Forecasting</p>
@@ -76,7 +162,7 @@
                                     </div>
                                     <div class="col-4 col-12-medium">
                                         <section>
-                                            <a href="#projects" class="image featured"><img src="images/pic02.jpg" alt="Business Intelligence" /></a>
+                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Business Intelligence" /></a>
                                             <header class="second icon solid fa-chart-bar">
                                                 <h3>Business Intelligence & BI</h3>
                                                 <p>Power BI, DAX & Executive Dashboards</p>
@@ -86,7 +172,7 @@
                                     </div>
                                     <div class="col-4 col-12-medium">
                                         <section>
-                                            <a href="#projects" class="image featured"><img src="images/pic03.jpg" alt="Data Engineering" /></a>
+                                            <a href="#projects" class="image featured"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Data Engineering" /></a>
                                             <header class="second icon solid fa-database">
                                                 <h3>SQL & Data Architecture</h3>
                                                 <p>Query Optimization & Transformation</p>
@@ -113,6 +199,7 @@
                                     <!-- Project 1: Airline Revenue -->
                                     <div class="col-6 col-12-medium">
                                         <section>
+                                            <a href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Airline Route & Revenue Performance Model" /></a>
                                             <header class="major">
                                                 <h2>Airline Route & Revenue Performance Model</h2>
                                                 <p>Commercial Network Analytics | SriLankan Airlines</p>
@@ -127,6 +214,7 @@
                                     <!-- Project 2: PMO Strategic Initiatives -->
                                     <div class="col-6 col-12-medium">
                                         <section>
+                                            <a href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Executive Strategic Initiatives Analytics Platform" /></a>
                                             <header class="major">
                                                 <h2>Executive Strategic Initiatives Analytics Platform</h2>
                                                 <p>Enterprise BI Architecture & Risk Governance</p>
@@ -139,13 +227,14 @@
                                     </div>
                                 </div>
 
-                                <hr style="margin: 3em 0;" />
+                                <hr style="margin: 3em 0; border-color: #334155;" />
 
                                 <!-- Row 2 -->
                                 <div class="row">
                                     <!-- Project 3: Uber x Lyft Valuation -->
                                     <div class="col-6 col-12-medium">
                                         <section>
+                                            <a href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Uber and Lyft Valuation Model" /></a>
                                             <header class="major">
                                                 <h2>Uber × Lyft Acquisition & Valuation Analysis</h2>
                                                 <p>Corporate Valuation & Financial Modeling | Excel</p>
@@ -160,6 +249,7 @@
                                     <!-- Project 4: Financial BI Cube -->
                                     <div class="col-6 col-12-medium">
                                         <section>
+                                            <a href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" class="image featured"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Financial BI Cube" /></a>
                                             <header class="major">
                                                 <h2>Multi-Source Financial & KPI Reporting Engine</h2>
                                                 <p>Business Intelligence Automation</p>
@@ -186,22 +276,20 @@
                                             <h2 class="icon fa-briefcase">Professional Focus & Technical Depth</h2>
 
                                             <article class="box excerpt">
-                                                <a href="#projects" class="image left"><img src="images/pic04.jpg" alt="Aviation Analytics" /></a>
                                                 <div>
                                                     <header>
                                                         <span class="date">Domain Focus</span>
-                                                        <h3><a href="#projects">Aviation Commercial Planning & Pricing</a></h3>
+                                                        <h3>Aviation Commercial Planning & Pricing</h3>
                                                     </header>
                                                     <p>Comfortable steering independently across assigned commercial network segments, assessing competitive market trends, booking curves, and station-level throughput to advise revenue optimization strategies.</p>
                                                 </div>
                                             </article>
 
                                             <article class="box excerpt">
-                                                <a href="#projects" class="image left"><img src="images/pic05.jpg" alt="Data Modeling" /></a>
                                                 <div>
                                                     <header>
                                                         <span class="date">Technical Stack</span>
-                                                        <h3><a href="#projects">Advanced SQL, Power BI, and Data Modeling</a></h3>
+                                                        <h3>Advanced SQL, Power BI, and Data Modeling</h3>
                                                     </header>
                                                     <p>Proficient in dimensional modeling (star schemas), SQL queries, window functions, and DAX calculations to convert raw tabular data into intuitive visual dashboards.</p>
                                                 </div>
@@ -213,9 +301,8 @@
                                         <section class="box spotlight">
                                             <h2 class="icon fa-lightbulb">Core Philosophy</h2>
                                             <article>
-                                                <a href="#projects" class="image featured"><img src="images/pic07.jpg" alt="Analytics Impact"></a>
                                                 <header>
-                                                    <h3><a href="#projects">Actionable Decision Support</a></h3>
+                                                    <h3>Actionable Decision Support</h3>
                                                     <p>Turning numbers into strategic narrative</p>
                                                 </header>
                                                 <p>Data analytics only achieves its true value when it drives proactive business decisions. Every dashboard, SQL model, and forecast is built with commercial stakeholder clarity as the primary objective.</p>
