@@ -84,20 +84,33 @@
   nav.primary a:hover{ color:var(--amber); }
 
   /* ============ HERO ============ */
-  .hero{ padding:96px 0 64px; position:relative; overflow:hidden; }
+  .hero{ padding:88px 0 64px; position:relative; overflow:hidden; }
   .hero::before{
     content:""; position:absolute; inset:0;
     background:radial-gradient(ellipse 900px 420px at 50% -10%, rgba(79,147,201,.16), transparent 70%);
     pointer-events:none;
   }
-  .hero-inner{ max-width:760px; position:relative; }
+  .hero-inner{
+    display:flex; align-items:center; gap:52px; position:relative;
+  }
+  .hero-text{ max-width:640px; }
   .hero h1{
-    font-size:clamp(2.1rem, 4.2vw, 3.1rem); font-weight:700; line-height:1.12;
+    font-size:clamp(2.1rem, 4vw, 2.9rem); font-weight:700; line-height:1.14;
     margin-bottom:.5em;
   }
   .hero h1 span{ color:var(--sky); }
-  .hero p.lede{ font-size:1.08rem; color:var(--slate); max-width:56ch; }
+  .hero p.lede{ font-size:1.06rem; color:var(--slate); max-width:54ch; }
   .hero-actions{ display:flex; gap:16px; margin-top:2em; flex-wrap:wrap; }
+  .hero-photo{ flex-shrink:0; }
+  .hero-photo .frame{
+    width:188px; height:188px; border-radius:50%; overflow:hidden;
+    border:2px solid var(--amber); box-shadow:0 0 0 6px rgba(215,162,74,.08), 0 18px 40px rgba(0,0,0,.35);
+  }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:760px){
+    .hero-inner{ flex-direction:column-reverse; text-align:left; gap:28px; }
+    .hero-photo .frame{ width:132px; height:132px; }
+  }
 
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -135,6 +148,33 @@
   .strip-card h3{ font-size:1.06rem; margin-bottom:.15em; }
   .strip-card .kicker{ font-family:var(--mono); font-size:.74rem; color:var(--slate-dim); margin-bottom:.9em; }
   .strip-card p{ font-size:.92rem; color:var(--slate); flex:1; }
+
+  /* ============ EXPERIENCE ============ */
+  .log{ display:flex; flex-direction:column; gap:0; }
+  .log-entry{
+    display:grid; grid-template-columns:150px 1fr; gap:28px;
+    padding:28px 0; border-bottom:1px solid var(--line);
+  }
+  .log-entry:first-child{ padding-top:0; }
+  .log-entry:last-child{ border-bottom:none; }
+  .log-dates{ font-family:var(--mono); font-size:.76rem; color:var(--amber); letter-spacing:.03em; padding-top:2px; }
+  .log-role h3{ font-size:1.08rem; margin-bottom:.1em; }
+  .log-role .org{ font-family:var(--mono); font-size:.8rem; color:var(--slate-dim); margin-bottom:.9em; display:block; }
+  .log-role ul{ margin:0; padding-left:1.1em; }
+  .log-role li{ font-size:.92rem; margin-bottom:.5em; color:var(--slate); }
+  .log-role li:last-child{ margin-bottom:0; }
+
+  .edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
+  .edu-card{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:24px 26px; }
+  .edu-card .eyebrow{ margin-bottom:.5em; }
+  .edu-card h4{ font-size:.98rem; margin-bottom:.2em; }
+  .edu-card .org{ font-family:var(--mono); font-size:.78rem; color:var(--slate-dim); margin-bottom:.8em; display:block; }
+  .edu-card p{ font-size:.88rem; margin-bottom:0; }
+
+  @media (max-width:640px){
+    .log-entry{ grid-template-columns:1fr; gap:8px; }
+    .edu-grid{ grid-template-columns:1fr; }
+  }
 
   /* ============ PROJECTS ============ */
   .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; align-items:stretch; }
@@ -218,6 +258,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#competencies">Capabilities</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -227,12 +268,17 @@
 
 <section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow">Revenue Management &amp; Data Analyst</p>
-    <h1>Route data becomes a <span>pricing decision</span> — that's the job.</h1>
-    <p class="lede">Hands-on revenue planning experience at SriLankan Airlines, paired with two-plus years building the SQL and Power BI systems that commercial teams actually run their week on.</p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">See the projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    <div class="hero-text">
+      <p class="eyebrow">Revenue Management &amp; Data Analyst</p>
+      <h1>Route data becomes a <span>pricing decision</span> — that's the job.</h1>
+      <p class="lede">Hands-on revenue planning experience at SriLankan Airlines, paired with two-plus years in business intelligence — building the SQL and Power BI systems that commercial teams actually run their week on.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See the projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="images/profile.jpg" alt="Rashmi Leema" /></div>
     </div>
   </div>
 </section>
@@ -285,6 +331,62 @@
 
 <div class="horizon"></div>
 
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>Flight log</h2>
+      <p>Two roles, one thread — turning operational data into a call someone can act on.</p>
+    </div>
+
+    <div class="log">
+      <div class="log-entry">
+        <div class="log-dates">JAN 2026 — JUN 2026</div>
+        <div class="log-role">
+          <h3>Trainee Revenue Management Analyst, Revenue Planning Executive</h3>
+          <span class="org">SriLankan Airlines</span>
+          <ul>
+            <li>Analysed monthly route and station performance, recommending demand and revenue drivers to commercial management.</li>
+            <li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
+            <li>Prepared ad hoc costing analyses and reports for senior management planning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry">
+        <div class="log-dates">JAN 2024 — JAN 2026</div>
+        <div class="log-role">
+          <h3>Associate Business Analyst</h3>
+          <span class="org">GTN Tech</span>
+          <ul>
+            <li>Analysed assets under custody, trading volumes, and revenue by asset class for Revolut, supporting quarterly board reporting.</li>
+            <li>Built a consolidated Excel model ("Client Cube") integrating multi-source data into one reporting framework, connected to Power BI.</li>
+            <li>Developed Power BI dashboards used across Finance, HR, Operations, and Middle Office.</li>
+            <li>Cut recurring reporting prep time by 80% through Excel and Power BI automation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <p class="eyebrow">Education</p>
+        <h4>BSc (Hons) in Finance &amp; Insurance</h4>
+        <span class="org">University of Colombo · 2020 – 2024 · Second Class Upper</span>
+        <p>Financial analysis, statistics, mathematical finance, risk management, quantitative methods, econometrics.</p>
+      </div>
+      <div class="edu-card">
+        <p class="eyebrow">Certification</p>
+        <h4>CFA Level I</h4>
+        <span class="org">Self-study · Sitting February 2027</span>
+        <p>In progress alongside current analyst work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="horizon"></div>
+
 <section class="alt" id="projects">
   <div class="wrap">
     <div class="section-head">
@@ -297,10 +399,10 @@
 
       <article class="proj-card">
         <a class="shot" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Airline route and revenue performance model" />
+          <img src="https://images.unsplash.com/photo-1765293995544-d89497756e4e?auto=format&fit=crop&w=800&q=80" alt="Aircraft parked on an airport tarmac" />
         </a>
         <div class="body">
-          <div class="tag">SriLankan Airlines · Commercial network</div>
+          <div class="tag">Personal project · Airline commercial analytics</div>
           <h3>Airline Route &amp; Revenue Performance Model</h3>
           <p>Built the views commercial planners actually opened: demand by O&amp;D pair, seasonal booking curves, and route-level yield — used to adjust fares and capacity mid-season.</p>
           <a class="go" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">View the route model →</a>
@@ -385,12 +487,17 @@
       <div>
         <h2>Let's talk revenue, BI, or aviation strategy</h2>
         <p>Open to conversations on airline revenue optimization, dashboard architecture, and commercial performance analytics.</p>
-        <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener" class="btn btn-ghost">GitHub profile ↗</a>
+        <div class="hero-actions">
+          <a href="mailto:rashmi.kuru@gmail.com" class="btn btn-primary">Email me</a>
+          <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        </div>
       </div>
       <div>
         <ul class="readout">
+          <li><dt>Email</dt><dd><a href="mailto:rashmi.kuru@gmail.com">rashmi.kuru@gmail.com</a></dd></li>
+          <li><dt>Phone</dt><dd>+94 77 944 4893</dd></li>
+          <li><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener">rashmi-leema</a></dd></li>
           <li><dt>GitHub</dt><dd><a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener">rashmileema-BI</a></dd></li>
-          <li><dt>Focus</dt><dd>Revenue Management &amp; Analytics</dd></li>
           <li><dt>Location</dt><dd>Colombo, Sri Lanka</dd></li>
         </ul>
       </div>
