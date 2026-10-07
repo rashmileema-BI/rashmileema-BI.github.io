@@ -1,536 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rashmi Leema | Revenue Management & Data Analyst</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Revenue management and BI analyst. SQL, Power BI and Power Platform systems that commercial teams run their week on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-
-  /* ============ TOKENS ============ */
-  :root{
-    --bg:        #0a0e1a;   /* deep space navy */
-    --panel:     #121a2c;   /* instrument panel */
-    --panel-2:   #0e1524;   /* recessed panel */
-    --line:      #223049;   /* panel seam */
-    --sky:       #4f93c9;   /* horizon sky, muted */
-    --ground:    #7a5a34;   /* horizon ground, muted */
-    --amber:     #d7a24a;   /* caution / signature accent */
-    --ivory:     #edf1f6;
-    --slate:     #93a3ba;
-    --slate-dim: #5b6a80;
-
-    --display: "Space Grotesk", sans-serif;
-    --body:    "IBM Plex Sans", sans-serif;
-    --mono:    "IBM Plex Mono", monospace;
-  }
-
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--slate);
-    font-family:var(--body);
-    font-size:16px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{ display:block; max-width:100%; }
-  a{ color:inherit; text-decoration:none; }
-  h1,h2,h3,h4{ font-family:var(--display); color:var(--ivory); margin:0 0 .4em; letter-spacing:-0.01em; }
-  p{ margin:0 0 1em; }
-  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
-  .eyebrow{
-    font-family:var(--mono); font-size:.72rem; letter-spacing:.14em;
-    text-transform:uppercase; color:var(--amber);
-  }
-  :focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
-  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
-
-  /* ============ SIGNATURE: ARTIFICIAL-HORIZON DIVIDER ============ */
-  .horizon{
-    height:2px; width:100%;
-    background:linear-gradient(90deg, transparent 0%, var(--sky) 18%, var(--amber) 50%, var(--ground) 82%, transparent 100%);
-    opacity:.55;
-  }
-  .horizon-mark{
-    display:flex; align-items:center; justify-content:center;
-    margin:-11px 0 0; pointer-events:none;
-  }
-  .horizon-mark svg{ display:block; }
-
-  /* ============ HEADER ============ */
-  header.site{
-    position:sticky; top:0; z-index:20;
-    background:rgba(10,14,26,.92); backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-row{ display:flex; align-items:center; justify-content:space-between; height:72px; }
-  .brand{ display:flex; align-items:center; gap:12px; }
-  .brand-badge{
-    font-family:var(--mono); font-size:.75rem; font-weight:500;
-    color:var(--bg); background:var(--amber);
-    border-radius:4px; padding:4px 7px; letter-spacing:.04em;
-  }
-  .brand-name{ font-family:var(--display); font-weight:600; color:var(--ivory); font-size:1.02rem; }
-  nav.primary ul{ list-style:none; display:flex; gap:30px; margin:0; padding:0; flex-wrap:wrap; }
-  nav.primary a{
-    font-family:var(--mono); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--slate); transition:color .2s ease;
-  }
-  nav.primary a:hover{ color:var(--amber); }
-
-  /* ============ HERO ============ */
-  .hero{ padding:88px 0 64px; position:relative; overflow:hidden; }
-  .hero::before{
-    content:""; position:absolute; inset:0;
-    background:radial-gradient(ellipse 900px 420px at 50% -10%, rgba(79,147,201,.16), transparent 70%);
-    pointer-events:none;
-  }
-  .hero-inner{
-    display:flex; align-items:center; gap:52px; position:relative;
-  }
-  .hero-text{ max-width:640px; }
-  .hero h1{
-    font-size:clamp(2.1rem, 4vw, 2.9rem); font-weight:700; line-height:1.14;
-    margin-bottom:.5em;
-  }
-  .hero h1 span{ color:var(--sky); }
-  .hero p.lede{ font-size:1.06rem; color:var(--slate); max-width:54ch; }
-  .hero-actions{ display:flex; gap:16px; margin-top:2em; flex-wrap:wrap; }
-  .hero-photo{ flex-shrink:0; }
-  .hero-photo .frame{
-    width:188px; height:188px; border-radius:50%; overflow:hidden;
-    border:2px solid var(--amber); box-shadow:0 0 0 6px rgba(215,162,74,.08), 0 18px 40px rgba(0,0,0,.35);
-  }
-  .hero-photo img{ width:100%; height:100%; object-fit:cover; }
-  @media (max-width:760px){
-    .hero-inner{ flex-direction:column-reverse; text-align:left; gap:28px; }
-    .hero-photo .frame{ width:132px; height:132px; }
-  }
-
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    font-family:var(--mono); font-size:.8rem; letter-spacing:.04em; text-transform:uppercase;
-    padding:13px 22px; border-radius:6px; border:1px solid transparent; transition:all .2s ease;
-  }
-  .btn-primary{ background:var(--amber); color:#1a1206; }
-  .btn-primary:hover{ background:#e5b466; transform:translateY(-1px); }
-  .btn-ghost{ border-color:var(--line); color:var(--ivory); }
-  .btn-ghost:hover{ border-color:var(--sky); color:var(--sky); }
-
-  /* ============ SECTION SHELL ============ */
-  section{ padding:76px 0; }
-  section.alt{ background:var(--panel-2); }
-  .section-head{ max-width:640px; margin-bottom:48px; }
-  .section-head h2{ font-size:clamp(1.5rem,2.6vw,2rem); }
-  .section-head p{ color:var(--slate-dim); font-size:.98rem; }
-
-  /* ============ COMPETENCIES ============ */
-  .grid-3{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;
-  }
-  .strip-card{
-    display:flex; flex-direction:column; height:100%;
-    background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;
-  }
-  .strip-card .shot{ aspect-ratio:16/10; width:100%; overflow:hidden; background:var(--panel-2); }
-  .strip-card .shot img{ width:100%; height:100%; object-fit:cover; filter:saturate(.9) brightness(.92); }
-  .strip-card .body{ padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
-  .strip-card .code-row{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-  .strip-card .code{
-    font-family:var(--mono); font-size:.7rem; letter-spacing:.1em;
-    color:var(--bg); background:var(--sky); border-radius:3px; padding:3px 6px;
-  }
-  .strip-card h3{ font-size:1.06rem; margin-bottom:.15em; }
-  .strip-card .kicker{ font-family:var(--mono); font-size:.74rem; color:var(--slate-dim); margin-bottom:.9em; }
-  .strip-card p{ font-size:.92rem; color:var(--slate); flex:1; }
-
-  /* ============ EXPERIENCE ============ */
-  .log{ display:flex; flex-direction:column; gap:0; }
-  .log-entry{
-    display:grid; grid-template-columns:150px 1fr; gap:28px;
-    padding:28px 0; border-bottom:1px solid var(--line);
-  }
-  .log-entry:first-child{ padding-top:0; }
-  .log-entry:last-child{ border-bottom:none; }
-  .log-dates{ font-family:var(--mono); font-size:.76rem; color:var(--amber); letter-spacing:.03em; padding-top:2px; }
-  .log-role h3{ font-size:1.08rem; margin-bottom:.1em; }
-  .log-role .org{ font-family:var(--mono); font-size:.8rem; color:var(--slate-dim); margin-bottom:.9em; display:block; }
-  .log-role ul{ margin:0; padding-left:1.1em; }
-  .log-role li{ font-size:.92rem; margin-bottom:.5em; color:var(--slate); }
-  .log-role li:last-child{ margin-bottom:0; }
-
-  .edu-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
-  .edu-card{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:24px 26px; }
-  .edu-card .eyebrow{ margin-bottom:.5em; }
-  .edu-card h4{ font-size:.98rem; margin-bottom:.2em; }
-  .edu-card .org{ font-family:var(--mono); font-size:.78rem; color:var(--slate-dim); margin-bottom:.8em; display:block; }
-  .edu-card p{ font-size:.88rem; margin-bottom:0; }
-
-  @media (max-width:640px){
-    .log-entry{ grid-template-columns:1fr; gap:8px; }
-    .edu-grid{ grid-template-columns:1fr; }
-  }
-
-  /* ============ PROJECTS ============ */
-  .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; align-items:stretch; }
-  .proj-card{
-    display:flex; flex-direction:column; height:100%;
-    background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .proj-card:hover{ border-color:var(--sky); transform:translateY(-2px); }
-  .proj-card .shot{ aspect-ratio:16/9; width:100%; overflow:hidden; background:var(--panel-2); }
-  .proj-card .shot img{ width:100%; height:100%; object-fit:cover; transition:filter .3s ease; filter:brightness(.88); }
-  .proj-card:hover .shot img{ filter:brightness(1); }
-  .proj-card .body{ padding:26px 26px 28px; display:flex; flex-direction:column; flex:1; }
-  .proj-card .tag{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; color:var(--amber); margin-bottom:.7em; }
-  .proj-card h3{ font-size:1.22rem; margin-bottom:.5em; }
-  .proj-card p{ font-size:.94rem; color:var(--slate); flex:1; margin-bottom:1.4em; }
-  .proj-card .go{
-    font-family:var(--mono); font-size:.78rem; letter-spacing:.04em; text-transform:uppercase;
-    color:var(--ivory); display:inline-flex; align-items:center; gap:8px; align-self:flex-start;
-    border-bottom:1px solid var(--line); padding-bottom:3px; transition:border-color .2s ease, color .2s ease;
-  }
-  .proj-card:hover .go{ color:var(--sky); border-color:var(--sky); }
-
-  /* ============ FOCUS / PHILOSOPHY ============ */
-  .focus-grid{ display:grid; grid-template-columns:1.5fr 1fr; gap:24px; align-items:stretch; }
-  .panel{ background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:30px 32px; height:100%; }
-  .focus-item{ padding-bottom:22px; margin-bottom:22px; border-bottom:1px solid var(--line); }
-  .focus-item:last-child{ border-bottom:none; margin-bottom:0; padding-bottom:0; }
-  .focus-item .eyebrow{ margin-bottom:.4em; }
-  .focus-item h4{ font-size:1.02rem; margin-bottom:.4em; }
-  .focus-item p{ font-size:.93rem; margin-bottom:0; }
-  .spotlight{ background:linear-gradient(160deg, var(--panel) 0%, #16233a 100%); }
-  .spotlight h4{ font-size:1.02rem; }
-  .spotlight .lede{ font-family:var(--mono); font-size:.75rem; color:var(--amber); margin-bottom:1em; letter-spacing:.03em; }
-  .spotlight p{ font-size:.93rem; margin-bottom:0; }
-
-  /* ============ FOOTER ============ */
-  footer.site{ background:var(--panel-2); border-top:1px solid var(--line); padding:64px 0 28px; }
-  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; margin-bottom:48px; }
-  footer.site h2{ font-size:1.3rem; }
-  footer.site p{ font-size:.94rem; }
-  .readout{ list-style:none; margin:0; padding:0; }
-  .readout li{
-    display:flex; justify-content:space-between; gap:16px;
-    padding:11px 0; border-bottom:1px solid var(--line); font-size:.9rem;
-  }
-  .readout li:last-child{ border-bottom:none; }
-  .readout dt{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--slate-dim); }
-  .readout dd{ margin:0; color:var(--ivory); text-align:right; }
-  .copyright{
-    font-family:var(--mono); font-size:.74rem; color:var(--slate-dim);
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-    padding-top:24px; border-top:1px solid var(--line);
-  }
-  .copyright a{ color:var(--slate-dim); }
-  .copyright a:hover{ color:var(--amber); }
-
-  /* ============ RESPONSIVE ============ */
-  @media (max-width:900px){
-    .grid-3{ grid-template-columns:1fr 1fr; }
-    .focus-grid{ grid-template-columns:1fr; }
-    .footer-grid{ grid-template-columns:1fr; }
-  }
-  @media (max-width:640px){
-    .wrap{ padding:0 20px; }
-    .grid-3, .grid-2{ grid-template-columns:1fr; }
-    .nav-row{ height:auto; flex-direction:column; align-items:flex-start; gap:14px; padding:14px 0; }
-    section{ padding:56px 0; }
-  }
+:root{--bg:#F8F6FC;--ink:#2A2540;--soft:#5f5a78;--violet:#5B4BDB;--lav:#DDD6F7;--mint:#CBEBDC;--peach:#FBD8C5;--sky:#CDE3F7;--butter:#FAEDBE;--rose:#F7D4E2;--white:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 28px;max-width:1100px;margin:0 auto}
+.logo{font-weight:800;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:36px;height:36px;border-radius:12px;background:var(--lav);display:grid;place-items:center;font-style:normal;font-size:14px;color:var(--violet)}
+nav ul{display:flex;gap:6px;list-style:none;padding:0;background:var(--white);border-radius:99px;padding:5px;box-shadow:0 2px 10px rgba(91,75,219,.08)}
+nav ul a{display:block;padding:8px 18px;border-radius:99px;text-decoration:none;font-weight:500;font-size:15px}
+nav ul a:hover{background:var(--lav)}
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;padding:56px 0 48px}
+.photo{width:210px;height:210px;border-radius:50%;background:var(--lav) center/cover;border:8px solid var(--white);box-shadow:0 14px 34px -12px rgba(91,75,219,.35)}
+.hero h1{font-size:clamp(32px,4.8vw,54px)}
+.hero p{margin:18px 0 26px;color:var(--soft);font-size:19px;max-width:56ch}
+.btn{display:inline-block;padding:13px 26px;border-radius:99px;background:var(--violet);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 8px 20px -8px rgba(91,75,219,.6)}
+.btn:hover{background:var(--ink)}
+.btn.alt{background:var(--white);color:var(--ink);box-shadow:0 2px 10px rgba(91,75,219,.12);margin-left:8px}
+.btn.alt:hover{background:var(--lav)}
+/* sections */
+section{padding-top:84px}
+.title{margin-bottom:30px}
+.title h2{font-size:clamp(28px,3.8vw,40px)}
+.title p{color:var(--soft);margin-top:8px;max-width:56ch}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
+.sk{border-radius:28px;padding:30px 28px 26px;display:flex;flex-direction:column}
+.sk h3{font-size:23px;margin-bottom:10px}
+.sk p{flex:1;color:#403b58;font-size:16px}
+.sk span{margin-top:18px;align-self:flex-start;background:rgba(255,255,255,.75);padding:5px 14px;border-radius:99px;font-size:14px;font-weight:700}
+.s1{background:var(--lav)}.s2{background:var(--sky)}.s3{background:var(--mint)}.s4{background:var(--butter)}.s5{background:var(--peach)}.s6{background:var(--rose)}
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+.pc{display:flex;flex-direction:column;background:var(--white);border-radius:28px;padding:30px;text-decoration:none;box-shadow:0 4px 18px rgba(91,75,219,.07);transition:box-shadow .2s,transform .2s}
+.pc:hover{box-shadow:0 18px 36px -14px rgba(91,75,219,.35);transform:translateY(-3px)}
+.chip{align-self:flex-start;padding:4px 14px;border-radius:99px;font-size:13px;font-weight:700}
+.pc h3{font-size:21px;margin:16px 0 8px}
+.pc p{flex:1;color:var(--soft);font-size:16px}
+.pc .more{margin-top:18px;font-weight:700;color:var(--violet)}
+/* experience */
+.xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+.job{background:var(--white);border-radius:28px;padding:32px;box-shadow:0 4px 18px rgba(91,75,219,.07)}
+.job time{display:inline-block;background:var(--mint);padding:4px 14px;border-radius:99px;font-size:14px;font-weight:700}
+.job h3{font-size:22px;margin:16px 0 4px}
+.job .co{color:var(--violet);font-weight:700;margin-bottom:12px}
+.job ul{padding-left:20px;display:grid;gap:8px;color:#403b58;font-size:16px}
+.edu{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.edu div{background:var(--sky);border-radius:22px;padding:22px 28px}
+/* contact */
+.contact{margin-top:90px;background:var(--lav);border-radius:40px;padding:64px 48px;text-align:left}
+.contact h2{font-size:clamp(30px,4.6vw,50px);max-width:18ch}
+.contact p{margin:14px 0 28px;color:#403b58;max-width:50ch}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.links a{padding:13px 24px;border-radius:99px;background:var(--white);font-weight:700;text-decoration:none}
+.links a:first-child{background:var(--violet);color:#fff}
+.links a:hover{background:var(--ink);color:#fff}
+footer{padding:36px 0 48px;color:var(--soft);font-size:14px}
+@media(max-width:760px){
+.hero{grid-template-columns:1fr;gap:26px;padding-top:36px}
+.photo{width:150px;height:150px}
+.btn.alt{margin:10px 0 0}
+.contact{padding:40px 26px;border-radius:30px}
+nav ul a{padding:8px 12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pc{transition:none}.pc:hover{transform:none}}
 </style>
 </head>
 <body>
+<nav aria-label="Main">
+<a class="logo" href="#top"><i>RL</i>Rashmi Leema</a>
+<ul><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
 
-<header class="site">
-  <div class="wrap nav-row">
-    <div class="brand">
-      <span class="brand-badge">RL</span>
-      <span class="brand-name">Rashmi Leema</span>
-    </div>
-    <nav class="primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#competencies">Capabilities</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<main class="wrap" id="top">
+<div class="hero">
+<div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
+<div>
+<h1>Revenue and BI analyst turning operational data into decisions.</h1>
+<p>Revenue planning at SriLankan Airlines, after two-plus years building the SQL and Power BI systems that commercial teams run their week on.</p>
+<a class="btn" href="#skills">See what I work in</a><a class="btn alt" href="#contact">Get in touch</a>
+</div>
+</div>
 
-<section class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-text">
-      <p class="eyebrow">Revenue Management &amp; Data Analyst</p>
-      <h1>Turning operational data into <span>automated business decisions</span>.</h1>
-      <p class="lede">Hands-on revenue planning experience at SriLankan Airlines, paired with two-plus years in business intelligence — building the SQL and Power BI systems that commercial teams actually run their week on.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See the projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="frame"><img src="images/Profile%20Photo.JPG" alt="Rashmi Leema" /></div>
-    </div>
-  </div>
+<section id="skills" style="padding-top:40px">
+<div class="title"><h2>What I work in</h2><p>Each skill comes with the project or role where I've used it.</p></div>
+<div class="skills">
+<div class="sk s1"><h3>SQL & data modeling</h3><p>Star schemas, window functions and ETL layers that hold up when several teams query at once.</p><span>Reporting Engine, Fraud Hub</span></div>
+<div class="sk s2"><h3>Power BI & DAX</h3><p>Executive scorecards and a shared measure library, so everyone reads the same numbers.</p><span>GTN Tech, PMO Platform</span></div>
+<div class="sk s3"><h3>Power Apps & Automate</h3><p>Governed approval workflows that replace manual email chains.</p><span>Exception Tracker</span></div>
+<div class="sk s4"><h3>Python & Excel VBA</h3><p>Risk scoring and internal tooling that replace manual investigations.</p><span>Fraud Hub</span></div>
+<div class="sk s5"><h3>Financial modeling</h3><p>DCF, sensitivity analysis and multi-source reporting models.</p><span>Uber × Lyft, Client Cube</span></div>
+<div class="sk s6"><h3>Airline revenue & yield</h3><p>Route and station performance, load factors, RASK and fare-class inventory.</p><span>SriLankan Airlines</span></div>
+</div>
 </section>
 
-<div class="horizon"></div>
-
-<section id="competencies">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Capabilities</p>
-      <h2>What I actually work in</h2>
-      <p>Three pillars, one habit: raw numbers only count once someone downstream can act on them.</p>
-    </div>
-
-    <div class="grid-3">
-
-      <article class="strip-card">
-        <div class="shot"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Aircraft wing above clouds" /></div>
-        <div class="body">
-          <div class="code-row"><span class="code">YLD</span></div>
-          <h3>Revenue &amp; Yield Optimization</h3>
-          <div class="kicker">Airline planning &amp; forecasting</div>
-          <p>Route and station performance, load factors, RASK and yield trends, fare-class inventory — read the way a network planner reads them, not just charted.</p>
-        </div>
-      </article>
-
-      <article class="strip-card">
-        <div class="shot"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analytics dashboard on screen" /></div>
-        <div class="body">
-          <div class="code-row"><span class="code">PBI</span></div>
-          <h3>Business Intelligence &amp; Power Platform</h3>
-          <div class="kicker">Power BI, DAX, Power Apps &amp; Power Automate</div>
-          <p>Automated reporting engines and executive scorecards built so a stakeholder gets the answer in the time it takes to open the file — plus Power Apps and Power Automate workflows that replace manual approvals and email chains.</p>
-        </div>
-      </article>
-
-      <article class="strip-card">
-        <div class="shot"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80" alt="Rows of structured data on a monitor" /></div>
-        <div class="body">
-          <div class="code-row"><span class="code">SQL</span></div>
-          <h3>SQL &amp; Data Architecture</h3>
-          <div class="kicker">Modeling &amp; transformation</div>
-          <p>Star schemas, window functions, and ETL layers built to hold up when three departments are querying the same view at once.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
+<section id="projects">
+<div class="title"><h2>Selected projects</h2><p>Six case studies across airline planning, enterprise BI, fraud operations, valuation and automation.</p></div>
+<div class="proj">
+<a class="pc" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub"><span class="chip" style="background:var(--lav)">Fraud analytics</span><h3>iGaming Fraud & Risk Operations Hub</h3><p>An automated pipeline replacing manual spreadsheet investigations, with live Power BI and Power Apps monitoring.</p><span class="more">View project</span></a>
+<a class="pc" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics"><span class="chip" style="background:var(--sky)">Airline analytics</span><h3>Route & Revenue Performance Model</h3><p>Demand by O&D pair, seasonal booking curves and route-level yield, used to adjust fares and capacity.</p><span class="more">View project</span></a>
+<a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform"><span class="chip" style="background:var(--mint)">Enterprise BI</span><h3>Executive Strategic Initiatives Platform</h3><p>Tracks initiative health, budget burn and milestone slippage across five departments.</p><span class="more">View project</span></a>
+<a class="pc" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project"><span class="chip" style="background:var(--butter)">Valuation</span><h3>Uber × Lyft Acquisition Model</h3><p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p><span class="more">View project</span></a>
+<a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube"><span class="chip" style="background:var(--peach)">BI automation</span><h3>Multi-Source Financial Reporting Engine</h3><p>A scheduled SQL-to-Power-BI pipeline that cut report prep from hours to minutes.</p><span class="more">View project</span></a>
+<a class="pc" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker"><span class="chip" style="background:var(--rose)">Power Platform</span><h3>Operations Exception Tracker</h3><p>Every exception request logged, routed and auditable, replacing Excel and email.</p><span class="more">View project</span></a>
+</div>
 </section>
-
-<div class="horizon"></div>
 
 <section id="experience">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Experience</p>
-      <h2>Flight log</h2>
-      <p>Two roles, one thread — turning operational data into a call someone can act on.</p>
-    </div>
-
-    <div class="log">
-      <div class="log-entry">
-        <div class="log-dates">JAN 2026 — JUN 2026</div>
-        <div class="log-role">
-          <h3>Trainee Revenue Management Analyst, Revenue Planning Executive</h3>
-          <span class="org">SriLankan Airlines</span>
-          <ul>
-            <li>Analysed monthly route and station performance, recommending demand and revenue drivers to commercial management.</li>
-            <li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
-            <li>Prepared ad hoc costing analyses and reports for senior management planning.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="log-entry">
-        <div class="log-dates">JAN 2024 — JAN 2026</div>
-        <div class="log-role">
-          <h3>Associate Business Analyst</h3>
-          <span class="org">GTN Tech</span>
-          <ul>
-            <li>Analysed assets under custody, trading volumes, and revenue by asset class for Revolut, supporting quarterly board reporting.</li>
-            <li>Built a consolidated Excel model ("Client Cube") integrating multi-source data into one reporting framework, connected to Power BI.</li>
-            <li>Developed Power BI dashboards used across Finance, HR, Operations, and Middle Office.</li>
-            <li>Cut recurring reporting prep time by 80% through Excel and Power BI automation.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="edu-grid">
-      <div class="edu-card">
-        <p class="eyebrow">Education</p>
-        <h4>BSc (Hons) in Finance &amp; Insurance</h4>
-        <span class="org">University of Colombo · 2020 – 2024 · Second Class Upper</span>
-        <p>Financial analysis, statistics, mathematical finance, risk management, quantitative methods, econometrics.</p>
-      </div>
-      <div class="edu-card">
-        <p class="eyebrow">Certification</p>
-        <h4>CFA Level I</h4>
-        <span class="org">Self-study · Sitting February 2027</span>
-        <p>In progress alongside current analyst work.</p>
-      </div>
-    </div>
-  </div>
+<div class="title"><h2>Experience</h2></div>
+<div class="xp">
+<div class="job"><time>Jan 2026 to Jun 2026</time><h3>Trainee Revenue Management Analyst</h3><div class="co">SriLankan Airlines</div>
+<ul><li>Analysed monthly route and station performance and recommended demand and revenue drivers to commercial management.</li><li>Ran economic evaluations of proposed flight schedules for network and capacity decisions.</li><li>Prepared ad hoc costing analyses for senior management planning.</li></ul></div>
+<div class="job"><time>Jan 2024 to Jan 2026</time><h3>Associate Business Analyst</h3><div class="co">GTN Tech</div>
+<ul><li>Analysed assets under custody, trading volumes and revenue by asset class for Revolut, supporting quarterly board reporting.</li><li>Built the "Client Cube" Excel model, connected to Power BI, merging multi-source data into one framework.</li><li>Developed Power BI dashboards used across Finance, HR, Operations and Middle Office.</li><li>Cut recurring reporting prep time by 80% through automation.</li></ul></div>
+</div>
+<div class="edu">
+<div><b>BSc (Hons) Finance & Insurance</b><br>University of Colombo, 2020 to 2024, Second Class Upper</div>
+<div><b>Microsoft Business Analyst</b><br>Professional Certificate, In Progress, Expected Completion: 2026</div>
+</div>
 </section>
 
-<div class="horizon"></div>
-
-<section class="alt" id="projects">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Selected work</p>
-      <h2>Featured projects</h2>
-      <p>Six case studies spanning airline commercial planning, enterprise BI, fraud operations, financial modeling, and workflow automation.</p>
-    </div>
-
-    <div class="grid-2">
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity and risk analytics network" />
-        </a>
-        <div class="body">
-          <div class="tag">Fraud analytics · End-to-end automation</div>
-          <h3>iGaming Fraud &amp; Risk Operations Hub</h3>
-          <p>An end-to-end automated pipeline replacing manual spreadsheet investigations with Python risk scoring, SQL Server staging, Power Query ETL, Excel VBA tooling, and live Power BI &amp; Power Apps monitoring.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub" target="_blank" rel="noopener">Explore the fraud risk hub →</a>
-        </div>
-      </article>
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1765293995544-d89497756e4e?auto=format&fit=crop&w=800&q=80" alt="Aircraft parked on an airport tarmac" />
-        </a>
-        <div class="body">
-          <div class="tag">Personal project · Airline commercial analytics</div>
-          <h3>Airline Route &amp; Revenue Performance Model</h3>
-          <p>Built the views commercial planners actually opened: demand by O&amp;D pair, seasonal booking curves, and route-level yield — used to adjust fares and capacity mid-season.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics" target="_blank" rel="noopener">View the route model →</a>
-        </div>
-      </article>
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Executive strategic initiatives analytics platform" />
-        </a>
-        <div class="body">
-          <div class="tag">Simulated PMO · Enterprise BI</div>
-          <h3>Executive Strategic Initiatives Platform</h3>
-          <p>A SQL Server and Power BI layer tracking initiative health, budget burn, and milestone slippage across five departments, with automatic flags on anything falling behind.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">Open the PMO platform →</a>
-        </div>
-      </article>
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" alt="Uber and Lyft valuation model" />
-        </a>
-        <div class="body">
-          <div class="tag">Corporate valuation · Excel</div>
-          <h3>Uber × Lyft Acquisition &amp; Valuation</h3>
-          <p>A five-year DCF and sensitivity matrix testing whether the deal pencils out under different WACC and synergy assumptions — built to survive being questioned line by line.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">Open the valuation model →</a>
-        </div>
-      </article>
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Financial KPI reporting engine" />
-        </a>
-        <div class="body">
-          <div class="tag">BI automation · Power BI + SQL</div>
-          <h3>Multi-Source Financial Reporting Engine</h3>
-          <p>Replaced a manual spreadsheet rollup with a scheduled SQL-to-Power-BI pipeline and a shared DAX measure library, cutting report prep from hours to minutes each period.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">See the reporting engine →</a>
-        </div>
-      </article>
-
-      <article class="proj-card">
-        <a class="shot" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Operations exception tracker workflow on a laptop" />
-        </a>
-        <div class="body">
-          <div class="tag">Personal project · Power Platform workflow automation</div>
-          <h3>Operations Exception Tracker</h3>
-          <p>An end-to-end Power Platform solution that replaced a manual Excel and email exception process with a governed, automated approval workflow — every request logged, routed, and auditable.</p>
-          <a class="go" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">Explore the exception tracker →</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
+<section id="contact" style="padding-top:0">
+<div class="contact">
+<h2>Let's talk revenue, BI or aviation strategy.</h2>
+<p>Open to conversations on airline revenue optimization, dashboard architecture and commercial performance analytics. Based in Colombo, Sri Lanka.</p>
+<div class="links"><a href="mailto:rashmi.kuru@gmail.com">Email me</a><a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a><a href="https://github.com/rashmileema-BI">GitHub</a></div>
+</div>
 </section>
-
-<div class="horizon"></div>
-
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">How I work</p>
-      <h2>Professional focus</h2>
-    </div>
-
-    <div class="focus-grid">
-      <div class="panel">
-        <div class="focus-item">
-          <p class="eyebrow">Domain</p>
-          <h4>Aviation commercial planning &amp; pricing</h4>
-          <p>Comfortable owning assigned network segments end to end — reading competitive fare moves, booking curves, and station throughput to recommend where a fare or an allocation should move.</p>
-        </div>
-        <div class="focus-item">
-          <p class="eyebrow">Stack</p>
-          <h4>SQL, Power BI, Power Apps, Power Automate &amp; dimensional modeling</h4>
-          <p>Star schemas, window functions, and DAX measures — the layer between a raw transactional table and a dashboard someone opens without being walked through it — plus Power Apps and Power Automate to turn manual, email-driven processes into governed workflows.</p>
-        </div>
-      </div>
-
-      <div class="panel spotlight">
-        <p class="lede">Core philosophy</p>
-        <h4>A model earns its place when it changes a decision</h4>
-        <p>Every dashboard, query, and forecast here is built for a specific reader making a specific call — not as a demonstration of technique.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="site" id="contact">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h2>Let's talk revenue, BI, or aviation strategy</h2>
-        <p>Open to conversations on airline revenue optimization, dashboard architecture, and commercial performance analytics.</p>
-        <div class="hero-actions">
-          <a href="mailto:rashmi.kuru@gmail.com" class="btn btn-primary">Email me</a>
-          <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
-        </div>
-      </div>
-      <div>
-        <ul class="readout">
-          <li><dt>Email</dt><dd><a href="mailto:rashmi.kuru@gmail.com">rashmi.kuru@gmail.com</a></dd></li>
-          <li><dt>Phone</dt><dd>+94 77 944 4893</dd></li>
-          <li><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener">rashmi-leema</a></dd></li>
-          <li><dt>GitHub</dt><dd><a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener">rashmileema-BI</a></dd></li>
-          <li><dt>Location</dt><dd>Colombo, Sri Lanka</dd></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <span>© Rashmi Leema. All rights reserved.</span>
-    </div>
-  </div>
-</footer>
-
+</main>
+<footer><div class="wrap">© Rashmi Leema</div></footer>
 </body>
 </html>
