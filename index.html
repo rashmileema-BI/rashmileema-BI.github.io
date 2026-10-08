@@ -9,42 +9,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F7F8FA;--ink:#1B2230;--soft:#556070;--accent:#1D4ED8;--line:#E2E6EC;--tint:#EDF2FC;--white:#fff}
+:root{--bg:#F7F8FA;--ink:#1B2230;--soft:#556070;--accent:#1D4ED8;--line:#D9E0EC;--tint:#E8EFFC;--white:#fff;--navy:#0F1B33}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{background:var(--bg);color:var(--ink);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
 h1,h2,h3{line-height:1.2;letter-spacing:-.015em;font-weight:800}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+:focus-visible{outline:3px solid #6C93F5;outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
-/* sticky nav */
-.top{position:sticky;top:0;z-index:50;background:rgba(247,248,250,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
-.top.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 16px -10px rgba(27,34,48,.25)}
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 28px;max-width:1080px;margin:0 auto}
-.logo{font-weight:800;font-size:17px;text-decoration:none}
-nav ul{display:flex;gap:4px;list-style:none}
-nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:var(--soft);transition:background .2s,color .2s}
-nav ul a:hover{background:var(--tint);color:var(--ink)}
-nav ul a.active{background:var(--tint);color:var(--accent);font-weight:700}
+/* bands */
+.band{padding:64px 0}
+.band.tint{background:var(--tint)}
+.band.dark{background:var(--navy);color:#fff}
+
+/* sticky nav (navy) */
+.top{position:sticky;top:0;z-index:50;background:rgba(15,27,51,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .2s}
+.top.scrolled{box-shadow:0 6px 20px -10px rgba(0,0,0,.5)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 28px;max-width:1080px;margin:0 auto}
+.logo{font-weight:800;font-size:17px;text-decoration:none;color:#fff}
+nav ul{display:flex;gap:4px;list-style:none;padding:0}
+nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:#B8C2D6;transition:background .2s,color .2s}
+nav ul a:hover{background:rgba(255,255,255,.1);color:#fff}
+nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 
 /* hero */
-.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;padding:44px 0 40px}
-.photo{width:180px;height:180px;border-radius:50%;background:var(--tint) center/cover;border:5px solid var(--white);box-shadow:0 8px 24px -10px rgba(27,34,48,.3)}
-.hero h1{font-size:clamp(30px,4.4vw,46px)}
-.hero p{margin:16px 0 22px;color:var(--soft);font-size:18px;max-width:60ch}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
+.photo{width:190px;height:190px;border-radius:50%;background:var(--tint) center/cover;border:5px solid rgba(255,255,255,.15);box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff}
+.hero p{margin:16px 0 22px;color:#B8C2D6;font-size:18px;max-width:60ch}
 .stack{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.stack span,.tags span{background:var(--white);border:1px solid var(--line);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
+.stack span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 24px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--ink)}
-.btn.alt{background:var(--white);color:var(--ink);border:1px solid var(--line)}
-.btn.alt:hover{background:var(--tint)}
-.quick{margin-top:16px;font-size:15px;color:var(--soft)}
-.quick a{font-weight:700;color:var(--accent)}
+.hero .btn{background:#fff;color:var(--navy)}
+.hero .btn:hover{background:var(--tint)}
+.hero .btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.hero .btn.alt:hover{background:rgba(255,255,255,.1)}
+.hero .quick{margin:16px 0 0;font-size:15px;color:#B8C2D6}
+.hero .quick a{font-weight:700;color:#fff}
 
-/* sections */
-section{padding-top:72px}
+/* section titles */
 .title{margin-bottom:26px}
 .title h2{font-size:clamp(26px,3.4vw,34px)}
 .title p{color:var(--soft);margin-top:6px;max-width:60ch}
@@ -56,7 +62,13 @@ section{padding-top:72px}
 .sk p{color:#3d4756;font-size:15.5px}
 .sk .where{margin-top:14px;font-size:14px;color:var(--soft)}
 .sk .where b{color:var(--ink)}
-.also{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
+.also{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
+.also b{color:var(--ink)}
+
+/* tags */
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.tags span{background:var(--white);border:1px solid var(--line);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
+.also .tags{margin:0}
 
 /* screenshots (hide themselves if the image is missing) */
 .shot{border-radius:10px;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
@@ -68,17 +80,16 @@ section{padding-top:72px}
 .feature h3{font-size:clamp(23px,2.8vw,29px);margin:12px 0}
 .feature dl{display:grid;gap:12px;margin:16px 0 18px}
 .feature dt{font-weight:800;font-size:14px;color:var(--accent)}
-.feature dd{color:#3d4756;font-size:15.5px}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.feature dd{color:#3d4756;font-size:15.5px;margin:0}
 
-/* projects */
-.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+/* projects: 2 x 2 */
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;transition:box-shadow .2s,transform .2s}
 .pc:hover{box-shadow:0 14px 30px -14px rgba(27,34,48,.3);transform:translateY(-2px)}
 .pc .shot{margin-bottom:16px}
 .pc h3{font-size:19px;margin:12px 0 8px}
 .pc p{color:var(--soft);font-size:15.5px}
-.result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)!important}
+.pc .result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)}
 .pc .tags{margin:14px 0 0}
 .pc .more{margin-top:14px;font-weight:700;color:var(--accent);font-size:15px}
 
@@ -90,17 +101,16 @@ section{padding-top:72px}
 .job .co{color:var(--accent);font-weight:700;margin-bottom:12px}
 .job ul{padding-left:20px;display:grid;gap:8px;color:#3d4756;font-size:15.5px}
 .edu{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.edu div{background:var(--tint);border-radius:12px;padding:18px 24px;font-size:15.5px}
+.edu div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 24px;font-size:15.5px}
 
 /* contact */
-.contact{margin-top:80px;background:var(--ink);color:#fff;border-radius:20px;padding:56px 44px}
-.contact h2{font-size:clamp(28px,4vw,42px);max-width:20ch}
-.contact p{margin:12px 0 26px;color:#C6CDD8;max-width:52ch}
+.cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:#fff}
+.cta p{margin:12px 0 26px;color:#B8C2D6;max-width:52ch}
 .links{display:flex;gap:10px;flex-wrap:wrap}
-.links a{padding:12px 22px;border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;text-decoration:none;color:#fff}
-.links a:first-child{background:#fff;color:var(--ink)}
+.links a{padding:12px 22px;border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;text-decoration:none;color:#fff;transition:background .2s}
+.links a:first-child{background:#fff;color:var(--navy)}
 .links a:hover{background:var(--accent);color:#fff}
-footer{padding:32px 0 44px;color:var(--soft);font-size:14px}
+footer{background:#0A1326;color:#8C97AD;padding:22px 0;font-size:14px}
 
 /* scroll reveal */
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -108,13 +118,15 @@ footer{padding:32px 0 44px;color:var(--soft);font-size:14px}
 .js .reveal.in{opacity:1;animation:rise .6s ease backwards;animation-delay:var(--d,0s)}
 
 @media(max-width:760px){
-html{scroll-padding-top:104px}
+html{scroll-padding-top:100px}
+.band{padding:48px 0}
 nav{padding:10px 20px;gap:6px}
-.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}
+nav ul a{padding:7px 10px;font-size:14px}
+.hero{grid-template-columns:1fr;gap:24px}
 .photo{width:140px;height:140px}
 .feature{grid-template-columns:1fr;padding:22px}
-.contact{padding:36px 24px;border-radius:16px}
-nav ul a{padding:7px 10px;font-size:14px}
+.proj{grid-template-columns:1fr}
+.xp{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
@@ -131,10 +143,11 @@ html{scroll-behavior:auto}
 </nav>
 </header>
 
-<main class="wrap" id="top">
+<main>
 
 <!-- HERO -->
-<div class="hero">
+<div class="band dark" id="top">
+<div class="wrap hero">
 <div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
 <div>
 <h1>Data Analyst who automates reporting with SQL, Python and Excel.</h1>
@@ -147,21 +160,25 @@ html{scroll-behavior:auto}
 <p class="quick"><a href="mailto:rashmi.kuru@gmail.com">rashmi.kuru@gmail.com</a> · <a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a> · <a href="https://github.com/rashmileema-BI">GitHub</a></p>
 </div>
 </div>
+</div>
 
 <!-- CORE SKILLS -->
-<section id="skills" style="padding-top:32px">
+<section class="band tint" id="skills">
+<div class="wrap">
 <div class="title"><h2>Core skills</h2><p>The tools I use most, and where I've used them.</p></div>
 <div class="core">
 <div class="sk"><h3>SQL</h3><p>Star schemas, window functions, staging layers and scheduled ETL that hold up when several teams query at once.</p><p class="where"><b>Used in:</b> Reporting Engine, Fraud Hub</p></div>
 <div class="sk"><h3>Python</h3><p>Risk scoring and data-cleaning scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub</p></div>
 <div class="sk"><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
 </div>
-<div class="also"><b style="color:var(--ink)">Also:</b>
-<span class="tags" style="margin:0"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span></span></div>
+<div class="also"><b>Also:</b>
+<div class="tags"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span></div></div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section class="band" id="projects">
+<div class="wrap">
 <div class="title"><h2>Selected projects</h2><p>Each one links to its code.</p></div>
 
 <article class="feature">
@@ -212,10 +229,12 @@ html{scroll-behavior:auto}
 <div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
 <span class="more">View project →</span></a>
 </div>
+</div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section class="band tint" id="experience">
+<div class="wrap">
 <div class="title"><h2>Experience</h2></div>
 <div class="xp">
 <div class="job"><time>Jan 2024 to Jan 2026</time><h3>Associate Business Analyst</h3><div class="co">GTN Tech</div>
@@ -236,11 +255,12 @@ html{scroll-behavior:auto}
 <div><b>BSc (Hons) Finance &amp; Insurance</b><br>University of Colombo, 2020 to 2024, Second Class Upper</div>
 <div><b>Microsoft Business Analyst</b><br>Professional Certificate, expected completion 2027</div>
 </div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="padding-top:0">
-<div class="contact">
+<section class="band dark" id="contact">
+<div class="wrap cta">
 <h2>Open to Data Analyst roles.</h2>
 <p>If your team needs someone to automate reporting, build reliable SQL pipelines and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
 <div class="links"><a href="mailto:rashmi.kuru@gmail.com">Email me</a><a href="cv/Rashmi-Leema-CV.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a><a href="https://github.com/rashmileema-BI">GitHub</a></div>
@@ -281,7 +301,7 @@ html{scroll-behavior:auto}
           if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
         });
       },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.title,.sk,.also,.feature,.pc,.job,.edu>div,.contact').forEach(function(el){
+      document.querySelectorAll('.title,.sk,.also,.feature,.pc,.job,.edu>div,.cta>*').forEach(function(el){
         el.classList.add('reveal');
         var i=Array.prototype.indexOf.call(el.parentNode.children,el);
         el.style.setProperty('--d',(i%3)*0.08+'s');
