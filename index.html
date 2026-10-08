@@ -3,100 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rashmi Leema | Revenue Management & Data Analyst</title>
-<meta name="description" content="Revenue management and BI analyst. SQL, Power BI and Power Platform systems that commercial teams run their week on.">
+<title>Rashmi Leema | Data Analyst (SQL, Python, Excel Automation)</title>
+<meta name="description" content="Data analyst specialising in SQL, Python and Excel automation. I build reporting pipelines and dashboards that replace manual work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F8F6FC;--ink:#2A2540;--soft:#5f5a78;--violet:#5B4BDB;--lav:#DDD6F7;--mint:#CBEBDC;--peach:#FBD8C5;--sky:#CDE3F7;--butter:#FAEDBE;--rose:#F7D4E2;--white:#fff}
+:root{--bg:#F7F7FA;--ink:#1F2233;--soft:#5A5F75;--accent:#4338CA;--line:#E3E4EC;--tint:#EEF0FB;--white:#fff}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:17px/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
-h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800}
+body{background:var(--bg);color:var(--ink);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{line-height:1.2;letter-spacing:-.015em;font-weight:800}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 28px;max-width:1100px;margin:0 auto}
-.logo{font-weight:800;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.logo i{width:36px;height:36px;border-radius:12px;background:var(--lav);display:grid;place-items:center;font-style:normal;font-size:14px;color:var(--violet)}
-nav ul{display:flex;gap:6px;list-style:none;background:var(--white);border-radius:99px;padding:5px;box-shadow:0 2px 10px rgba(91,75,219,.08)}
-nav ul a{display:block;padding:8px 18px;border-radius:99px;text-decoration:none;font-weight:500;font-size:15px}
-nav ul a:hover{background:var(--lav)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 28px;max-width:1080px;margin:0 auto}
+.logo{font-weight:800;font-size:17px;text-decoration:none}
+nav ul{display:flex;gap:4px;list-style:none}
+nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:var(--soft)}
+nav ul a:hover{background:var(--tint);color:var(--ink)}
 /* hero */
-.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;padding:56px 0 48px}
-.photo{width:210px;height:210px;border-radius:50%;background:var(--lav) center/cover;border:8px solid var(--white);box-shadow:0 14px 34px -12px rgba(91,75,219,.35)}
-.hero h1{font-size:clamp(32px,4.8vw,54px)}
-.hero p{margin:18px 0 26px;color:var(--soft);font-size:19px;max-width:56ch}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;padding:52px 0 40px}
+.photo{width:180px;height:180px;border-radius:50%;background:var(--tint) center/cover;border:5px solid var(--white);box-shadow:0 8px 24px -10px rgba(31,34,51,.3)}
+.hero h1{font-size:clamp(30px,4.4vw,46px)}
+.hero p{margin:16px 0 22px;color:var(--soft);font-size:18px;max-width:60ch}
+.stack{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.stack span,.tags span{background:var(--white);border:1px solid var(--line);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 26px;border-radius:99px;background:var(--violet);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 8px 20px -8px rgba(91,75,219,.6)}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
 .btn:hover{background:var(--ink)}
-.btn.alt{background:var(--white);color:var(--ink);box-shadow:0 2px 10px rgba(91,75,219,.12)}
-.btn.alt:hover{background:var(--lav)}
-.quick{margin-top:18px;font-size:15px;color:var(--soft)}
-.quick a{font-weight:700;color:var(--violet)}
+.btn.alt{background:var(--white);color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:var(--tint)}
+.quick{margin-top:16px;font-size:15px;color:var(--soft)}
+.quick a{font-weight:700;color:var(--accent)}
 /* sections */
-section{padding-top:84px}
-.title{margin-bottom:30px}
-.title h2{font-size:clamp(28px,3.8vw,40px)}
-.title p{color:var(--soft);margin-top:8px;max-width:56ch}
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
-.sk{border-radius:28px;padding:30px 28px 26px;display:flex;flex-direction:column}
-.sk h3{font-size:23px;margin-bottom:10px}
-.sk p{flex:1;color:#403b58;font-size:16px}
-.sk span{margin-top:18px;align-self:flex-start;background:rgba(255,255,255,.75);padding:5px 14px;border-radius:99px;font-size:14px;font-weight:700}
-.s1{background:var(--lav)}.s2{background:var(--sky)}.s3{background:var(--mint)}.s4{background:var(--butter)}.s5{background:var(--peach)}.s6{background:var(--rose)}
-/* featured project */
-.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;background:var(--white);border-radius:36px;padding:36px;box-shadow:0 4px 18px rgba(91,75,219,.07);margin-bottom:26px}
-.feature h3{font-size:clamp(24px,3vw,32px);margin:14px 0 12px}
-.feature dl{display:grid;gap:12px;margin:18px 0 22px}
-.feature dt{font-weight:800;font-size:15px;color:var(--violet)}
-.feature dd{color:#403b58;font-size:16px}
+section{padding-top:72px}
+.title{margin-bottom:26px}
+.title h2{font-size:clamp(26px,3.4vw,34px)}
+.title p{color:var(--soft);margin-top:6px;max-width:60ch}
+/* core skills */
+.core{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.sk{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:26px}
+.sk h3{font-size:21px;margin-bottom:8px}
+.sk p{color:#3d4156;font-size:15.5px}
+.sk .where{margin-top:14px;font-size:14px;color:var(--soft)}
+.sk .where b{color:var(--ink)}
+.also{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
 /* screenshots (hide themselves if the image is missing) */
-.shot{border-radius:20px;overflow:hidden;background:var(--lav);border:1px solid #e4defa}
+.shot{border-radius:10px;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
 .shot img{display:block;width:100%;height:auto}
+/* featured */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;margin-bottom:22px}
+.chip{display:inline-block;background:var(--tint);color:var(--accent);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:700}
+.feature h3{font-size:clamp(23px,2.8vw,29px);margin:12px 0}
+.feature dl{display:grid;gap:12px;margin:16px 0 18px}
+.feature dt{font-weight:800;font-size:14px;color:var(--accent)}
+.feature dd{color:#3d4156;font-size:15.5px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 /* projects */
-.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
-.pc{display:flex;flex-direction:column;background:var(--white);border-radius:28px;padding:26px;text-decoration:none;box-shadow:0 4px 18px rgba(91,75,219,.07);transition:box-shadow .2s,transform .2s}
-.pc:hover{box-shadow:0 18px 36px -14px rgba(91,75,219,.35);transform:translateY(-3px)}
-.pc .shot{margin-bottom:18px}
-.chip{align-self:flex-start;padding:4px 14px;border-radius:99px;font-size:13px;font-weight:700}
-.pc h3{font-size:21px;margin:14px 0 8px}
-.pc p{color:var(--soft);font-size:16px}
-.result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)}
-.pc .more{margin-top:16px;font-weight:700;color:var(--violet)}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;transition:box-shadow .2s,transform .2s}
+.pc:hover{box-shadow:0 14px 30px -14px rgba(31,34,51,.3);transform:translateY(-2px)}
+.pc .shot{margin-bottom:16px}
+.pc h3{font-size:19px;margin:12px 0 8px}
+.pc p{color:var(--soft);font-size:15.5px}
+.result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)!important}
+.pc .tags{margin:14px 0 0}
+.pc .more{margin-top:14px;font-weight:700;color:var(--accent);font-size:15px}
 /* experience */
-.xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
-.job{background:var(--white);border-radius:28px;padding:32px;box-shadow:0 4px 18px rgba(91,75,219,.07)}
-.job time{display:inline-block;background:var(--mint);padding:4px 14px;border-radius:99px;font-size:14px;font-weight:700}
-.job h3{font-size:22px;margin:16px 0 4px}
-.job .co{color:var(--violet);font-weight:700;margin-bottom:12px}
-.job ul{padding-left:20px;display:grid;gap:8px;color:#403b58;font-size:16px}
-.edu{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.edu div{background:var(--sky);border-radius:22px;padding:22px 28px}
+.xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+.job{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px}
+.job time{color:var(--soft);font-size:14px;font-weight:700}
+.job h3{font-size:20px;margin:8px 0 2px}
+.job .co{color:var(--accent);font-weight:700;margin-bottom:12px}
+.job ul{padding-left:20px;display:grid;gap:8px;color:#3d4156;font-size:15.5px}
+.edu{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.edu div{background:var(--tint);border-radius:12px;padding:18px 24px;font-size:15.5px}
 /* contact */
-.contact{margin-top:90px;background:var(--lav);border-radius:40px;padding:64px 48px}
-.contact h2{font-size:clamp(30px,4.6vw,50px);max-width:18ch}
-.contact p{margin:14px 0 28px;color:#403b58;max-width:50ch}
-.links{display:flex;gap:12px;flex-wrap:wrap}
-.links a{padding:13px 24px;border-radius:99px;background:var(--white);font-weight:700;text-decoration:none}
-.links a:first-child{background:var(--violet);color:#fff}
-.links a:hover{background:var(--ink);color:#fff}
-footer{padding:36px 0 48px;color:var(--soft);font-size:14px}
+.contact{margin-top:80px;background:var(--ink);color:#fff;border-radius:20px;padding:56px 44px}
+.contact h2{font-size:clamp(28px,4vw,42px);max-width:20ch}
+.contact p{margin:12px 0 26px;color:#C9CBDA;max-width:52ch}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.links a{padding:12px 22px;border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;text-decoration:none;color:#fff}
+.links a:first-child{background:#fff;color:var(--ink)}
+.links a:hover{background:var(--accent);color:#fff}
+footer{padding:32px 0 44px;color:var(--soft);font-size:14px}
 @media(max-width:760px){
-.hero{grid-template-columns:1fr;gap:26px;padding-top:36px}
-.photo{width:150px;height:150px}
-.feature{grid-template-columns:1fr;padding:24px}
-.contact{padding:40px 26px;border-radius:30px}
-nav ul a{padding:8px 12px}
+.hero{grid-template-columns:1fr;gap:24px;padding-top:32px}
+.photo{width:140px;height:140px}
+.feature{grid-template-columns:1fr;padding:22px}
+.contact{padding:36px 24px;border-radius:16px}
+nav ul a{padding:8px 10px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pc{transition:none}.pc:hover{transform:none}}
 </style>
 </head>
 <body>
 <nav aria-label="Main">
-<a class="logo" href="#top"><i>RL</i>Rashmi Leema</a>
+<a class="logo" href="#top">Rashmi Leema</a>
 <ul><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
 </nav>
 
@@ -106,8 +110,9 @@ nav ul a{padding:8px 12px}
 <div class="hero">
 <div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
 <div>
-<h1>Revenue and BI analyst turning operational data into decisions.</h1>
-<p>Revenue planning at SriLankan Airlines, after two-plus years building the SQL and Power BI systems that commercial teams run their week on.</p>
+<h1>Data Analyst who automates reporting with SQL, Python and Excel.</h1>
+<p>Two-plus years building pipelines, models and dashboards for Finance, HR, Operations and Middle Office teams. I cut recurring reporting prep by 80% by replacing manual work with automation.</p>
+<div class="stack"><span>SQL</span><span>Python</span><span>Excel VBA</span><span>Power Query</span><span>Power BI</span><span>Power Apps</span></div>
 <div class="btns">
 <a class="btn" href="cv/Rashmi-Leema-CV.pdf" download>Download CV</a>
 <a class="btn alt" href="#projects">See my work</a>
@@ -116,68 +121,69 @@ nav ul a{padding:8px 12px}
 </div>
 </div>
 
-<!-- SKILLS FIRST -->
-<section id="skills" style="padding-top:40px">
-<div class="title"><h2>What I work in</h2><p>Each skill comes with the project or role where I've used it.</p></div>
-<div class="skills">
-<div class="sk s1"><h3>SQL & data modeling</h3><p>Star schemas, window functions and ETL layers that hold up when several teams query at once.</p><span>Reporting Engine, Fraud Hub</span></div>
-<div class="sk s2"><h3>Power BI & DAX</h3><p>Executive scorecards and a shared measure library, so everyone reads the same numbers.</p><span>GTN Tech, PMO Platform</span></div>
-<div class="sk s3"><h3>Power Apps & Automate</h3><p>Governed approval workflows that replace manual email chains.</p><span>Exception Tracker</span></div>
-<div class="sk s4"><h3>Python & Excel VBA</h3><p>Risk scoring and internal tooling that replace manual investigations.</p><span>Fraud Hub</span></div>
-<div class="sk s5"><h3>Financial modeling</h3><p>DCF, sensitivity analysis and multi-source reporting models.</p><span>Uber × Lyft, Client Cube</span></div>
-<div class="sk s6"><h3>Airline revenue & yield</h3><p>Route and station performance, load factors, RASK and fare-class inventory.</p><span>SriLankan Airlines</span></div>
+<!-- CORE SKILLS -->
+<section id="skills" style="padding-top:32px">
+<div class="title"><h2>Core skills</h2><p>The tools I use most, and where I've used them.</p></div>
+<div class="core">
+<div class="sk"><h3>SQL</h3><p>Star schemas, window functions, staging layers and scheduled ETL that hold up when several teams query at once.</p><p class="where"><b>Used in:</b> Reporting Engine, Fraud Hub</p></div>
+<div class="sk"><h3>Python</h3><p>Risk scoring and data-cleaning scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub</p></div>
+<div class="sk"><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
 </div>
+<div class="also"><b style="color:var(--ink)">Also:</b>
+<span class="tags" style="margin:0"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span></span></div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<div class="title"><h2>Selected projects</h2><p>One featured project, then five more. Each links to its code.</p></div>
+<div class="title"><h2>Selected projects</h2><p>Each one links to its code.</p></div>
 
-<!-- FEATURED: swap in your best project and screenshot -->
 <article class="feature">
 <div>
-<span class="chip" style="background:var(--sky)">Featured · Airline analytics</span>
-<h3>Route & Revenue Performance Model</h3>
+<span class="chip">Featured · SQL + Python + VBA</span>
+<h3>iGaming Fraud &amp; Risk Operations Hub</h3>
 <dl>
-<div><dt>What it is</dt><dd>Commercial planning views built for the people who set fares and capacity: demand by O&D pair, seasonal booking curves and route-level yield.</dd></div>
-<div><dt>What I built</dt><dd>The data model and the views planners open day to day, designed around the questions a network planner actually asks.</dd></div>
-<div><dt>Why it matters</dt><dd>Used to adjust fares and capacity mid-season.</dd></div>
+<div><dt>The problem</dt><dd>Fraud investigations ran on manual spreadsheets, which was slow and hard to audit.</dd></div>
+<div><dt>What I built</dt><dd>Python risk scoring, SQL Server staging, Power Query ETL and VBA tooling, feeding live Power BI and Power Apps monitoring.</dd></div>
+<div><dt>Result</dt><dd>Replaced manual spreadsheet investigations. <!-- ADD A NUMBER: e.g. "Scores X records in Y seconds" or "Cut review time from A to B" --></dd></div>
 </dl>
-<a class="btn" href="https://github.com/rashmileema-BI/airline-revenue-route-yield-analytics">View the project</a>
+<div class="tags"><span>Python</span><span>SQL Server</span><span>Power Query</span><span>VBA</span><span>Power BI</span><span>Power Apps</span></div>
+<a class="btn" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub">View the project</a>
 </div>
-<div class="shot"><img src="images/route-model.png" alt="Screenshot of the route and revenue performance dashboard" onerror="this.parentNode.style.display='none'"></div>
+<div class="shot"><img src="images/fraud-hub.png" alt="Screenshot of the fraud and risk dashboard" onerror="this.parentNode.style.display='none'"></div>
 </article>
 
 <div class="proj">
-<a class="pc" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub">
-<div class="shot"><img src="images/fraud-hub.png" alt="Screenshot of the fraud and risk dashboard" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip" style="background:var(--lav)">Fraud analytics</span><h3>iGaming Fraud & Risk Operations Hub</h3>
-<p>Python risk scoring, SQL Server staging, Power Query ETL and VBA tooling, with live Power BI and Power Apps monitoring.</p>
-<p class="result">Replaced manual spreadsheet investigations.</p><span class="more">View project</span></a>
-
-<a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform">
-<div class="shot"><img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip" style="background:var(--mint)">Enterprise BI</span><h3>Executive Strategic Initiatives Platform</h3>
-<p>Tracks initiative health, budget burn and milestone slippage across five departments.</p>
-<p class="result">Automatically flags anything falling behind.</p><span class="more">View project</span></a>
-
 <a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube">
 <div class="shot"><img src="images/reporting-engine.png" alt="Screenshot of the financial reporting dashboard" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip" style="background:var(--peach)">BI automation</span><h3>Multi-Source Financial Reporting Engine</h3>
+<span class="chip">BI automation</span><h3>Multi-Source Financial Reporting Engine</h3>
 <p>A scheduled SQL-to-Power-BI pipeline with a shared DAX measure library.</p>
-<p class="result">Report prep cut from hours to minutes.</p><span class="more">View project</span></a>
+<p class="result">Report prep cut from hours to minutes.</p>
+<div class="tags"><span>SQL</span><span>DAX</span><span>Power BI</span></div>
+<span class="more">View project →</span></a>
 
 <a class="pc" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker">
 <div class="shot"><img src="images/exception-tracker.png" alt="Screenshot of the exception tracker app" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip" style="background:var(--rose)">Power Platform</span><h3>Operations Exception Tracker</h3>
+<span class="chip">Workflow automation</span><h3>Operations Exception Tracker</h3>
 <p>A governed approval workflow replacing a manual Excel and email process.</p>
-<p class="result">Every request logged, routed and auditable.</p><span class="more">View project</span></a>
+<p class="result">Every request logged, routed and auditable.</p>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span></div>
+<span class="more">View project →</span></a>
+
+<a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform">
+<div class="shot"><img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip">Enterprise BI</span><h3>Executive Strategic Initiatives Platform</h3>
+<p>Tracks initiative health, budget burn and milestone slippage across five departments.</p>
+<p class="result">Automatically flags anything falling behind.</p>
+<div class="tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
+<span class="more">View project →</span></a>
 
 <a class="pc" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project">
 <div class="shot"><img src="images/uber-lyft.png" alt="Screenshot of the valuation model" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip" style="background:var(--butter)">Valuation</span><h3>Uber × Lyft Acquisition Model</h3>
+<span class="chip">Financial modelling</span><h3>Uber × Lyft Acquisition Model</h3>
 <p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p>
-<p class="result">Built to hold up under line-by-line questioning.</p><span class="more">View project</span></a>
+<p class="result">Built to hold up under line-by-line questioning.</p>
+<div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
+<span class="more">View project →</span></a>
 </div>
 </section>
 
@@ -185,22 +191,31 @@ nav ul a{padding:8px 12px}
 <section id="experience">
 <div class="title"><h2>Experience</h2></div>
 <div class="xp">
-<div class="job"><time>Jan 2026 to Jun 2026</time><h3>Trainee Revenue Management Analyst</h3><div class="co">SriLankan Airlines</div>
-<ul><li>Analysed monthly route and station performance and recommended demand and revenue drivers to commercial management.</li><li>Ran economic evaluations of proposed flight schedules for network and capacity decisions.</li><li>Prepared ad hoc costing analyses for senior management planning.</li></ul></div>
 <div class="job"><time>Jan 2024 to Jan 2026</time><h3>Associate Business Analyst</h3><div class="co">GTN Tech</div>
-<ul><li>Analysed assets under custody, trading volumes and revenue by asset class for Revolut, supporting quarterly board reporting.</li><li>Built the "Client Cube" Excel model, connected to Power BI, merging multi-source data into one framework.</li><li>Developed Power BI dashboards used across Finance, HR, Operations and Middle Office.</li><li>Cut recurring reporting prep time by 80% through automation.</li></ul></div>
+<ul>
+<li>Cut recurring reporting prep time by 80% through automation.</li>
+<li>Built the "Client Cube" Excel model, connected to Power BI, merging multi-source data into one framework.</li>
+<li>Developed Power BI dashboards used across Finance, HR, Operations and Middle Office.</li>
+<li>Analysed assets under custody, trading volumes and revenue by asset class for Revolut, supporting quarterly board reporting.</li>
+</ul></div>
+<div class="job"><time>Jan 2026 to Jun 2026</time><h3>Trainee Analyst, Revenue Management</h3><div class="co">SriLankan Airlines</div>
+<ul>
+<li>Analysed monthly performance data by route and station and recommended the main drivers to commercial management.</li>
+<li>Ran economic evaluations of proposed schedules to support capacity decisions.</li>
+<li>Prepared ad hoc costing analyses for senior management planning.</li>
+</ul></div>
 </div>
 <div class="edu">
-<div><b>BSc (Hons) Finance & Insurance</b><br>University of Colombo, 2020 to 2024, Second Class Upper</div>
-<div><b>Microsoft Business Analyst</b><br>Professional Certificate, Expected Completion: 2027</div>
+<div><b>BSc (Hons) Finance &amp; Insurance</b><br>University of Colombo, 2020 to 2024, Second Class Upper</div>
+<div><b>Microsoft Business Analyst</b><br>Professional Certificate, expected completion 2027</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" style="padding-top:0">
 <div class="contact">
-<h2>Let's talk revenue, BI or aviation strategy.</h2>
-<p>Open to conversations on airline revenue optimization, dashboard architecture and commercial performance analytics. Based in Colombo, Sri Lanka.</p>
+<h2>Open to Data Analyst roles.</h2>
+<p>If your team needs someone to automate reporting, build reliable SQL pipelines and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
 <div class="links"><a href="mailto:rashmi.kuru@gmail.com">Email me</a><a href="cv/Rashmi-Leema-CV.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a><a href="https://github.com/rashmileema-BI">GitHub</a></div>
 </div>
 </section>
