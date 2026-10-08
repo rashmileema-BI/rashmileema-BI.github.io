@@ -21,6 +21,7 @@ a{color:inherit}
 /* bands */
 .band{padding:64px 0}
 .band.tint{background:var(--tint)}
+.band.white{background:var(--white)}
 .band.dark{background:var(--navy);color:#fff}
 
 /* sticky nav (navy) */
@@ -50,6 +51,12 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .hero .quick{margin:16px 0 0;font-size:15px;color:#B8C2D6}
 .hero .quick a{font-weight:700;color:#fff}
 
+/* stats strip */
+.stats{background:var(--white);border-bottom:1px solid var(--line);padding:30px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--accent);line-height:1.1}
+.stat span{display:block;margin-top:6px;font-size:14px;color:var(--soft)}
+
 /* section titles */
 .title{margin-bottom:26px}
 .title h2{font-size:clamp(26px,3.4vw,34px)}
@@ -69,6 +76,13 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 .tags span{background:var(--white);border:1px solid var(--line);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
 .also .tags{margin:0}
+
+/* about */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
+.about p{color:#3d4756;margin-bottom:14px}
+.offer{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:24px 26px}
+.offer h3{font-size:18px;margin-bottom:10px}
+.offer ul{padding-left:20px;display:grid;gap:8px;color:#3d4756;font-size:15.5px}
 
 /* screenshots (hide themselves if the image is missing) */
 .shot{border-radius:10px;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
@@ -92,6 +106,15 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .pc .result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)}
 .pc .tags{margin:14px 0 0}
 .pc .more{margin-top:14px;font-weight:700;color:var(--accent);font-size:15px}
+
+/* code showcase */
+.code-card{margin-top:22px;background:#0B1424;border-radius:14px;overflow:hidden;border:1px solid #1d2b47}
+.code-card header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#111e36;color:#B8C2D6;font-size:14px}
+.code-card header b{color:#fff}
+.code-card pre{margin:0;padding:20px;overflow-x:auto;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#D6DEEE}
+.code-card .k{color:#7FB0FF;font-weight:700}
+.code-card .f{color:#F2C879}
+.code-card .c{color:#6F7F9E}
 
 /* experience */
 .xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
@@ -121,9 +144,12 @@ footer{background:#0A1326;color:#8C97AD;padding:22px 0;font-size:14px}
 html{scroll-padding-top:100px}
 .band{padding:48px 0}
 nav{padding:10px 20px;gap:6px}
+nav ul{flex-wrap:wrap}
 nav ul a{padding:7px 10px;font-size:14px}
 .hero{grid-template-columns:1fr;gap:24px}
 .photo{width:140px;height:140px}
+.stats .wrap{grid-template-columns:repeat(2,1fr)}
+.about{grid-template-columns:1fr}
 .feature{grid-template-columns:1fr;padding:22px}
 .proj{grid-template-columns:1fr}
 .xp{grid-template-columns:1fr}
@@ -139,7 +165,7 @@ html{scroll-behavior:auto}
 <header class="top" id="topbar">
 <nav aria-label="Main">
 <a class="logo" href="#top">Rashmi Leema</a>
-<ul><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+<ul><li><a href="#skills">Skills</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
 </nav>
 </header>
 
@@ -162,6 +188,16 @@ html{scroll-behavior:auto}
 </div>
 </div>
 
+<!-- STATS STRIP -->
+<div class="stats">
+<div class="wrap">
+<div class="stat"><b>80%</b><span>less recurring reporting prep</span></div>
+<div class="stat"><b>2+ yrs</b><span>building analytics solutions</span></div>
+<div class="stat"><b>4</b><span>teams served: Finance, HR, Ops, Middle Office</span></div>
+<div class="stat"><b>5</b><span>end-to-end projects on GitHub</span></div>
+</div>
+</div>
+
 <!-- CORE SKILLS -->
 <section class="band tint" id="skills">
 <div class="wrap">
@@ -173,6 +209,28 @@ html{scroll-behavior:auto}
 </div>
 <div class="also"><b>Also:</b>
 <div class="tags"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span></div></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="band white" id="about">
+<div class="wrap">
+<div class="title"><h2>About me</h2></div>
+<div class="about">
+<div>
+<p>I'm a data analyst who likes replacing repetitive work with systems that run themselves. I start from the question the business is asking, build the SQL and Python behind it, and finish with a dashboard or tool people actually open.</p>
+<p>My background is in finance, so I'm comfortable with messy multi-source data and with explaining numbers to non-technical teams.</p>
+</div>
+<div class="offer">
+<h3>What I can do for your team</h3>
+<ul>
+<li>Automate recurring reports end to end</li>
+<li>Build reliable SQL models and ETL</li>
+<li>Turn raw data into dashboards stakeholders trust</li>
+<li>Replace manual spreadsheet processes with governed workflows</li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 
@@ -228,6 +286,26 @@ html{scroll-behavior:auto}
 <p class="result">Built to hold up under line-by-line questioning.</p>
 <div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
 <span class="more">View project →</span></a>
+</div>
+
+<div class="code-card">
+<header><b>SQL sample · weighted risk scoring view</b><span>Fraud Hub</span></header>
+<pre><code><span class="c">-- Sum weighted rule hits per player, then band the score</span>
+<span class="k">WITH</span> f <span class="k">AS</span> (
+  <span class="k">SELECT</span> player_id, rule_code, <span class="f">MIN</span>(detail) <span class="k">AS</span> detail
+  <span class="k">FROM</span> core.risk_flags
+  <span class="k">GROUP BY</span> player_id, rule_code
+)
+<span class="k">SELECT</span> f.player_id, p.country,
+       <span class="f">SUM</span>(w.points) <span class="k">AS</span> risk_score,
+       <span class="k">CASE WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 60 <span class="k">THEN</span> 'High'
+            <span class="k">WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 40 <span class="k">THEN</span> 'Medium'
+            <span class="k">ELSE</span> 'Low' <span class="k">END AS</span> risk_band,
+       <span class="f">STRING_AGG</span>(f.rule_code, '; ') <span class="k">WITHIN GROUP</span> (<span class="k">ORDER BY</span> f.rule_code) <span class="k">AS</span> rules
+<span class="k">FROM</span> f
+<span class="k">JOIN</span> core.rule_weights <span class="k">AS</span> w <span class="k">ON</span> w.rule_code = f.rule_code
+<span class="k">JOIN</span> core.players <span class="k">AS</span> p <span class="k">ON</span> p.player_id = f.player_id
+<span class="k">GROUP BY</span> f.player_id, p.country;</code></pre>
 </div>
 </div>
 </section>
@@ -301,7 +379,7 @@ html{scroll-behavior:auto}
           if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
         });
       },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.title,.sk,.also,.feature,.pc,.job,.edu>div,.cta>*').forEach(function(el){
+      document.querySelectorAll('.title,.sk,.also,.feature,.pc,.job,.edu>div,.cta>*,.stat,.code-card,.about>*').forEach(function(el){
         el.classList.add('reveal');
         var i=Array.prototype.indexOf.call(el.parentNode.children,el);
         el.style.setProperty('--d',(i%3)*0.08+'s');
