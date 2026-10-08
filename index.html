@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rashmi Leema | Data Analyst (SQL, Python, Excel Automation)</title>
-<meta name="description" content="Data analyst specialising in SQL, Python and Excel automation. I build reporting pipelines and dashboards that replace manual work.">
+<meta name="description" content="Data analyst specialising in SQL, Python and Excel automation. I build reporting models, SQL data layers and dashboards that replace manual work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -18,11 +18,13 @@ a{color:inherit}
 :focus-visible{outline:3px solid #6C93F5;outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
+/* bands */
 .band{padding:64px 0}
 .band.tint{background:var(--tint)}
 .band.white{background:var(--white)}
 .band.dark{background:var(--navy);color:#fff}
 
+/* sticky nav */
 .top{position:sticky;top:0;z-index:50;background:rgba(15,27,51,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .2s}
 .top.scrolled{box-shadow:0 6px 20px -10px rgba(0,0,0,.5)}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 28px;max-width:1080px;margin:0 auto}
@@ -32,6 +34,7 @@ nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;f
 nav ul a:hover{background:rgba(255,255,255,.1);color:#fff}
 nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 
+/* hero */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
 .photo{width:190px;height:190px;border-radius:50%;background:var(--tint) center/cover;border:5px solid rgba(255,255,255,.15);box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
 .hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff}
@@ -48,15 +51,18 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .hero .quick{margin:16px 0 0;font-size:15px;color:#B8C2D6}
 .hero .quick a{font-weight:700;color:#fff}
 
+/* stats strip */
 .stats{background:var(--white);border-bottom:1px solid var(--line);padding:30px 0}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
 .stat b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--accent);line-height:1.1}
 .stat span{display:block;margin-top:6px;font-size:14px;color:var(--soft)}
 
+/* titles */
 .title{margin-bottom:26px}
 .title h2{font-size:clamp(26px,3.4vw,34px)}
 .title p{color:var(--soft);margin-top:6px;max-width:60ch}
 
+/* core skills */
 .core{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
 .sk{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:26px}
 .sk h3{font-size:21px;margin-bottom:8px}
@@ -66,25 +72,35 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .also{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
 .also b{color:var(--ink)}
 
+/* tags */
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
 .tags span{background:var(--white);border:1px solid var(--line);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
 .also .tags{margin:0}
 
+/* about */
 .about{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
 .about p{color:#3d4756;margin-bottom:14px}
 .offer{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:24px 26px}
 .offer h3{font-size:18px;margin-bottom:10px}
 .offer ul{padding-left:20px;display:grid;gap:8px;color:#3d4756;font-size:15.5px}
 
+/* screenshots (hide themselves if the image is missing) */
 .shot{border-radius:10px;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
-.shot img{display:block;width:100%;height:auto}
+.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
 
+/* featured */
 .feature{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;margin-bottom:22px}
 .chip{display:inline-block;background:var(--tint);color:var(--accent);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:700}
 .feature h3{font-size:clamp(23px,2.8vw,29px);margin:12px 0}
 .feature dl{display:grid;gap:12px;margin:16px 0 18px}
 .feature dt{font-weight:800;font-size:14px;color:var(--accent)}
 .feature dd{color:#3d4756;font-size:15.5px;margin:0}
+
+/* pipeline strip */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 22px;counter-reset:s}
+.flow div{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;color:var(--soft);counter-increment:s}
+.flow b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+.flow b::before{content:counter(s);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px}
 
 /* Fraud Hub gallery */
 .gallery{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:22px}
@@ -98,16 +114,24 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .gpanel video{display:block;width:100%;height:auto;border-radius:10px;background:#0B1424}
 .gcap{margin-top:12px;color:var(--soft);font-size:15px;max-width:80ch}
 
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,14,28,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;border-radius:8px}
+
+/* projects: 2 x 2 */
 .proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;transition:box-shadow .2s,transform .2s}
 .pc:hover{box-shadow:0 14px 30px -14px rgba(27,34,48,.3);transform:translateY(-2px)}
 .pc .shot{margin-bottom:16px}
+.pc .shot img{cursor:inherit}
 .pc h3{font-size:19px;margin:12px 0 8px}
 .pc p{color:var(--soft);font-size:15.5px}
 .pc .result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)}
 .pc .tags{margin:14px 0 0}
 .pc .more{margin-top:14px;font-weight:700;color:var(--accent);font-size:15px}
 
+/* code showcase */
 .code-card{margin-top:22px;background:#0B1424;border-radius:14px;overflow:hidden;border:1px solid #1d2b47}
 .code-card header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#111e36;color:#B8C2D6;font-size:14px}
 .code-card header b{color:#fff}
@@ -116,6 +140,7 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .code-card .f{color:#F2C879}
 .code-card .c{color:#6F7F9E}
 
+/* experience */
 .xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
 .job{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px}
 .job time{color:var(--soft);font-size:14px;font-weight:700}
@@ -125,6 +150,7 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .edu{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .edu div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 24px;font-size:15.5px}
 
+/* contact */
 .cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:#fff}
 .cta p{margin:12px 0 26px;color:#B8C2D6;max-width:52ch}
 .links{display:flex;gap:10px;flex-wrap:wrap}
@@ -133,21 +159,27 @@ nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 .links a:hover{background:var(--accent);color:#fff}
 footer{background:#0A1326;color:#8C97AD;padding:22px 0;font-size:14px}
 
+/* scroll reveal */
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .js .reveal{opacity:0}
 .js .reveal.in{opacity:1;animation:rise .6s ease backwards;animation-delay:var(--d,0s)}
 
+@media(max-width:900px){
+.flow{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:760px){
 html{scroll-padding-top:100px}
 .band{padding:48px 0}
 nav{padding:10px 20px;gap:6px}
-nav ul{flex-wrap:wrap}
-nav ul a{padding:7px 10px;font-size:14px}
+nav ul{flex-wrap:nowrap;overflow-x:auto;width:100%;max-width:100%;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav ul a{padding:7px 10px;font-size:14px;white-space:nowrap}
 .hero{grid-template-columns:1fr;gap:24px}
 .photo{width:140px;height:140px}
 .stats .wrap{grid-template-columns:repeat(2,1fr)}
 .about{grid-template-columns:1fr}
 .feature{grid-template-columns:1fr;padding:22px}
+.flow{grid-template-columns:1fr}
 .gallery{padding:20px}
 .proj{grid-template-columns:1fr}
 .xp{grid-template-columns:1fr}
@@ -175,7 +207,7 @@ html{scroll-behavior:auto}
 <div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
 <div>
 <h1>Data Analyst who automates reporting with SQL, Python and Excel.</h1>
-<p>Two-plus years building pipelines, models and dashboards for Finance, HR, Operations and Middle Office teams. I cut recurring reporting prep by 80% by replacing manual work with automation.</p>
+<p>Two-plus years building reporting models, SQL data layers and dashboards for Finance, HR, Operations and Middle Office teams. I cut recurring reporting prep by 80% by replacing manual work with automation.</p>
 <div class="stack"><span>SQL</span><span>Python</span><span>Excel VBA</span><span>Power Query</span><span>Power BI</span><span>Power Apps</span></div>
 <div class="btns">
 <a class="btn" href="cv/Rashmi-Leema-CV.pdf" download>Download CV</a>
@@ -192,7 +224,7 @@ html{scroll-behavior:auto}
 <div class="stat"><b>80%</b><span>less recurring reporting prep</span></div>
 <div class="stat"><b>2+ yrs</b><span>building analytics solutions</span></div>
 <div class="stat"><b>4</b><span>teams served: Finance, HR, Ops, Middle Office</span></div>
-<div class="stat"><b>5</b><span>end-to-end projects on GitHub</span></div>
+<div class="stat"><b>5</b><span>portfolio projects on GitHub</span></div>
 </div>
 </div>
 
@@ -201,7 +233,7 @@ html{scroll-behavior:auto}
 <div class="wrap">
 <div class="title"><h2>Core skills</h2><p>The tools I use most, and where I've used them.</p></div>
 <div class="core">
-<div class="sk"><h3>SQL</h3><p>Star schemas, window functions, staging layers and scheduled ETL that hold up when several teams query at once.</p><p class="where"><b>Used in:</b> Reporting Engine, Fraud Hub</p></div>
+<div class="sk"><h3>SQL</h3><p>Staging and core layers, stored procedures, views and window functions that turn raw files into scored, query-ready tables.</p><p class="where"><b>Used in:</b> Reporting Engine, Fraud Hub</p></div>
 <div class="sk"><h3>Python</h3><p>Synthetic data generation and risk-scoring scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub</p></div>
 <div class="sk"><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
 </div>
@@ -223,7 +255,7 @@ html{scroll-behavior:auto}
 <h3>What I can do for your team</h3>
 <ul>
 <li>Automate recurring reports end to end</li>
-<li>Build reliable SQL models and ETL</li>
+<li>Build clean SQL data layers and repeatable load scripts</li>
 <li>Turn raw data into dashboards stakeholders trust</li>
 <li>Replace manual spreadsheet processes with governed workflows</li>
 </ul>
@@ -244,6 +276,7 @@ html{scroll-behavior:auto}
 <dl>
 <div><dt>The problem</dt><dd>Fraud review is often run on manual spreadsheets, which is slow and hard to audit. I built an end-to-end version on synthetic data to show a better way.</dd></div>
 <div><dt>What I built</dt><dd>Python-generated test data, SQL Server staging and scoring, six weighted rules, automatic case assignment with SLA deadlines, a three-page Power BI dashboard (overview, risk, reconciliation) and a Power Apps case app.</dd></div>
+<div><dt>What the data showed</dt><dd>In the June 2026 synthetic data, card payments failed most often (5.87%), followed by crypto (5.72%), bank transfer (4.65%) and e-wallet (4.18%).</dd></div>
 <div><dt>Result</dt><dd>Tested on 2,000 synthetic players and 50,652 payments with 235 planted fraud accounts: all 235 were flagged (100% recall) in 0.4 seconds, and every High and Medium case was a planted account.</dd></div>
 </dl>
 <div class="tags"><span>Python</span><span>SQL Server</span><span>Power Query</span><span>VBA</span><span>Power BI</span><span>Power Apps</span><span>Synthetic data</span></div>
@@ -252,18 +285,26 @@ html{scroll-behavior:auto}
 <div class="shot"><img src="images/fraud-overview.png" alt="Power BI overview page showing transactions, failure rate, deposits and withdrawals" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
 </article>
 
+<div class="flow" aria-label="How the Fraud Hub pipeline works">
+<div><b>Generate</b>Python creates synthetic players, payments, devices and bonuses.</div>
+<div><b>Stage</b>Raw files load into untyped SQL Server staging tables.</div>
+<div><b>Transform</b>Types, blanks and keys are cleaned into the core tables.</div>
+<div><b>Score</b>Stored procedures apply six weighted rules and open cases.</div>
+<div><b>Serve</b>Power BI and Power Apps read the cases.</div>
+</div>
+
 <!-- FRAUD HUB IN ACTION -->
 <div class="gallery">
 <h3>Fraud Hub in action</h3>
 <div class="gtabs" role="tablist" aria-label="Fraud Hub screens">
-<button role="tab" id="t-risk" aria-selected="true" aria-controls="g-risk">Risk queue</button>
-<button role="tab" id="t-rec" aria-selected="false" aria-controls="g-rec">Reconciliation</button>
-<button role="tab" id="t-app" aria-selected="false" aria-controls="g-app">Power Apps case app</button>
+<button type="button" role="tab" id="t-risk" aria-selected="true" aria-controls="g-risk">Risk queue</button>
+<button type="button" role="tab" id="t-rec" aria-selected="false" aria-controls="g-rec">Reconciliation</button>
+<button type="button" role="tab" id="t-app" aria-selected="false" aria-controls="g-app">Power Apps case app</button>
 </div>
 
 <div class="gpanel" id="g-risk" role="tabpanel" aria-labelledby="t-risk">
 <div class="shot"><img src="images/fraud-risk.png" alt="Power BI risk page with a ranked risk queue and shared card holders" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
-<p class="gcap">Ranks players by risk score and level, with the rules that triggered each one, and lists shared-card holders. This is the June 2026 view of the synthetic data: 17 High, 57 Medium, 15 shared cards.</p>
+<p class="gcap">Ranks players by risk score and level, with the rules that triggered each one, and lists shared-card holders. June 2026 view of the synthetic data: 17 High, 57 Medium, 15 shared cards. Click the image to enlarge.</p>
 </div>
 
 <div class="gpanel" id="g-rec" role="tabpanel" aria-labelledby="t-rec" hidden>
@@ -276,7 +317,7 @@ html{scroll-behavior:auto}
 <source src="images/fraud-app-demo.mp4" type="video/mp4">
 Your browser can't play this video.
 </video>
-<p class="gcap">Analyst case-management app built in Power Apps on top of the SQL Server case queue. Screen recording.</p>
+<p class="gcap">Power Apps case app for working the fraud case queue. Screen recording.</p>
 </div>
 </div>
 
@@ -284,8 +325,8 @@ Your browser can't play this video.
 <a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube">
 <div class="shot"><img src="images/reporting-engine.png" alt="Screenshot of the financial reporting dashboard" onerror="this.parentNode.style.display='none'"></div>
 <span class="chip">BI automation</span><h3>Multi-Source Financial Reporting Engine</h3>
-<p>A scheduled SQL-to-Power-BI pipeline with a shared DAX measure library.</p>
-<p class="result">Report prep cut from hours to minutes.</p>
+<p>A SQL-to-Power-BI pipeline with a shared DAX measure library.</p>
+<p class="result">Replaces a manual monthly reporting process with a refreshable report.</p>
 <div class="tags"><span>SQL</span><span>DAX</span><span>Power BI</span></div>
 <span class="more">View project →</span></a>
 
@@ -366,13 +407,15 @@ Your browser can't play this video.
 <section class="band dark" id="contact">
 <div class="wrap cta">
 <h2>Open to Data Analyst roles.</h2>
-<p>If your team needs someone to automate reporting, build reliable SQL pipelines and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
+<p>If your team needs someone to automate reporting, build clean SQL layers and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
 <div class="links"><a href="mailto:rashmi.kuru@gmail.com">Email me</a><a href="cv/Rashmi-Leema-CV.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a><a href="https://github.com/rashmileema-BI">GitHub</a></div>
 </div>
 </section>
 
 </main>
 <footer><div class="wrap">© Rashmi Leema</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
 
 <script>
 (function(){
@@ -387,7 +430,18 @@ Your browser can't play this video.
     });
   });
 
-  /* 1. Sticky nav shadow + section highlight */
+  /* 1. Click-to-enlarge for dashboard screenshots */
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+  function openLb(i){lbImg.src=i.currentSrc||i.src;lbImg.alt=i.alt;lb.classList.add('open');}
+  document.querySelectorAll('.feature .shot img,.gallery .shot img').forEach(function(i){
+    i.setAttribute('tabindex','0');i.setAttribute('role','button');
+    i.addEventListener('click',function(){openLb(i);});
+    i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}});
+  });
+  lb.addEventListener('click',function(){lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+
+  /* 2. Sticky nav shadow + section highlight */
   var bar=document.getElementById('topbar');
   function onScroll(){bar.classList.toggle('scrolled',window.scrollY>10);}
   window.addEventListener('scroll',onScroll,{passive:true});
@@ -408,7 +462,7 @@ Your browser can't play this video.
     },{rootMargin:'-35% 0px -60% 0px'});
     document.querySelectorAll('main section[id]').forEach(function(s){spy.observe(s);});
 
-    /* 2. Scroll reveal */
+    /* 3. Scroll reveal (skipped for reduced motion) */
     if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
       document.documentElement.classList.add('js');
       var io=new IntersectionObserver(function(entries){
@@ -416,7 +470,7 @@ Your browser can't play this video.
           if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
         });
       },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.title,.sk,.also,.feature,.gallery,.pc,.job,.edu>div,.cta>*,.stat,.code-card,.about>*').forEach(function(el){
+      document.querySelectorAll('.title,.sk,.also,.feature,.flow>div,.gallery,.pc,.job,.edu>div,.cta>*,.stat,.code-card,.about>*').forEach(function(el){
         el.classList.add('reveal');
         var i=Array.prototype.indexOf.call(el.parentNode.children,el);
         el.style.setProperty('--d',(i%3)*0.08+'s');
