@@ -9,47 +9,47 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F8F6FC;--ink:#2A2540;--soft:#5f5a78;--accent:#5B4BDB;--line:#E4DEF5;--tint:#EEEAFB;--white:#fff;--lav:#DDD6F7}
+:root{--bg:#F7F8FA;--ink:#1B2230;--soft:#556070;--accent:#1D4ED8;--line:#D9E0EC;--tint:#E8EFFC;--white:#fff;--navy:#0F1B33}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--bg);color:var(--ink);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
 h1,h2,h3{line-height:1.2;letter-spacing:-.015em;font-weight:800}
 a{color:inherit}
-:focus-visible{outline:3px solid #5B4BDB;outline-offset:3px}
+:focus-visible{outline:3px solid #6C93F5;outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
 /* bands */
 .band{padding:64px 0}
 .band.tint{background:var(--tint)}
 .band.white{background:var(--white)}
-.band.dark{background:var(--lav);color:var(--ink)}
+.band.dark{background:var(--navy);color:#fff}
 
 /* sticky nav */
-.top{position:sticky;top:0;z-index:50;background:rgba(248,246,252,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .2s}
-.top.scrolled{box-shadow:0 6px 20px -10px rgba(91,75,219,.3)}
+.top{position:sticky;top:0;z-index:50;background:rgba(15,27,51,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .2s}
+.top.scrolled{box-shadow:0 6px 20px -10px rgba(0,0,0,.5)}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 28px;max-width:1080px;margin:0 auto}
-.logo{font-weight:800;font-size:17px;text-decoration:none;color:var(--ink)}
+.logo{font-weight:800;font-size:17px;text-decoration:none;color:#fff}
 nav ul{display:flex;gap:4px;list-style:none;padding:0}
-nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:var(--soft);transition:background .2s,color .2s}
-nav ul a:hover{background:var(--lav);color:var(--ink)}
-nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
+nav ul a{display:block;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:#B8C2D6;transition:background .2s,color .2s}
+nav ul a:hover{background:rgba(255,255,255,.1);color:#fff}
+nav ul a.active{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
 
 /* hero */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
-.photo{width:190px;height:190px;border-radius:50%;background:var(--tint) center/cover;border:5px solid #fff;box-shadow:0 10px 30px -10px rgba(91,75,219,.35)}
-.hero h1{font-size:clamp(30px,4.4vw,46px);color:var(--ink)}
-.hero p{margin:16px 0 22px;color:var(--soft);font-size:18px;max-width:60ch}
+.photo{width:190px;height:190px;border-radius:50%;background:var(--tint) center/cover;border:5px solid rgba(255,255,255,.15);box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff}
+.hero p{margin:16px 0 22px;color:#B8C2D6;font-size:18px;max-width:60ch}
 .stack{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.stack span{background:rgba(255,255,255,.7);border:1px solid rgba(91,75,219,.25);color:var(--ink);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
+.stack span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-block;padding:12px 24px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;transition:background .2s}
 .btn:hover{background:var(--ink)}
-.hero .btn{background:var(--accent);color:#fff}
-.hero .btn:hover{background:var(--ink)}
-.hero .btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
-.hero .btn.alt:hover{background:var(--tint)}
-.hero .quick{margin:16px 0 0;font-size:15px;color:var(--soft)}
-.hero .quick a{font-weight:700;color:var(--accent)}
+.hero .btn{background:#fff;color:var(--navy)}
+.hero .btn:hover{background:var(--tint)}
+.hero .btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.hero .btn.alt:hover{background:rgba(255,255,255,.1)}
+.hero .quick{margin:16px 0 0;font-size:15px;color:#B8C2D6}
+.hero .quick a{font-weight:700;color:#fff}
 
 /* stats strip */
 .stats{background:var(--white);border-bottom:1px solid var(--line);padding:30px 0}
@@ -65,11 +65,8 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 /* core skills */
 .core{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
 .sk{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:26px}
-.core .sk:nth-child(1){background:#DDD6F7}
-.core .sk:nth-child(2){background:#CDE3F7}
-.core .sk:nth-child(3){background:#CBEBDC}
 .sk h3{font-size:21px;margin-bottom:8px}
-.sk p{color:#403b58;font-size:15.5px}
+.sk p{color:#3d4756;font-size:15.5px}
 .sk .where{margin-top:14px;font-size:14px;color:var(--soft)}
 .sk .where b{color:var(--ink)}
 .also{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
@@ -82,10 +79,10 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 
 /* about */
 .about{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
-.about p{color:#403b58;margin-bottom:14px}
+.about p{color:#3d4756;margin-bottom:14px}
 .offer{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:24px 26px}
 .offer h3{font-size:18px;margin-bottom:10px}
-.offer ul{padding-left:20px;display:grid;gap:8px;color:#403b58;font-size:15.5px}
+.offer ul{padding-left:20px;display:grid;gap:8px;color:#3d4756;font-size:15.5px}
 
 /* screenshots (hide themselves if the image is missing) */
 .shot{border-radius:10px;overflow:hidden;background:var(--tint);border:1px solid var(--line)}
@@ -97,7 +94,7 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 .feature h3{font-size:clamp(23px,2.8vw,29px);margin:12px 0}
 .feature dl{display:grid;gap:12px;margin:16px 0 18px}
 .feature dt{font-weight:800;font-size:14px;color:var(--accent)}
-.feature dd{color:#403b58;font-size:15.5px;margin:0}
+.feature dd{color:#3d4756;font-size:15.5px;margin:0}
 
 /* pipeline strip */
 .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 22px;counter-reset:s}
@@ -113,19 +110,19 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 .gtabs button:hover{background:var(--tint);color:var(--ink)}
 .gtabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
 .gpanel[hidden]{display:none}
-.gpanel .shot{background:var(--tint)}
-.gpanel video{display:block;width:100%;height:auto;border-radius:10px;background:var(--tint)}
+.gpanel .shot{background:#0B1424}
+.gpanel video{display:block;width:100%;height:auto;border-radius:10px;background:#0B1424}
 .gcap{margin-top:12px;color:var(--soft);font-size:15px;max-width:80ch}
 
 /* lightbox */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(42,37,64,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,14,28,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
 .lb.open{display:flex}
 .lb img{max-width:100%;max-height:100%;border-radius:8px}
 
 /* projects: 2 x 2 */
 .proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;transition:box-shadow .2s,transform .2s}
-.pc:hover{box-shadow:0 14px 30px -14px rgba(91,75,219,.35);transform:translateY(-2px)}
+.pc:hover{box-shadow:0 14px 30px -14px rgba(27,34,48,.3);transform:translateY(-2px)}
 .pc .shot{margin-bottom:16px}
 .pc .shot img{cursor:inherit}
 .pc h3{font-size:19px;margin:12px 0 8px}
@@ -135,13 +132,13 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 .pc .more{margin-top:14px;font-weight:700;color:var(--accent);font-size:15px}
 
 /* code showcase */
-.code-card{margin-top:22px;background:#F3F0FD;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-.code-card header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#E7E2FA;color:var(--soft);font-size:14px}
-.code-card header b{color:var(--ink)}
-.code-card pre{margin:0;padding:20px;overflow-x:auto;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#2A2540}
-.code-card .k{color:#5B4BDB;font-weight:700}
-.code-card .f{color:#A05A00}
-.code-card .c{color:#6b6688}
+.code-card{margin-top:22px;background:#0B1424;border-radius:14px;overflow:hidden;border:1px solid #1d2b47}
+.code-card header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#111e36;color:#B8C2D6;font-size:14px}
+.code-card header b{color:#fff}
+.code-card pre{margin:0;padding:20px;overflow-x:auto;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#D6DEEE}
+.code-card .k{color:#7FB0FF;font-weight:700}
+.code-card .f{color:#F2C879}
+.code-card .c{color:#6F7F9E}
 
 /* experience */
 .xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
@@ -149,18 +146,18 @@ nav ul a.active{background:var(--lav);color:var(--accent);font-weight:700}
 .job time{color:var(--soft);font-size:14px;font-weight:700}
 .job h3{font-size:20px;margin:8px 0 2px}
 .job .co{color:var(--accent);font-weight:700;margin-bottom:12px}
-.job ul{padding-left:20px;display:grid;gap:8px;color:#403b58;font-size:15.5px}
+.job ul{padding-left:20px;display:grid;gap:8px;color:#3d4756;font-size:15.5px}
 .edu{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .edu div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 24px;font-size:15.5px}
 
 /* contact */
-.cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:var(--ink)}
-.cta p{margin:12px 0 26px;color:var(--soft);max-width:52ch}
+.cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:#fff}
+.cta p{margin:12px 0 26px;color:#B8C2D6;max-width:52ch}
 .links{display:flex;gap:10px;flex-wrap:wrap}
-.links a{padding:12px 22px;border-radius:8px;background:#fff;font-weight:700;text-decoration:none;color:var(--ink);transition:background .2s}
-.links a:first-child{background:var(--accent);color:#fff}
-.links a:hover{background:var(--ink);color:#fff}
-footer{background:var(--bg);border-top:1px solid var(--line);color:var(--soft);padding:22px 0;font-size:14px}
+.links a{padding:12px 22px;border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;text-decoration:none;color:#fff;transition:background .2s}
+.links a:first-child{background:#fff;color:var(--navy)}
+.links a:hover{background:var(--accent);color:#fff}
+footer{background:#0A1326;color:#8C97AD;padding:22px 0;font-size:14px}
 
 /* scroll reveal */
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -236,8 +233,8 @@ html{scroll-behavior:auto}
 <div class="wrap">
 <div class="title"><h2>Core skills</h2><p>The tools I use most, and where I've used them.</p></div>
 <div class="core">
-<div class="sk"><h3>SQL</h3><p>Staging and core layers, stored procedures, views and window functions that turn raw files into scored, query-ready tables.</p><p class="where"><b>Used in:</b> Reporting Engine, Fraud Hub</p></div>
-<div class="sk"><h3>Python</h3><p>Synthetic data generation and risk-scoring scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub</p></div>
+<div class="sk"><h3>SQL</h3><p>Staging and core layers, star schemas, stored procedures, views and window functions that turn raw files into scored, query-ready tables.</p><p class="where"><b>Used in:</b> Variance Platform, Fraud Hub</p></div>
+<div class="sk"><h3>Python</h3><p>Synthetic data generation and risk-scoring scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub, Exception Tracker</p></div>
 <div class="sk"><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
 </div>
 <div class="also"><b>Also:</b>
@@ -326,19 +323,19 @@ Your browser can't play this video.
 
 <div class="proj">
 <a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube">
-<div class="shot"><img src="images/reporting-engine.png" alt="Screenshot of the financial reporting dashboard" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">BI automation</span><h3>Multi-Source Financial Reporting Engine</h3>
-<p>A SQL-to-Power-BI pipeline with a shared DAX measure library.</p>
-<p class="result">Replaces a manual monthly reporting process with a refreshable report.</p>
-<div class="tags"><span>SQL</span><span>DAX</span><span>Power BI</span></div>
+<div class="shot"><img src="images/variance-dashboard.png" alt="Power BI group performance matrix showing revenue, operating expenses, margin and budget variance by region" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip">Financial BI · BRD to dashboard</span><h3>Multi-Entity Financial Variance &amp; Consolidation Platform</h3>
+<p>Written up from a business requirements document: a SQL Server star schema and stored procedure consolidate three regional entities into a monthly actual-vs-budget summary, feeding a Power BI variance dashboard. In the 2025 data, the group finished 0.26% ahead of budget, led by Americas, with EMEA 0.23% under.</p>
+<p class="result">Consolidates 10,983 transactions into 288 monthly summary rows (24 months × 3 regions × 4 account categories) in under 0.2 seconds. Actual and budget reconcile to the cent, and every run is logged. Built on illustrative data.</p>
+<div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Star schema</span><span>Power BI</span><span>DAX</span><span>BRD</span></div>
 <span class="more">View project →</span></a>
 
 <a class="pc" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker">
-<div class="shot"><img src="images/exception-tracker.png" alt="Screenshot of the exception tracker app" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">Workflow automation</span><h3>Operations Exception Tracker</h3>
-<p>A governed approval workflow replacing a manual Excel and email process.</p>
-<p class="result">Every request logged, routed and auditable.</p>
-<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SharePoint</span></div>
+<div class="shot"><img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip">Workflow automation</span><h3>Operations Exception &amp; Approval Tracker</h3>
+<p>A Power Apps tracker on SQL Server for logging, searching and approving operational exceptions, with a Power Automate approval and escalation flow.</p>
+<p class="result">High-severity exceptions are routed to a manager, approved or rejected with email notifications, and escalated if left unresolved. Tested on 2,000 synthetic records.</p>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span><span>Synthetic data</span></div>
 <span class="more">View project →</span></a>
 
 <a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform">
@@ -350,10 +347,10 @@ Your browser can't play this video.
 <span class="more">View project →</span></a>
 
 <a class="pc" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project">
-<div class="shot"><img src="images/uber-lyft.png" alt="Screenshot of the valuation model" onerror="this.parentNode.style.display='none'"></div>
+<div class="shot"><img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" onerror="this.parentNode.style.display='none'"></div>
 <span class="chip">Financial modelling</span><h3>Uber × Lyft Acquisition Model</h3>
 <p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p>
-<p class="result">Built to hold up under line-by-line questioning.</p>
+<p class="result">Base case: enterprise value $18.2B, implied share price $48.27 vs $16.53 current, synergies worth $2.1B. Most sensitive to WACC and terminal growth.</p>
 <div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
 <span class="more">View project →</span></a>
 </div>
@@ -387,16 +384,19 @@ Your browser can't play this video.
 <div class="xp">
 <div class="job"><time>Jan 2024 to Jan 2026</time><h3>Associate Business Analyst</h3><div class="co">GTN Tech</div>
 <ul>
-<li>Cut recurring reporting prep time by 80% through automation.</li>
-<li>Built the "Client Cube" Excel model, connected to Power BI, merging multi-source data into one framework.</li>
-<li>Developed Power BI dashboards used across Finance, HR, Operations and Middle Office.</li>
-<li>Analysed assets under custody, trading volumes and revenue by asset class for Revolut, supporting quarterly board reporting.</li>
+<li>Built Excel VBA macros and automated workbooks that removed manual data consolidation, improved accuracy and standardized recurring Finance and Operations reports.</li>
+<li>Consolidated data from multiple sources into reporting-ready datasets using Excel Power Query and Power Pivot, supported by Python and SQL Server - SSMS.</li>
+<li>Designed and built a multi-client data cube in Excel, giving executives cross-asset visibility; it supported client acquisition for a major global fintech client.</li>
+<li>Extended Excel automation with Power Apps and Power Automate workflows, cutting board-meeting report preparation from ~8 hours to ~1.5 hours.</li>
+<li>Gathered requirements with Finance, HR, Operations and Middle Office, and delivered Excel and Power BI dashboards for performance tracking.</li>
+<li>Maintained live tools based on user feedback, wrote process maps and user guides.</li>
+<li>Produced Excel-based trend and predictive analyses on trading activity, AUC and revenue drivers, and prepared strategic content for a CEO keynote at Money 20/20.</li>
 </ul></div>
 <div class="job"><time>Jan 2026 to Jun 2026</time><h3>Trainee Analyst, Revenue Management</h3><div class="co">SriLankan Airlines</div>
 <ul>
-<li>Analysed monthly performance data by route and station and recommended the main drivers to commercial management.</li>
-<li>Ran economic evaluations of proposed schedules to support capacity decisions.</li>
-<li>Prepared ad hoc costing analyses for senior management planning.</li>
+<li>Built and maintained Excel analyses of monthly route and station performance, with recommendations to commercial management on demand and revenue drivers.</li>
+<li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
+<li>Prepared ad hoc costing analyses and reports for Senior Management planning purposes.</li>
 </ul></div>
 </div>
 <div class="edu">
