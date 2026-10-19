@@ -7,582 +7,232 @@
 <meta name="description" content="Data analyst specialising in SQL, Python and Excel automation. I build reporting models, SQL data layers and dashboards that replace manual work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#142D39;        /* primary: headlines, nav, footer */
-  --teal:#087E83;       /* secondary: actions, links, active */
-  --mint:#C5E9E3;       /* accent: callouts, tags (ink text only) */
-  --paper:#F5F3EE;      /* background canvas */
-  --white:#FFFFFF;      /* surface */
-  --text:#253F4B;       /* body copy */
-  --soft:#526671;       /* supporting text */
-  --line:#CCD5D6;       /* borders (decorative) */
-  --onink:#C9D8DC;      /* readable muted text on ink */
+  --ink:#0B1120;        /* primary: deep obsidian slate for hero, nav, footer */
+  --ink-soft:#1E293B;   /* elevated dark surface */
+  --teal:#4F46E5;       /* primary accent: modern electric indigo */
+  --teal-hover:#4338CA; /* deeper indigo for hover states */
+  --cyan:#06B6D4;       /* secondary highlight: vibrant cyan */
+  --mint:#EEF2FF;       /* soft indigo tint for chips, badges & icon boxes */
+  --paper:#F8FAFC;      /* crisp cool alabaster canvas */
+  --white:#FFFFFF;      /* pure white card surface */
+  --text:#334155;       /* high-contrast slate body copy */
+  --soft:#64748B;       /* muted slate supporting text */
+  --line:#E2E8F0;       /* subtle structural hairline border */
+  --onink:#94A3B8;      /* readable muted text on dark backgrounds */
+  --shadow-sm:0 1px 3px rgba(15,23,42,.04), 0 1px 2px rgba(15,23,42,.02);
+  --shadow-md:0 12px 28px -6px rgba(15,23,42,.07), 0 4px 10px -3px rgba(15,23,42,.03);
+  --shadow-lg:0 20px 38px -10px rgba(79,70,229,.15), 0 8px 16px -6px rgba(15,23,42,.05);
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{background:var(--paper);color:var(--text);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
-h1,h2,h3{line-height:1.2;letter-spacing:-.015em;font-weight:800;color:var(--ink)}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{background:var(--paper);color:var(--text);font:16.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-.dark :focus-visible,.top :focus-visible,footer :focus-visible{outline-color:var(--mint)}
+.dark :focus-visible,.top :focus-visible,footer :focus-visible{outline-color:var(--cyan)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
 /* icons (Lucide, outline, 24px grid, 2px stroke) */
 .i{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ic{display:inline-flex;align-items:center;gap:10px}
+.i-sm{width:16px;height:16px}
+.ic{display:inline-flex;align-items:center;gap:8px}
 
 /* bands */
-.band{padding:64px 0}
+.band{padding:72px 0}
 .band.white{background:var(--white)}
-.band.dark{background:var(--ink);color:#fff}
+.band.dark{
+  background:
+    radial-gradient(circle at 85% 15%, rgba(79,70,229,.28), transparent 42%),
+    radial-gradient(circle at 12% 85%, rgba(6,182,212,.18), transparent 38%),
+    var(--ink);
+  color:#fff;
+}
 
 /* sticky nav */
-.top{position:sticky;top:0;z-index:50;background:rgba(20,45,57,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1);transition:box-shadow .2s}
-.top.scrolled{box-shadow:0 6px 20px -10px rgba(0,0,0,.5)}
+.top{position:sticky;top:0;z-index:50;background:rgba(11,17,32,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .2s}
+.top.scrolled{box-shadow:0 10px 30px -10px rgba(2,6,23,.6)}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 28px;max-width:1080px;margin:0 auto}
-.logo{font-weight:800;font-size:17px;text-decoration:none;color:#fff}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:#fff;letter-spacing:-.02em}
+.logo-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--teal),var(--cyan));color:#fff}
 nav ul{display:flex;gap:4px;list-style:none;padding:0}
-nav ul a{display:block;padding:8px 13px;border-radius:8px;text-decoration:none;font-weight:500;font-size:15px;color:var(--onink);transition:background .2s,color .2s}
-nav ul a:hover{background:rgba(255,255,255,.1);color:#fff}
-nav ul a.active{background:rgba(197,233,227,.16);color:var(--mint);font-weight:700}
+nav ul a{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;color:var(--onink);transition:background .2s,color .2s}
+nav ul a .i{width:15px;height:15px;opacity:.75}
+nav ul a:hover{background:rgba(255,255,255,.08);color:#fff}
+nav ul a.active{background:rgba(79,70,229,.25);color:#fff;box-shadow:inset 0 0 0 1px rgba(129,140,248,.35)}
+nav ul a.active .i{color:#818CF8;opacity:1}
 
 /* hero */
-.hero{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
-.photo{width:190px;height:190px;border-radius:50%;background:var(--paper) center/cover;border:5px solid rgba(197,233,227,.25);box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.photo{width:194px;height:194px;border-radius:50%;background:var(--paper) center/cover;border:4px solid rgba(129,140,248,.35);box-shadow:0 0 0 8px rgba(79,70,229,.12), 0 20px 40px -15px rgba(0,0,0,.6)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(79,70,229,.2);border:1px solid rgba(129,140,248,.35);color:#C7D2FE;padding:5px 13px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:14px}
+.eyebrow .i{width:15px;height:15px;color:var(--cyan)}
 .hero h1{font-size:clamp(30px,4.4vw,46px);color:#fff}
-.hero p{margin:16px 0 22px;color:var(--onink);font-size:18px;max-width:60ch}
-.stack{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.stack span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:#fff;padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
-.btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:8px;background:var(--teal);color:#fff;font-weight:700;text-decoration:none;transition:background .2s}
-.btn:hover{background:var(--ink)}
-.hero .btn{background:#fff;color:var(--ink)}
-.hero .btn:hover{background:var(--mint)}
-.hero .btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
-.hero .btn.alt:hover{background:rgba(255,255,255,.12)}
-.hero .quick{margin:16px 0 0;font-size:15px;color:var(--onink)}
-.hero .quick a{font-weight:700;color:#fff}
+.hero p{margin:16px 0 22px;color:#CBD5E1;font-size:18px;max-width:60ch}
+.stack{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.stack span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#F1F5F9;padding:5px 13px;border-radius:8px;font-size:13.5px;font-weight:600;backdrop-filter:blur(4px)}
+.stack span .i{width:14px;height:14px;color:#38BDF8}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:10px;background:linear-gradient(135deg,var(--teal),#4338CA);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 8px 20px -6px rgba(79,70,229,.5);transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{background:var(--teal-hover);transform:translateY(-1px);box-shadow:0 12px 24px -6px rgba(79,70,229,.65)}
+.hero .btn{background:#fff;color:var(--ink);box-shadow:0 10px 25px -5px rgba(0,0,0,.25)}
+.hero .btn:hover{background:var(--mint);color:var(--teal)}
+.hero .btn.alt{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.22);box-shadow:none}
+.hero .btn.alt:hover{background:rgba(255,255,255,.14);color:#fff}
+.hero .quick{margin:18px 0 0;font-size:14.5px;color:var(--onink);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero .quick a{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#E2E8F0;text-decoration:none;transition:color .2s}
+.hero .quick a:hover{color:var(--cyan)}
+.hero .quick a .i{width:15px;height:15px;color:#818CF8}
 
 /* stats strip */
-.stats{background:var(--white);border-bottom:1px solid var(--line);padding:30px 0}
+.stats{background:var(--white);border-bottom:1px solid var(--line);padding:32px 0;box-shadow:var(--shadow-sm)}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.stat b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--teal);line-height:1.1}
-.stat span{display:block;margin-top:6px;font-size:14px;color:var(--soft)}
+.stat{display:flex;flex-direction:column;align-items:center;padding:8px}
+.stat-ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--mint);color:var(--teal);margin-bottom:10px}
+.stat b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:800;background:linear-gradient(135deg,var(--teal),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}
+.stat span{display:block;margin-top:6px;font-size:14px;color:var(--soft);font-weight:500}
 
 /* titles */
-.title{margin-bottom:26px}
+.title{margin-bottom:30px}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:var(--mint);color:var(--teal);padding:4px 12px;border-radius:999px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.sec-badge .i{width:14px;height:14px}
 .title h2{font-size:clamp(26px,3.4vw,34px)}
 .title p{color:var(--soft);margin-top:6px;max-width:60ch}
 
 /* core skills */
-.core{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.sk{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:12px;padding:26px}
-.sk .ico{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--mint);color:var(--ink);margin-bottom:14px}
+.core{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.sk{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+.sk:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.sk .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--mint);color:var(--teal);margin-bottom:16px}
 .sk h3{font-size:21px;margin-bottom:8px}
 .sk p{color:var(--text);font-size:15.5px}
-.sk .where{margin-top:14px;font-size:14px;color:var(--soft)}
+.sk .where{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--soft);display:flex;align-items:center;gap:6px}
+.sk .where .i{width:15px;height:15px;color:var(--teal)}
 .sk .where b{color:var(--ink)}
-.also{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
-.also b{color:var(--ink)}
+.also{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:14.5px}
+.also b{display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+.also b .i{width:16px;height:16px;color:var(--teal)}
 
 /* tags */
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
-.tags span{background:var(--white);border:1px solid var(--line);color:var(--ink);padding:4px 12px;border-radius:6px;font-size:13.5px;font-weight:700}
+.tags span{display:inline-flex;align-items:center;gap:5px;background:var(--paper);border:1px solid var(--line);color:var(--ink);padding:5px 12px;border-radius:8px;font-size:13px;font-weight:700}
 .also .tags{margin:0}
+.also .tags span{background:var(--white)}
 
 /* about */
-.about{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
-.about p{color:var(--text);margin-bottom:14px}
-.offer{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:12px;padding:24px 26px}
-.offer h3{font-size:18px;margin-bottom:12px}
-.offer ul{list-style:none;padding:0;display:grid;gap:12px;color:var(--text);font-size:15.5px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:start}
+.about p{color:var(--text);margin-bottom:14px;font-size:17px}
+.offer{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow-sm)}
+.offer h3{display:flex;align-items:center;gap:10px;font-size:18px;margin-bottom:16px}
+.offer h3 .i{color:var(--teal)}
+.offer ul{list-style:none;padding:0;display:grid;gap:14px;color:var(--text);font-size:15.5px}
 .offer li{display:flex;gap:12px;align-items:flex-start}
-.offer li .i{color:var(--teal);margin-top:2px}
+.offer li .i{color:var(--teal);margin-top:3px;background:var(--mint);padding:4px;width:26px;height:26px;border-radius:7px}
 
 /* screenshots (hide themselves if the image is missing) */
-.shot{border-radius:10px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.shot{border-radius:12px;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
 .shot img{display:block;width:100%;height:auto;cursor:zoom-in}
 
 /* featured */
-.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;margin-bottom:22px}
-.chip{display:inline-block;background:var(--mint);color:var(--ink);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:700}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:34px;margin-bottom:24px;box-shadow:var(--shadow-md)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--mint);color:var(--teal);padding:5px 12px;border-radius:8px;font-size:13px;font-weight:700}
 .chip.ic{display:inline-flex;gap:6px}
 .chip .i{width:15px;height:15px}
+.chip.success{background:#ECFDF5;color:#059669;border:1px solid #A7F3D0}
 .feature h3{font-size:clamp(23px,2.8vw,29px);margin:12px 0}
-.feature dl{display:grid;gap:12px;margin:16px 0 18px}
-.feature dt{font-weight:800;font-size:14px;color:var(--teal)}
-.feature dd{color:var(--text);font-size:15.5px;margin:0}
+.feature dl{display:grid;gap:12px;margin:16px 0 20px}
+.feature dt{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;color:var(--teal)}
+.feature dt .i{width:15px;height:15px}
+.feature dd{color:var(--text);font-size:15.5px;margin:2px 0 0}
 
 /* pipeline strip */
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 22px;counter-reset:s}
-.flow div{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;color:var(--soft);counter-increment:s}
-.flow b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
-.flow b::before{content:counter(s);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 24px;counter-reset:s}
+.flow div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:14px;color:var(--soft);counter-increment:s;box-shadow:var(--shadow-sm);position:relative}
+.flow b{display:flex;align-items:center;justify-content:space-between;color:var(--ink);font-size:15px;margin-bottom:6px}
+.flow b span{display:inline-flex;align-items:center}
+.flow b span::before{content:counter(s);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px}
+.flow b .i{width:16px;height:16px;color:var(--teal);opacity:.8}
 
 /* Fraud Hub gallery */
-.gallery{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:22px}
-.gallery h3{font-size:21px}
-.gtabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 18px}
-.gtabs button{font:inherit;font-weight:700;font-size:14.5px;padding:9px 16px;border-radius:8px;border:1px solid var(--soft);background:var(--white);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
-.gtabs button:hover{background:var(--mint)}
-.gtabs button[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.gallery{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:24px;box-shadow:var(--shadow-sm)}
+.gallery h3{display:flex;align-items:center;gap:10px;font-size:21px}
+.gallery h3 .i{color:var(--teal)}
+.gtabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+.gtabs button{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:14px;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--text);cursor:pointer;transition:all .2s}
+.gtabs button .i{width:16px;height:16px;color:var(--soft)}
+.gtabs button:hover{background:var(--mint);color:var(--teal);border-color:#C7D2FE}
+.gtabs button:hover .i{color:var(--teal)}
+.gtabs button[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 4px 12px rgba(79,70,229,.25)}
+.gtabs button[aria-selected="true"] .i{color:#fff}
 .gpanel[hidden]{display:none}
 .gpanel .shot{background:var(--ink)}
 .gpanel video{display:block;width:100%;height:auto;border-radius:10px;background:var(--ink)}
 .gcap{margin-top:12px;color:var(--soft);font-size:15px;max-width:80ch}
 
 /* lightbox */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(10,24,31,.93);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(11,17,32,.93);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
 .lb.open{display:flex}
-.lb img{max-width:100%;max-height:100%;border-radius:8px}
+.lb img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 25px 50px -12px rgba(0,0,0,.6)}
 
 /* projects: 2 x 2 */
-.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;text-decoration:none;transition:box-shadow .2s,transform .2s}
-.pc:hover{box-shadow:0 14px 30px -14px rgba(20,45,57,.35);transform:translateY(-2px)}
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.pc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;box-shadow:var(--shadow-sm);transition:box-shadow .25s,transform .25s,border-color .25s}
+.pc:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:#C7D2FE}
 .pc .shot{margin-bottom:16px}
 .pc .shot img{cursor:inherit}
 .pc .chip{align-self:flex-start}
-.pc h3{font-size:19px;margin:12px 0 8px}
+.pc h3{font-size:19.5px;margin:12px 0 8px}
 .pc p{color:var(--soft);font-size:15.5px}
-.pc .result{flex:1;margin-top:10px;font-weight:700;font-size:15px;color:var(--ink)}
-.pc .tags{margin:14px 0 0}
-.pc .more{margin-top:14px;font-weight:700;color:var(--teal);font-size:15px;display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:3px}
+.pc .result{flex:1;margin-top:12px;font-weight:700;font-size:15px;color:var(--ink);padding-top:12px;border-top:1px dashed var(--line)}
+.pc .tags{margin:16px 0 0}
+.pc .more{margin-top:16px;font-weight:700;color:var(--teal);font-size:15px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.pc:hover .more{text-decoration:underline;text-underline-offset:4px}
 
 /* code showcase */
-.code-card{margin-top:22px;background:#0E212B;border-radius:14px;overflow:hidden;border:1px solid #21404E}
-.code-card header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#16303D;color:var(--onink);font-size:14px}
-.code-card header b{color:#fff}
-.code-card pre{margin:0;padding:20px;overflow-x:auto;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#DCE7EA}
-.code-card .k{color:#7FD6D0;font-weight:700}
-.code-card .f{color:#F2C879}
-.code-card .c{color:#93A9B1}
+.code-card{margin-top:24px;background:#0F172A;border-radius:16px;overflow:hidden;border:1px solid #1E293B;box-shadow:var(--shadow-md)}
+.code-card header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#1E293B;color:var(--onink);font-size:14px}
+.code-card header b{display:inline-flex;align-items:center;gap:8px;color:#fff}
+.code-card header b .i{color:#38BDF8}
+.code-card pre{margin:0;padding:22px;overflow-x:auto;font:14px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#E2E8F0}
+.code-card .k{color:#818CF8;font-weight:700}
+.code-card .f{color:#38BDF8}
+.code-card .c{color:#64748B}
 
 /* experience */
-.xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
-.job{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px}
-.job time{color:var(--soft);font-size:14px;font-weight:700}
-.job h3{font-size:20px;margin:8px 0 2px}
-.job .co{color:var(--teal);font-weight:700;margin-bottom:12px}
-.job ul{padding-left:20px;display:grid;gap:8px;color:var(--text);font-size:15.5px}
+.xp{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+.job{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm)}
+.job-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.job time{display:inline-flex;align-items:center;gap:6px;color:var(--soft);font-size:13.5px;font-weight:700;background:var(--white);padding:4px 10px;border-radius:6px;border:1px solid var(--line)}
+.job time .i{width:14px;height:14px;color:var(--teal)}
+.job h3{font-size:20px;margin:8px 0 4px}
+.job .co{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-weight:700;margin-bottom:14px;font-size:15.5px}
+.job .co .i{width:16px;height:16px}
+.job ul{padding-left:20px;display:grid;gap:10px;color:var(--text);font-size:15.5px}
+.job ul li::marker{color:var(--teal)}
 
 /* education */
 .edugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.edc{display:flex;gap:18px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px}
-.edc .ico{display:grid;place-items:center;flex:none;width:52px;height:52px;border-radius:12px;background:var(--mint);color:var(--ink)}
+.edc{display:flex;gap:18px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow-sm)}
+.edc .ico{display:grid;place-items:center;flex:none;width:54px;height:54px;border-radius:14px;background:var(--mint);color:var(--teal)}
 .edc .ico .i{width:26px;height:26px}
-.edc time{color:var(--soft);font-size:14px;font-weight:700}
+.edc time{display:inline-flex;align-items:center;gap:5px;color:var(--soft);font-size:13.5px;font-weight:700}
 .edc h3{font-size:20px;margin:6px 0 2px}
 .edc .co{color:var(--teal);font-weight:700}
-.edc p{color:var(--text);font-size:15.5px;margin-top:8px}
+.edc p{display:inline-flex;align-items:center;gap:6px;color:var(--text);font-size:15px;margin-top:10px;background:var(--paper);padding:4px 10px;border-radius:6px;border:1px solid var(--line);font-weight:600}
+.edc p .i{width:15px;height:15px;color:var(--teal)}
 
 /* certificates */
-.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-.cert{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.cert{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+.cert:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
 .cert .shot{margin-bottom:16px;background:var(--white)}
 .cert .shot img{cursor:zoom-in}
-.cert .badge{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--mint);color:var(--ink);margin-bottom:12px}
-.cert h3{font-size:18px;margin-bottom:2px}
+.cert-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.cert .badge{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--mint);color:var(--teal)}
+.cert h3{font-size:19px;margin-bottom:2px}
 .cert .co{color:var(--teal);font-weight:700;font-size:15px}
-.cert p{color:var(--soft);font-size:14.5px;margin:8px 0 14px;flex:1}
+.cert p{color:var(--soft);font-size:14.5px;margin:10px 0 16px;flex:1}
 .cert .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.cert .verify{margin-top:14px;font-weight:700;font-size:15px;color:var(--teal);display:inline-flex;align-items:center;gap:8px;text-underline-offset:3px}
-
-/* contact */
-.cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:#fff}
-.cta p{margin:12px 0 26px;color:var(--onink);max-width:52ch}
-.links{display:flex;gap:10px;flex-wrap:wrap}
-.links a{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:8px;background:rgba(255,255,255,.12);font-weight:700;text-decoration:none;color:#fff;transition:background .2s,color .2s}
-.links a:first-child{background:#fff;color:var(--ink)}
-.links a:hover{background:var(--mint);color:var(--ink)}
-footer{background:#0E212B;color:var(--onink);padding:22px 0;font-size:14px}
-
-/* scroll reveal */
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.js .reveal{opacity:0}
-.js .reveal.in{opacity:1;animation:rise .6s ease backwards;animation-delay:var(--d,0s)}
-
-@media(max-width:900px){
-.flow{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:760px){
-html{scroll-padding-top:100px}
-.band{padding:48px 0}
-nav{padding:10px 20px;gap:6px}
-nav ul{flex-wrap:nowrap;overflow-x:auto;width:100%;max-width:100%;scrollbar-width:none}
-nav ul::-webkit-scrollbar{display:none}
-nav ul a{padding:7px 10px;font-size:14px;white-space:nowrap}
-.hero{grid-template-columns:1fr;gap:24px}
-.photo{width:140px;height:140px}
-.stats .wrap{grid-template-columns:repeat(2,1fr)}
-.about{grid-template-columns:1fr}
-.feature{grid-template-columns:1fr;padding:22px}
-.flow{grid-template-columns:1fr}
-.gallery{padding:20px}
-.proj{grid-template-columns:1fr}
-.xp,.edugrid,.certs{grid-template-columns:1fr}
-}
-@media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-.pc{transition:none}.pc:hover{transform:none}
-.js .reveal{opacity:1}.js .reveal.in{animation:none}
-}
-</style>
-</head>
-<body>
-
-<!-- Lucide icon sprite (outline, 24px grid, 2px stroke) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
-<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
-<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
-<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
-<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
-<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
-<symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
-<symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></symbol>
-<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
-<symbol id="i-users" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol>
-<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-</svg>
-
-<header class="top" id="topbar">
-<nav aria-label="Main">
-<a class="logo" href="#top">Rashmi Leema</a>
-<ul><li><a href="#skills">Skills</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#certificates">Certificates</a></li><li><a href="#contact">Contact</a></li></ul>
-</nav>
-</header>
-
-<main>
-
-<!-- HERO -->
-<div class="band dark" id="top">
-<div class="wrap hero">
-<div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
-<div>
-<h1>Data Analyst who automates reporting with SQL, Python and Excel.</h1>
-<p>Two-plus years building reporting models, SQL data layers and dashboards for Finance, HR, Operations and Middle Office teams. I cut recurring reporting prep by 80% by replacing manual work with automation.</p>
-<div class="stack"><span>SQL</span><span>Python</span><span>Excel VBA</span><span>Power Query</span><span>Power BI</span><span>Power Apps</span></div>
-<div class="btns">
-<a class="btn" href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
-<a class="btn alt" href="#projects">See my work<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-</div>
-<p class="quick"><a href="mailto:rashmi.kuru@gmail.com">rashmi.kuru@gmail.com</a> · <a href="https://www.linkedin.com/in/rashmi-leema">LinkedIn</a> · <a href="https://github.com/rashmileema-BI">GitHub</a></p>
-</div>
-</div>
-</div>
-
-<!-- STATS STRIP -->
-<div class="stats">
-<div class="wrap">
-<div class="stat"><b>80%</b><span>less recurring reporting prep</span></div>
-<div class="stat"><b>2+ yrs</b><span>building analytics solutions</span></div>
-<div class="stat"><b>4</b><span>teams served: Finance, HR, Ops, Middle Office</span></div>
-<div class="stat"><b>5</b><span>portfolio projects on GitHub</span></div>
-</div>
-</div>
-
-<!-- CORE SKILLS -->
-<section class="band" id="skills">
-<div class="wrap">
-<div class="title"><h2>Core skills</h2><p>The tools I use most, and where I've used them.</p></div>
-<div class="core">
-<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></div><h3>SQL</h3><p>Staging and core layers, star schemas, stored procedures, views and window functions that turn raw files into scored, query-ready tables.</p><p class="where"><b>Used in:</b> Variance Platform, Fraud Hub</p></div>
-<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg></div><h3>Python</h3><p>Synthetic data generation and risk-scoring scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><b>Used in:</b> Fraud Hub, Exception Tracker</p></div>
-<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
-</div>
-<div class="also"><b>Also:</b>
-<div class="tags"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span></div></div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="band white" id="about">
-<div class="wrap">
-<div class="title"><h2>About me</h2></div>
-<div class="about">
-<div>
-<p>I'm a data analyst who likes replacing repetitive work with systems that run themselves. I start from the question the business is asking, build the SQL and Python behind it, and finish with a dashboard or tool people actually open.</p>
-<p>My background is in finance, so I'm comfortable with messy multi-source data and with explaining numbers to non-technical teams.</p>
-</div>
-<div class="offer">
-<h3>What I can do for your team</h3>
-<ul>
-<li><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Automate recurring reports end to end</li>
-<li><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Build clean SQL data layers and repeatable load scripts</li>
-<li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Turn raw data into dashboards stakeholders trust</li>
-<li><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Replace manual spreadsheet processes with governed workflows</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section class="band" id="projects">
-<div class="wrap">
-<div class="title"><h2>Selected projects</h2><p>Each one links to its code.</p></div>
-
-<article class="feature">
-<div>
-<span class="chip">Featured · SQL + Python + VBA</span>
-<h3>iGaming Fraud &amp; Risk Operations Hub</h3>
-<dl>
-<div><dt>The problem</dt><dd>Fraud review is often run on manual spreadsheets, which is slow and hard to audit. I built an end-to-end version on synthetic data to show a better way.</dd></div>
-<div><dt>What I built</dt><dd>Python-generated test data, SQL Server staging and scoring, six weighted rules, automatic case assignment with SLA deadlines, a three-page Power BI dashboard (overview, risk, reconciliation) and a Power Apps case app.</dd></div>
-<div><dt>What the data showed</dt><dd>In the June 2026 synthetic data, card payments failed most often (5.87%), followed by crypto (5.72%), bank transfer (4.65%) and e-wallet (4.18%).</dd></div>
-<div><dt>Result</dt><dd>Tested on 2,000 synthetic players and 50,652 payments with 235 planted fraud accounts: all 235 were flagged (100% recall) in 0.4 seconds, and every High and Medium case was a planted account.</dd></div>
-</dl>
-<div class="tags"><span>Python</span><span>SQL Server</span><span>Power Query</span><span>VBA</span><span>Power BI</span><span>Power Apps</span><span>Synthetic data</span></div>
-<a class="btn" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub">View the project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-</div>
-<div class="shot"><img src="images/fraud-overview.png" alt="Power BI overview page showing transactions, failure rate, deposits and withdrawals" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
-</article>
-
-<div class="flow" aria-label="How the Fraud Hub pipeline works">
-<div><b>Generate</b>Python creates synthetic players, payments, devices and bonuses.</div>
-<div><b>Stage</b>Raw files load into untyped SQL Server staging tables.</div>
-<div><b>Transform</b>Types, blanks and keys are cleaned into the core tables.</div>
-<div><b>Score</b>Stored procedures apply six weighted rules and open cases.</div>
-<div><b>Serve</b>Power BI and Power Apps read the cases.</div>
-</div>
-
-<!-- FRAUD HUB IN ACTION -->
-<div class="gallery">
-<h3>Fraud Hub in action</h3>
-<div class="gtabs" role="tablist" aria-label="Fraud Hub screens">
-<button type="button" role="tab" id="t-risk" aria-selected="true" aria-controls="g-risk">Risk queue</button>
-<button type="button" role="tab" id="t-rec" aria-selected="false" aria-controls="g-rec">Reconciliation</button>
-<button type="button" role="tab" id="t-app" aria-selected="false" aria-controls="g-app">Power Apps case app</button>
-</div>
-
-<div class="gpanel" id="g-risk" role="tabpanel" aria-labelledby="t-risk">
-<div class="shot"><img src="images/fraud-risk.png" alt="Power BI risk page with a ranked risk queue and shared card holders" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
-<p class="gcap">Ranks players by risk score and level, with the rules that triggered each one, and lists shared-card holders. June 2026 view of the synthetic data: 17 High, 57 Medium, 15 shared cards. Click the image to enlarge.</p>
-</div>
-
-<div class="gpanel" id="g-rec" role="tabpanel" aria-labelledby="t-rec" hidden>
-<div class="shot"><img src="images/fraud-reconciliation.png" alt="Power BI reconciliation page listing ledger versus payment provider exceptions" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
-<p class="gcap">Matches the internal ledger against payment-provider records and surfaces 334 exceptions in five categories: missing at PSP (101), amount mismatch (95), fee mismatch (82), duplicate at PSP (41) and missing in ledger (15).</p>
-</div>
-
-<div class="gpanel" id="g-app" role="tabpanel" aria-labelledby="t-app" hidden>
-<video controls muted playsinline preload="metadata" aria-label="Screen recording of the Power Apps fraud case app">
-<source src="images/fraud-app-demo.mp4" type="video/mp4">
-Your browser can't play this video.
-</video>
-<p class="gcap">Power Apps case app for working the fraud case queue. Screen recording.</p>
-</div>
-</div>
-
-<div class="proj">
-<a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube">
-<div class="shot"><img src="images/variance-dashboard.png" alt="Power BI group performance matrix showing revenue, operating expenses, margin and budget variance by region" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">Financial BI · BRD to dashboard</span><h3>Multi-Entity Financial Variance &amp; Consolidation Platform</h3>
-<p>Written up from a business requirements document: a SQL Server star schema and stored procedure consolidate three regional entities into a monthly actual-vs-budget summary, feeding a Power BI variance dashboard. In the 2025 data, the group finished 0.26% ahead of budget, led by Americas, with EMEA 0.23% under.</p>
-<p class="result">Consolidates 10,983 transactions into 288 monthly summary rows (24 months × 3 regions × 4 account categories) in under 0.2 seconds. Actual and budget reconcile to the cent, and every run is logged. Built on illustrative data.</p>
-<div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Star schema</span><span>Power BI</span><span>DAX</span><span>BRD</span></div>
-<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
-
-<a class="pc" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker">
-<div class="shot"><img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">Workflow automation</span><h3>Operations Exception &amp; Approval Tracker</h3>
-<p>A Power Apps tracker on SQL Server for logging, searching and approving operational exceptions, with a Power Automate approval and escalation flow.</p>
-<p class="result">High-severity exceptions are routed to a manager, approved or rejected with email notifications, and escalated if left unresolved. Tested on 2,000 synthetic records.</p>
-<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span><span>Synthetic data</span></div>
-<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
-
-<a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform">
-<div class="shot"><img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">Enterprise BI</span><h3>Executive Strategic Initiatives Platform</h3>
-<p>Tracks initiative health, budget burn and milestone slippage across five departments.</p>
-<p class="result">Automatically flags anything falling behind.</p>
-<div class="tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
-<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
-
-<a class="pc" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project">
-<div class="shot"><img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" onerror="this.parentNode.style.display='none'"></div>
-<span class="chip">Financial modelling</span><h3>Uber × Lyft Acquisition Model</h3>
-<p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p>
-<p class="result">Base case: enterprise value $18.2B, implied share price $48.27 vs $16.53 current, synergies worth $2.1B. Most sensitive to WACC and terminal growth.</p>
-<div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
-<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
-</div>
-
-<div class="code-card">
-<header><b>SQL sample · weighted risk scoring view</b><span>Fraud Hub</span></header>
-<pre><code><span class="c">-- Sum weighted rule hits per player, then band the score</span>
-<span class="k">WITH</span> f <span class="k">AS</span> (
-  <span class="k">SELECT</span> player_id, rule_code, <span class="f">MIN</span>(detail) <span class="k">AS</span> detail
-  <span class="k">FROM</span> core.risk_flags
-  <span class="k">GROUP BY</span> player_id, rule_code
-)
-<span class="k">SELECT</span> f.player_id, p.country,
-       <span class="f">SUM</span>(w.points) <span class="k">AS</span> risk_score,
-       <span class="k">CASE WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 60 <span class="k">THEN</span> 'High'
-            <span class="k">WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 40 <span class="k">THEN</span> 'Medium'
-            <span class="k">ELSE</span> 'Low' <span class="k">END AS</span> risk_band,
-       <span class="f">STRING_AGG</span>(f.rule_code, '; ') <span class="k">WITHIN GROUP</span> (<span class="k">ORDER BY</span> f.rule_code) <span class="k">AS</span> rules
-<span class="k">FROM</span> f
-<span class="k">JOIN</span> core.rule_weights <span class="k">AS</span> w <span class="k">ON</span> w.rule_code = f.rule_code
-<span class="k">JOIN</span> core.players <span class="k">AS</span> p <span class="k">ON</span> p.player_id = f.player_id
-<span class="k">GROUP BY</span> f.player_id, p.country;</code></pre>
-</div>
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="band white" id="experience">
-<div class="wrap">
-<div class="title"><h2>Experience</h2></div>
-<div class="xp">
-<div class="job"><time>Jan 2024 to Jan 2026</time><h3>Associate Business Analyst</h3><div class="co">GTN Tech</div>
-<ul>
-<li>Built Excel VBA macros and automated workbooks that removed manual data consolidation, improved accuracy and standardized recurring Finance and Operations reports.</li>
-<li>Consolidated data from multiple sources into reporting-ready datasets using Excel Power Query and Power Pivot, supported by Python and SQL Server - SSMS.</li>
-<li>Designed and built a multi-client data cube in Excel, giving executives cross-asset visibility; it supported client acquisition for a major global fintech client.</li>
-<li>Extended Excel automation with Power Apps and Power Automate workflows, cutting board-meeting report preparation from ~8 hours to ~1.5 hours.</li>
-<li>Gathered requirements with Finance, HR, Operations and Middle Office, and delivered Excel and Power BI dashboards for performance tracking.</li>
-<li>Maintained live tools based on user feedback, wrote process maps and user guides.</li>
-<li>Produced Excel-based trend and predictive analyses on trading activity, AUC and revenue drivers, and prepared strategic content for a CEO keynote at Money 20/20.</li>
-</ul></div>
-<div class="job"><time>Jan 2026 to Jun 2026</time><h3>Trainee Analyst, Revenue Management</h3><div class="co">SriLankan Airlines</div>
-<ul>
-<li>Built and maintained Excel analyses of monthly route and station performance, with recommendations to commercial management on demand and revenue drivers.</li>
-<li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
-<li>Prepared ad hoc costing analyses and reports for Senior Management planning purposes.</li>
-</ul></div>
-</div>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section class="band" id="education">
-<div class="wrap">
-<div class="title"><h2>Education</h2><p>Academic qualifications.</p></div>
-<div class="edugrid">
-<div class="edc">
-<div class="ico"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg></div>
-<div>
-<time>2020 to 2024</time>
-<h3>BSc (Hons) Finance &amp; Insurance</h3>
-<div class="co">University of Colombo</div>
-<p>Second Class Upper.</p>
-</div>
-</div>
-<!-- Add more qualifications by copying the .edc block above -->
-</div>
-</div>
-</section>
-
-<!-- CERTIFICATES -->
-<section class="band white" id="certificates">
-<div class="wrap">
-<div class="title"><h2>Certificates</h2><p>Professional certifications and completed courses.</p></div>
-<div class="certs">
-
-<div class="cert">
-<!-- Add your certificate image at images/certs/microsoft-business-analyst.png (it hides itself if missing) -->
-<div class="shot"><img src="images/certs/microsoft-business-analyst.png" alt="Microsoft Business Analyst Professional Certificate" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
-<div class="badge"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg></div>
-<h3>Microsoft Business Analyst</h3>
-<div class="co">Professional Certificate</div>
-<p>Requirements gathering, data analysis and reporting with the Microsoft stack.</p>
-<div class="meta"><span class="chip ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>In progress · expected 2027</span></div>
-<!-- Once earned, add: <a class="verify" href="CREDENTIAL-URL">View credential<svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a> -->
-</div>
-
-<!-- Copy the .cert block above for each new certificate -->
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="band dark" id="contact">
-<div class="wrap cta">
-<h2>Open to Data Analyst roles.</h2>
-<p>If your team needs someone to automate reporting, build clean SQL layers and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
-<div class="links">
-<a href="mailto:rashmi.kuru@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
-<a href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
-<a href="https://www.linkedin.com/in/rashmi-leema"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>LinkedIn</a>
-<a href="https://github.com/rashmileema-BI"><svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>GitHub</a>
-</div>
-</div>
-</section>
-
-</main>
-<footer><div class="wrap">© Rashmi Leema</div></footer>
-
-<div class="lb" id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
-
-<script>
-(function(){
-  /* 0. Gallery tabs (pauses the video when you leave its tab) */
-  var tabs=document.querySelectorAll('.gtabs button'),panels=document.querySelectorAll('.gpanel'),vid=document.querySelector('.gpanel video');
-  tabs.forEach(function(t){
-    t.addEventListener('click',function(){
-      var target=t.getAttribute('aria-controls');
-      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false');});
-      panels.forEach(function(p){p.hidden=p.id!==target;});
-      if(vid&&target!=='g-app')vid.pause();
-    });
-  });
-
-  /* 1. Click-to-enlarge for dashboard and certificate images */
-  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
-  function openLb(i){lbImg.src=i.currentSrc||i.src;lbImg.alt=i.alt;lb.classList.add('open');}
-  document.querySelectorAll('.feature .shot img,.gallery .shot img,.cert .shot img').forEach(function(i){
-    i.setAttribute('tabindex','0');i.setAttribute('role','button');
-    i.addEventListener('click',function(){openLb(i);});
-    i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}});
-  });
-  lb.addEventListener('click',function(){lb.classList.remove('open');});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
-
-  /* 2. Sticky nav shadow + section highlight */
-  var bar=document.getElementById('topbar');
-  function onScroll(){bar.classList.toggle('scrolled',window.scrollY>10);}
-  window.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
-
-  if('IntersectionObserver' in window){
-    var links={};
-    document.querySelectorAll('nav ul a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
-    var spy=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(!e.isIntersecting)return;
-        Object.keys(links).forEach(function(k){
-          var on=k===e.target.id;
-          links[k].classList.toggle('active',on);
-          if(on)links[k].setAttribute('aria-current','true');else links[k].removeAttribute('aria-current');
-        });
-      });
-    },{rootMargin:'-35% 0px -60% 0px'});
-    document.querySelectorAll('main section[id]').forEach(function(s){spy.observe(s);});
-
-    /* 3. Scroll reveal (skipped for reduced motion) */
-    if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
-      document.documentElement.classList.add('js');
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-        });
-      },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.title,.sk,.also,.feature,.flow>div,.gallery,.pc,.job,.edc,.cert,.cta>*,.stat,.code-card,.about>*').forEach(function(el){
-        el.classList.add('reveal');
-        var i=Array.prototype.indexOf.call(el.parentNode.children,el);
-        el.style.setProperty('--d',(i%3)*0.08+'s');
-        io.observe(el);
-      });
-    }
-  }
-})();
-</script>
-</body>
-</html>
+.cert .verify{margin-top:16px;padding:10px 1
