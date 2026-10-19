@@ -152,7 +152,7 @@ nav ul a.active {
 .band { padding: 84px 0; position: relative; }
 .band.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
-/* Hero Section (Always Dark Obsidian for Contrast) */
+/* Hero Section */
 .hero-band {
   margin-top: -68px;
   padding: 136px 0 88px;
@@ -347,7 +347,16 @@ nav ul a.active {
 .stat span { display: block; margin-top: 3px; font-size: 13px; color: var(--soft); font-weight: 500; }
 
 /* Section Headers */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 34px;
+}
 .title { margin-bottom: 34px; }
+.title-row .title { margin-bottom: 0; }
 .sec-badge {
   display: inline-flex;
   align-items: center;
@@ -366,6 +375,33 @@ nav ul a.active {
 .sec-badge .i { width: 14px; height: 14px; }
 .title h2 { font-size: clamp(26px, 3.4vw, 36px); }
 .title p { color: var(--soft); margin-top: 6px; max-width: 60ch; }
+
+/* Interactive Filter Pills */
+.pf-filters {
+  display: inline-flex;
+  gap: 6px;
+  padding: 5px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+.pf-btn {
+  font: 700 13px "Plus Jakarta Sans", sans-serif;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--soft);
+  cursor: pointer;
+  transition: all .2s;
+}
+.pf-btn:hover { color: var(--ink); }
+.pf-btn.active {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
 
 /* Interactive Spotlight Card Mixin */
 .spot-card {
@@ -437,7 +473,7 @@ nav ul a.active {
 .also b { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
 .also b .i { width: 16px; height: 16px; color: var(--brand); }
 
-.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tags { display: flex; gap: 7px; flex-wrap: wrap; }
 .tags span {
   background: var(--surface-2);
   border: 1px solid var(--line);
@@ -472,16 +508,94 @@ nav ul a.active {
   border-radius: 8px;
 }
 
-/* Screenshots */
+/* Screenshots & Rich Fallback Blueprints */
 .shot {
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
-  background: var(--surface-2);
+  background: #0B1120;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
 }
 .shot img { display: block; width: 100%; height: auto; cursor: zoom-in; transition: transform .35s ease; }
 .shot:hover img { transform: scale(1.015); }
+
+/* Visual Blueprint Banner inside Project Cards (Always visible if image is missing, or sits cleanly as header) */
+.pc-visual {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(at 90% 10%, rgba(79, 70, 229, 0.45), transparent 60%),
+    radial-gradient(at 10% 90%, rgba(6, 182, 212, 0.3), transparent 60%),
+    #0B1120;
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  min-height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px;
+  color: #fff;
+}
+.pc-visual.has-img { padding: 0; }
+.pc-visual img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform .35s ease;
+}
+.pc:hover .pc-visual img { transform: scale(1.03); }
+.pc-vis-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font: 600 11.5px "JetBrains Mono", monospace;
+  color: #94A3B8;
+}
+.pc-vis-top span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #E2E8F0;
+}
+.pc-vis-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.pc-node {
+  flex: 1;
+  min-width: 80px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #F1F5F9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pc-node .i { width: 14px; height: 14px; color: #38BDF8; }
+.pc-vis-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #A5B4FC;
+  font-weight: 700;
+}
 
 /* Featured Case Study */
 .feature {
@@ -571,7 +685,7 @@ nav ul a.active {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 28px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   box-shadow: var(--shadow-sm);
 }
 .gallery-top {
@@ -620,42 +734,107 @@ nav ul a.active {
 .gpanel video { display: block; width: 100%; height: auto; border-radius: 12px; background: #0B1120; }
 .gcap { margin-top: 12px; color: var(--soft); font-size: 14.5px; max-width: 80ch; }
 
-/* 2x2 Project Grid */
-.proj { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+/* Upgraded Rich 2x2 Project Grid */
+.proj { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .pc {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 26px;
   text-decoration: none;
 }
-.pc .shot { margin-bottom: 16px; }
-.pc .shot img { cursor: inherit; }
-.pc .chip { align-self: flex-start; }
-.pc h3 { font-size: 19.5px; margin: 12px 0 8px; }
-.pc p { color: var(--soft); font-size: 15px; }
-.pc .result {
-  flex: 1;
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--line);
-  font-weight: 700;
-  font-size: 14.5px;
-  color: var(--ink);
+.pc[hidden] { display: none; }
+.pc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-.pc .tags { margin: 16px 0 0; }
+.pc-num {
+  font: 700 12px "JetBrains Mono", monospace;
+  color: var(--soft);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+.pc h3 { font-size: 21px; margin: 12px 0 8px; }
+.pc p { color: var(--text); font-size: 15px; }
+
+/* 3-Column Mini KPI Strip inside each Project Card */
+.pc-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.pc-kpis div { text-align: center; }
+.pc-kpis b {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1.2;
+}
+.pc-kpis span {
+  display: block;
+  font-size: 11.5px;
+  color: var(--soft);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Architecture & Deliverable Bullets inside Project Cards */
+.pc-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--soft);
+  flex: 1;
+}
+.pc-specs li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.pc-specs li .i {
+  width: 15px;
+  height: 15px;
+  color: var(--brand);
+  margin-top: 3px;
+}
+.pc-specs li b { color: var(--ink); }
+
+.pc-foot {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 .pc .more {
-  margin-top: 16px;
   font-weight: 700;
   color: var(--brand);
-  font-size: 14.5px;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 /* macOS IDE Code Window */
 .code-card {
-  margin-top: 26px;
+  margin-top: 28px;
   background: #0B1120;
   border-radius: 16px;
   overflow: hidden;
@@ -713,10 +892,7 @@ nav ul a.active {
   padding-left: 28px;
   border-left: 2px solid var(--line);
 }
-.job {
-  position: relative;
-  padding: 28px;
-}
+.job { position: relative; padding: 28px; }
 .job::after {
   content: "";
   position: absolute;
@@ -1054,7 +1230,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
         <span>Power Apps &amp; Automate</span>
         <span>Financial modelling</span>
         <span>Data modelling</span>
-        <span>BRD &amp; UAT</span>
+        <span>BRD, RTM &amp; UAT</span>
       </div>
     </div>
   </div>
@@ -1088,15 +1264,24 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
 <!-- PROJECTS -->
 <section class="band" id="projects">
   <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Portfolio</span>
-      <h2>Selected projects</h2>
-      <p>Each one links to its code and architecture documentation.</p>
+    <div class="title-row">
+      <div class="title">
+        <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Portfolio</span>
+        <h2>Selected projects</h2>
+        <p>End-to-end systems combining SQL engineering, business requirements, and executive BI.</p>
+      </div>
+      <div class="pf-filters" role="group" aria-label="Filter projects by category">
+        <button type="button" class="pf-btn active" data-filter="all">All Projects (5)</button>
+        <button type="button" class="pf-btn" data-filter="sql">SQL &amp; Data Layers</button>
+        <button type="button" class="pf-btn" data-filter="bi">Power BI &amp; BA</button>
+        <button type="button" class="pf-btn" data-filter="finance">Workflow &amp; Finance</button>
+      </div>
     </div>
 
-    <article class="feature spot-card">
+    <!-- FEATURED CASE STUDY (01) -->
+    <article class="feature spot-card" data-cat="sql bi">
       <div>
-        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Featured · SQL + Python + VBA</span>
+        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Featured Case Study · 01 · SQL + Python + VBA</span>
         <h3>iGaming Fraud &amp; Risk Operations Hub</h3>
         <dl>
           <div><dt><svg class="i" aria-hidden="true"><use href="#i-target"/></svg>The problem</dt><dd>Fraud review is often run on manual spreadsheets, which is slow and hard to audit. I built an end-to-end version on synthetic data to show a better way.</dd></div>
@@ -1148,48 +1333,152 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
       </div>
     </div>
 
-    <div class="proj">
-      <a class="pc spot-card" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">
-        <div class="shot"><img src="images/variance-dashboard.png" alt="Power BI group performance matrix showing revenue, operating expenses, margin and budget variance by region" onerror="this.parentNode.style.display='none'"></div>
-        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Financial BI · BRD to dashboard</span>
+    <!-- RICH 2x2 PROJECT BENTO GRID (02 - 05) -->
+    <div class="proj" id="projGrid">
+
+      <!-- Project 02 -->
+      <a class="pc spot-card" data-cat="sql bi finance" href="https://github.com/rashmileema-BI/automated-financial-bi-cube" target="_blank" rel="noopener">
+        <div class="pc-visual has-img">
+          <img src="images/variance-dashboard.png" alt="Power BI group performance matrix showing revenue, operating expenses, margin and budget variance by region" onerror="this.style.display='none';this.parentNode.classList.remove('has-img');this.nextElementSibling.style.display='block'">
+          <div style="display:none">
+            <div class="pc-vis-top"><span><svg class="i i-sm" aria-hidden="true"><use href="#i-database"/></svg>STAR SCHEMA · T-SQL</span><span>02 / FIN-BI</span></div>
+            <div class="pc-vis-flow">
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>BRD Specs</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>3-Entity ETL</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>DAX Matrix</div>
+            </div>
+            <div class="pc-vis-foot"><span>Actual vs Budget Consolidation</span><span>100% Cent-Reconciled</span></div>
+          </div>
+        </div>
+        <div class="pc-head">
+          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Financial BI · BRD to Dashboard</span>
+          <span class="pc-num">CASE 02</span>
+        </div>
         <h3>Multi-Entity Financial Variance &amp; Consolidation Platform</h3>
-        <p>Written up from a business requirements document: a SQL Server star schema and stored procedure consolidate three regional entities into a monthly actual-vs-budget summary, feeding a Power BI variance dashboard. In the 2025 data, the group finished 0.26% ahead of budget, led by Americas, with EMEA 0.23% under.</p>
-        <p class="result">Consolidates 10,983 transactions into 288 monthly summary rows (24 months × 3 regions × 4 account categories) in under 0.2 seconds. Actual and budget reconcile to the cent, and every run is logged. Built on illustrative data.</p>
-        <div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Star schema</span><span>Power BI</span><span>DAX</span><span>BRD</span></div>
-        <span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        <p>Engineered from a formal Business Requirements Document (BRD): a SQL Server star schema and stored procedure consolidate three regional entities into a monthly actual-vs-budget summary feeding a Power BI executive variance matrix.</p>
+        <div class="pc-kpis">
+          <div><b>10,983</b><span>Transactions</span></div>
+          <div><b>&lt; 0.2s</b><span>Consolidation</span></div>
+          <div><b>+0.26%</b><span>Group vs Budget</span></div>
+        </div>
+        <ul class="pc-specs">
+          <li><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg><span><b>Architecture:</b> Consolidates 24 months × 3 regions (Americas, EMEA, APAC) × 4 account categories into 288 governed summary rows.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg><span><b>Auditability:</b> Actual and budget reconcile to the exact cent with automated execution logging on every run.</span></li>
+        </ul>
+        <div class="pc-foot">
+          <div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Star Schema</span><span>Power BI</span><span>BRD</span></div>
+          <span class="more">Explore repo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </div>
       </a>
 
-      <a class="pc spot-card" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">
-        <div class="shot"><img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" onerror="this.parentNode.style.display='none'"></div>
-        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Workflow automation</span>
+      <!-- Project 03 -->
+      <a class="pc spot-card" data-cat="sql finance" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">
+        <div class="pc-visual has-img">
+          <img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" onerror="this.style.display='none';this.parentNode.classList.remove('has-img');this.nextElementSibling.style.display='block'">
+          <div style="display:none">
+            <div class="pc-vis-top"><span><svg class="i i-sm" aria-hidden="true"><use href="#i-workflow"/></svg>POWER PLATFORM · SQL</span><span>03 / OPS-FLOW</span></div>
+            <div class="pc-vis-flow">
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>Power Apps</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Auto Routing</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>SQL Audit Log</div>
+            </div>
+            <div class="pc-vis-foot"><span>Automated SLA Escalation</span><span>2,000 Synthetic Cases</span></div>
+          </div>
+        </div>
+        <div class="pc-head">
+          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Workflow Automation</span>
+          <span class="pc-num">CASE 03</span>
+        </div>
         <h3>Operations Exception &amp; Approval Tracker</h3>
-        <p>A Power Apps tracker on SQL Server for logging, searching and approving operational exceptions, with a Power Automate approval and escalation flow.</p>
-        <p class="result">High-severity exceptions are routed to a manager, approved or rejected with email notifications, and escalated if left unresolved. Tested on 2,000 synthetic records.</p>
-        <div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span><span>Synthetic data</span></div>
-        <span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        <p>A governed Power Apps operational exception portal backed by SQL Server for logging, searching, and resolving incidents—replacing ad-hoc email threads with a structured Power Automate approval and SLA escalation flow.</p>
+        <div class="pc-kpis">
+          <div><b>2,000</b><span>Test Exceptions</span></div>
+          <div><b>100%</b><span>Auto-Routed</span></div>
+          <div><b>SLA</b><span>Escalation Engine</span></div>
+        </div>
+        <ul class="pc-specs">
+          <li><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg><span><b>Workflow Logic:</b> High-severity exceptions route automatically to line managers with one-click email approve/reject actions.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span><b>Governance:</b> Unresolved overdue tickets trigger automated escalation alerts and write full audit trails to SQL Server.</span></li>
+        </ul>
+        <div class="pc-foot">
+          <div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span></div>
+          <span class="more">Explore repo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </div>
       </a>
 
-      <a class="pc spot-card" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">
-        <div class="shot"><img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.parentNode.style.display='none'"></div>
-        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Enterprise BI</span>
-        <h3>Executive Strategic Initiatives Platform</h3>
-        <p>Tracks initiative health, budget burn and milestone slippage across five departments.</p>
-        <p class="result">Automatically flags anything falling behind.</p>
-        <div class="tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
-        <span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      <!-- Project 04 -->
+      <a class="pc spot-card" data-cat="sql bi" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform" target="_blank" rel="noopener">
+        <div class="pc-visual has-img">
+          <img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.style.display='none';this.parentNode.classList.remove('has-img');this.nextElementSibling.style.display='block'">
+          <div style="display:none">
+            <div class="pc-vis-top"><span><svg class="i i-sm" aria-hidden="true"><use href="#i-chart"/></svg>ENTERPRISE PMO · BA + BI</span><span>04 / EXEC-PMO</span></div>
+            <div class="pc-vis-flow">
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>BRD &amp; RTM</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Star Schema</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Risk &amp; Burn BI</div>
+            </div>
+            <div class="pc-vis-foot"><span>5 Enterprise Departments</span><span>Automated Slippage Flags</span></div>
+          </div>
+        </div>
+        <div class="pc-head">
+          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Enterprise BI &amp; BA Documentation</span>
+          <span class="pc-num">CASE 04</span>
+        </div>
+        <h3>Executive Strategic Initiatives &amp; Risk Analytics Platform</h3>
+        <p>Full-lifecycle PMO and operational risk analytics suite monitoring strategic initiative health, budget burn rates, and milestone slippage across five departments, supported by complete Business Analyst documentation.</p>
+        <div class="pc-kpis">
+          <div><b>5 Depts</b><span>Cross-Functional</span></div>
+          <div><b>BRD + RTM</b><span>BA Deliverables</span></div>
+          <div><b>Auto-Flag</b><span>Slippage Alerts</span></div>
+        </div>
+        <ul class="pc-specs">
+          <li><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg><span><b>BA Artefacts:</b> Includes formal Business Requirements Document (BRD), Requirements Traceability Matrix (RTM), and relational star schema.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><b>Executive Visibility:</b> DAX measures dynamically flag capex/opex budget overruns and delayed critical-path milestones.</span></li>
+        </ul>
+        <div class="pc-foot">
+          <div class="tags"><span>Power BI</span><span>DAX</span><span>SQL Star Schema</span><span>BRD &amp; RTM</span></div>
+          <span class="more">Explore repo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </div>
       </a>
 
-      <a class="pc spot-card" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">
-        <div class="shot"><img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" onerror="this.parentNode.style.display='none'"></div>
-        <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Financial modelling</span>
-        <h3>Uber × Lyft Acquisition Model</h3>
-        <p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p>
-        <p class="result">Base case: enterprise value $18.2B, implied share price $48.27 vs $16.53 current, synergies worth $2.1B. Most sensitive to WACC and terminal growth.</p>
-        <div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
-        <span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      <!-- Project 05 -->
+      <a class="pc spot-card" data-cat="finance" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">
+        <div class="pc-visual has-img">
+          <img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" onerror="this.style.display='none';this.parentNode.classList.remove('has-img');this.nextElementSibling.style.display='block'">
+          <div style="display:none">
+            <div class="pc-vis-top"><span><svg class="i i-sm" aria-hidden="true"><use href="#i-file-text"/></svg>M&amp;A VALUATION · DCF</span><span>05 / CORP-FIN</span></div>
+            <div class="pc-vis-flow">
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>5-Yr Forecast</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>WACC Matrix</div>
+              <div class="pc-node"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg>$18.2B EV</div>
+            </div>
+            <div class="pc-vis-foot"><span>Implied Share Price: $48.27</span><span>$2.1B Deal Synergies</span></div>
+          </div>
+        </div>
+        <div class="pc-head">
+          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Financial Modelling · M&amp;A</span>
+          <span class="pc-num">CASE 05</span>
+        </div>
+        <h3>Uber × Lyft Strategic Acquisition Valuation Model</h3>
+        <p>Multi-scenario 5-year Discounted Cash Flow (DCF) and M&amp;A valuation model evaluating a hypothetical acquisition under dynamic WACC, terminal growth, and operational cost-synergy assumptions.</p>
+        <div class="pc-kpis">
+          <div><b>$18.2B</b><span>Enterprise Value</span></div>
+          <div><b>$48.27</b><span>Implied Share Price</span></div>
+          <div><b>$2.1B</b><span>Synergy Value</span></div>
+        </div>
+        <ul class="pc-specs">
+          <li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg><span><b>Valuation Rigour:</b> Models standalone vs combined free cash flows, comparing $48.27 implied equity value against $16.53 market baseline.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg><span><b>Sensitivity Matrix:</b> Two-dimensional stress testing across discount rates (WACC) and terminal growth multiples.</span></li>
+        </ul>
+        <div class="pc-foot">
+          <div class="tags"><span>Excel</span><span>5-Yr DCF</span><span>Sensitivity Analysis</span><span>M&amp;A</span></div>
+          <span class="more">Explore repo<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </div>
       </a>
+
     </div>
 
+    <!-- macOS SQL Code Showcase -->
     <div class="code-card">
       <header>
         <div class="code-title">
@@ -1362,7 +1651,21 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
     });
   });
 
-  /* 2. Copy SQL Button */
+  /* 2. Interactive Project Category Filter */
+  var filterBtns = document.querySelectorAll('.pf-btn');
+  var projCards = document.querySelectorAll('#projGrid .pc');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cat = btn.getAttribute('data-filter');
+      filterBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
+      projCards.forEach(function(card){
+        var cardCats = card.getAttribute('data-cat') || '';
+        card.hidden = (cat !== 'all' && cardCats.indexOf(cat) === -1);
+      });
+    });
+  });
+
+  /* 3. Copy SQL Button */
   var copyBtn = document.getElementById('copySql');
   var sqlBlock = document.getElementById('sqlBlock');
   if (copyBtn && sqlBlock) {
@@ -1375,7 +1678,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
     });
   }
 
-  /* 3. Gallery Tabs (pauses video when leaving tab) */
+  /* 4. Gallery Tabs (pauses video when leaving tab) */
   var tabs = document.querySelectorAll('.gtabs button'),
       panels = document.querySelectorAll('.gpanel'),
       vid = document.querySelector('.gpanel video');
@@ -1388,7 +1691,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
     });
   });
 
-  /* 4. Click-to-enlarge Lightbox */
+  /* 5. Click-to-enlarge Lightbox */
   var lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
   function openLb(i){ lbImg.src = i.currentSrc || i.src; lbImg.alt = i.alt; lb.classList.add('open'); }
   document.querySelectorAll('.feature .shot img,.gallery .shot img,.cert .shot img').forEach(function(i){
@@ -1400,7 +1703,7 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
   lb.addEventListener('click', function(){ lb.classList.remove('open'); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') lb.classList.remove('open'); });
 
-  /* 5. Section Highlight + Scroll Reveal */
+  /* 6. Section Highlight + Scroll Reveal */
   if ('IntersectionObserver' in window) {
     var links = {};
     document.querySelectorAll('nav ul a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
