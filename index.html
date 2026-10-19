@@ -235,4 +235,475 @@ nav ul a.active .i{color:#818CF8;opacity:1}
 .cert .co{color:var(--teal);font-weight:700;font-size:15px}
 .cert p{color:var(--soft);font-size:14.5px;margin:10px 0 16px;flex:1}
 .cert .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.cert .verify{margin-top:16px;padding:10px 1
+.cert .verify{margin-top:16px;padding:10px 16px;border-radius:10px;background:var(--white);border:1px solid var(--line);font-weight:700;font-size:14.5px;color:var(--teal);display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:all .2s}
+.cert .verify:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+/* contact */
+.cta h2{font-size:clamp(28px,4vw,42px);max-width:20ch;color:#fff}
+.cta p{margin:12px 0 28px;color:#CBD5E1;max-width:52ch;font-size:17.5px}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.links a{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:10px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);font-weight:700;text-decoration:none;color:#fff;transition:all .2s}
+.links a:first-child{background:linear-gradient(135deg,var(--teal),var(--cyan));border-color:transparent;color:#fff;box-shadow:0 8px 20px -6px rgba(6,182,212,.45)}
+.links a:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+footer{background:#060A14;color:var(--onink);padding:24px 0;font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+/* scroll reveal */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.js .reveal{opacity:0}
+.js .reveal.in{opacity:1;animation:rise .6s ease backwards;animation-delay:var(--d,0s)}
+
+@media(max-width:900px){
+.flow{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+html{scroll-padding-top:100px}
+.band{padding:52px 0}
+nav{padding:10px 20px;gap:6px}
+nav ul{flex-wrap:nowrap;overflow-x:auto;width:100%;max-width:100%;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav ul a{padding:7px 10px;font-size:13.5px;white-space:nowrap}
+.hero{grid-template-columns:1fr;gap:24px}
+.photo{width:140px;height:140px}
+.stats .wrap{grid-template-columns:repeat(2,1fr)}
+.about{grid-template-columns:1fr}
+.feature{grid-template-columns:1fr;padding:22px}
+.flow{grid-template-columns:1fr}
+.gallery{padding:20px}
+.proj{grid-template-columns:1fr}
+.xp,.edugrid,.certs{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.pc,.sk,.cert,.btn{transition:none}.pc:hover,.sk:hover,.cert:hover,.btn:hover{transform:none}
+.js .reveal{opacity:1}.js .reveal.in{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Lucide + Brand icon sprite (outline, 24px grid, 2px stroke) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M3 5h4"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-trending-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></symbol>
+<symbol id="i-microsoft" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
+</svg>
+
+<header class="top" id="topbar">
+<nav aria-label="Main">
+<a class="logo" href="#top"><span class="logo-mark"><svg class="i i-sm" aria-hidden="true"><use href="#i-chart"/></svg></span>Rashmi Leema</a>
+<ul>
+  <li><a href="#skills"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Skills</a></li>
+  <li><a href="#about"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg>About</a></li>
+  <li><a href="#projects"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Projects</a></li>
+  <li><a href="#experience"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg>Experience</a></li>
+  <li><a href="#education"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg>Education</a></li>
+  <li><a href="#certificates"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Certificates</a></li>
+  <li><a href="#contact"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<div class="band dark" id="top">
+<div class="wrap hero">
+<div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
+<div>
+<div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>Data &amp; Business Analytics Portfolio</div>
+<h1>Data Analyst who automates reporting with SQL, Python and Excel.</h1>
+<p>Two-plus years building reporting models, SQL data layers and dashboards for Finance, HR, Operations and Middle Office teams. I cut recurring reporting prep by 80% by replacing manual work with automation.</p>
+<div class="stack">
+  <span><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>SQL</span>
+  <span><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Python</span>
+  <span><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Excel VBA</span>
+  <span><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Power Query</span>
+  <span><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Power BI</span>
+  <span><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>Power Apps</span>
+</div>
+<div class="btns">
+<a class="btn" href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
+<a class="btn alt" href="#projects">See my work<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+</div>
+<p class="quick">
+  <a href="mailto:rashmi.kuru@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>rashmi.kuru@gmail.com</a>
+  <a href="https://www.linkedin.com/in/rashmi-leema"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+  <a href="https://github.com/rashmileema-BI"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+</p>
+</div>
+</div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats">
+<div class="wrap">
+<div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-trending-down"/></svg></div><b>80%</b><span>less recurring reporting prep</span></div>
+<div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg></div><b>2+ yrs</b><span>building analytics solutions</span></div>
+<div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></div><b>4</b><span>teams served: Finance, HR, Ops, Middle Office</span></div>
+<div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg></div><b>5</b><span>portfolio projects on GitHub</span></div>
+</div>
+</div>
+
+<!-- CORE SKILLS -->
+<section class="band" id="skills">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Capabilities</span>
+  <h2>Core skills</h2>
+  <p>The tools I use most, and where I've used them.</p>
+</div>
+<div class="core">
+<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></div><h3>SQL</h3><p>Staging and core layers, star schemas, stored procedures, views and window functions that turn raw files into scored, query-ready tables.</p><p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> Variance Platform, Fraud Hub</p></div>
+<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></div><h3>Python</h3><p>Synthetic data generation and risk-scoring scripts that replace manual investigations and repetitive spreadsheet work.</p><p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> Fraud Hub, Exception Tracker</p></div>
+<div class="sk"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Excel automation</h3><p>VBA tooling, Power Query and multi-source models that turn hours of monthly prep into a refresh.</p><p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> Client Cube (GTN Tech), Fraud Hub</p></div>
+</div>
+<div class="also"><b><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>Also:</b>
+<div class="tags"><span>Power BI &amp; DAX</span><span>Power Apps &amp; Automate</span><span>Financial modelling</span><span>Data modelling</span><span>BRD &amp; UAT</span></div></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="band white" id="about">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg>Profile</span>
+  <h2>About me</h2>
+</div>
+<div class="about">
+<div>
+<p>I'm a data analyst who likes replacing repetitive work with systems that run themselves. I start from the question the business is asking, build the SQL and Python behind it, and finish with a dashboard or tool people actually open.</p>
+<p>My background is in finance, so I'm comfortable with messy multi-source data and with explaining numbers to non-technical teams.</p>
+</div>
+<div class="offer">
+<h3><svg class="i" aria-hidden="true"><use href="#i-target"/></svg>What I can do for your team</h3>
+<ul>
+<li><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Automate recurring reports end to end</li>
+<li><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Build clean SQL data layers and repeatable load scripts</li>
+<li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Turn raw data into dashboards stakeholders trust</li>
+<li><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Replace manual spreadsheet processes with governed workflows</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="band" id="projects">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Portfolio</span>
+  <h2>Selected projects</h2>
+  <p>Each one links to its code.</p>
+</div>
+
+<article class="feature">
+<div>
+<span class="chip"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Featured · SQL + Python + VBA</span>
+<h3>iGaming Fraud &amp; Risk Operations Hub</h3>
+<dl>
+<div><dt><svg class="i" aria-hidden="true"><use href="#i-target"/></svg>The problem</dt><dd>Fraud review is often run on manual spreadsheets, which is slow and hard to audit. I built an end-to-end version on synthetic data to show a better way.</dd></div>
+<div><dt><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>What I built</dt><dd>Python-generated test data, SQL Server staging and scoring, six weighted rules, automatic case assignment with SLA deadlines, a three-page Power BI dashboard (overview, risk, reconciliation) and a Power Apps case app.</dd></div>
+<div><dt><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>What the data showed</dt><dd>In the June 2026 synthetic data, card payments failed most often (5.87%), followed by crypto (5.72%), bank transfer (4.65%) and e-wallet (4.18%).</dd></div>
+<div><dt><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg>Result</dt><dd>Tested on 2,000 synthetic players and 50,652 payments with 235 planted fraud accounts: all 235 were flagged (100% recall) in 0.4 seconds, and every High and Medium case was a planted account.</dd></div>
+</dl>
+<div class="tags"><span>Python</span><span>SQL Server</span><span>Power Query</span><span>VBA</span><span>Power BI</span><span>Power Apps</span><span>Synthetic data</span></div>
+<a class="btn" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub">View the project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+</div>
+<div class="shot"><img src="images/fraud-overview.png" alt="Power BI overview page showing transactions, failure rate, deposits and withdrawals" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+</article>
+
+<div class="flow" aria-label="How the Fraud Hub pipeline works">
+<div><b><span>Generate</span><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></b>Python creates synthetic players, payments, devices and bonuses.</div>
+<div><b><span>Stage</span><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></b>Raw files load into untyped SQL Server staging tables.</div>
+<div><b><span>Transform</span><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg></b>Types, blanks and keys are cleaned into the core tables.</div>
+<div><b><span>Score</span><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></b>Stored procedures apply six weighted rules and open cases.</div>
+<div><b><span>Serve</span><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></b>Power BI and Power Apps read the cases.</div>
+</div>
+
+<!-- FRAUD HUB IN ACTION -->
+<div class="gallery">
+<h3><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>Fraud Hub in action</h3>
+<div class="gtabs" role="tablist" aria-label="Fraud Hub screens">
+<button type="button" role="tab" id="t-risk" aria-selected="true" aria-controls="g-risk"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Risk queue</button>
+<button type="button" role="tab" id="t-rec" aria-selected="false" aria-controls="g-rec"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Reconciliation</button>
+<button type="button" role="tab" id="t-app" aria-selected="false" aria-controls="g-app"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg>Power Apps case app</button>
+</div>
+
+<div class="gpanel" id="g-risk" role="tabpanel" aria-labelledby="t-risk">
+<div class="shot"><img src="images/fraud-risk.png" alt="Power BI risk page with a ranked risk queue and shared card holders" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+<p class="gcap">Ranks players by risk score and level, with the rules that triggered each one, and lists shared-card holders. June 2026 view of the synthetic data: 17 High, 57 Medium, 15 shared cards. Click the image to enlarge.</p>
+</div>
+
+<div class="gpanel" id="g-rec" role="tabpanel" aria-labelledby="t-rec" hidden>
+<div class="shot"><img src="images/fraud-reconciliation.png" alt="Power BI reconciliation page listing ledger versus payment provider exceptions" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+<p class="gcap">Matches the internal ledger against payment-provider records and surfaces 334 exceptions in five categories: missing at PSP (101), amount mismatch (95), fee mismatch (82), duplicate at PSP (41) and missing in ledger (15).</p>
+</div>
+
+<div class="gpanel" id="g-app" role="tabpanel" aria-labelledby="t-app" hidden>
+<video controls muted playsinline preload="metadata" aria-label="Screen recording of the Power Apps fraud case app">
+<source src="images/fraud-app-demo.mp4" type="video/mp4">
+Your browser can't play this video.
+</video>
+<p class="gcap">Power Apps case app for working the fraud case queue. Screen recording.</p>
+</div>
+</div>
+
+<div class="proj">
+<a class="pc" href="https://github.com/rashmileema-BI/automated-financial-bi-cube">
+<div class="shot"><img src="images/variance-dashboard.png" alt="Power BI group performance matrix showing revenue, operating expenses, margin and budget variance by region" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Financial BI · BRD to dashboard</span><h3>Multi-Entity Financial Variance &amp; Consolidation Platform</h3>
+<p>Written up from a business requirements document: a SQL Server star schema and stored procedure consolidate three regional entities into a monthly actual-vs-budget summary, feeding a Power BI variance dashboard. In the 2025 data, the group finished 0.26% ahead of budget, led by Americas, with EMEA 0.23% under.</p>
+<p class="result">Consolidates 10,983 transactions into 288 monthly summary rows (24 months × 3 regions × 4 account categories) in under 0.2 seconds. Actual and budget reconcile to the cent, and every run is logged. Built on illustrative data.</p>
+<div class="tags"><span>SQL Server</span><span>T-SQL</span><span>Star schema</span><span>Power BI</span><span>DAX</span><span>BRD</span></div>
+<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+
+<a class="pc" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker">
+<div class="shot"><img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Workflow automation</span><h3>Operations Exception &amp; Approval Tracker</h3>
+<p>A Power Apps tracker on SQL Server for logging, searching and approving operational exceptions, with a Power Automate approval and escalation flow.</p>
+<p class="result">High-severity exceptions are routed to a manager, approved or rejected with email notifications, and escalated if left unresolved. Tested on 2,000 synthetic records.</p>
+<div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span><span>Synthetic data</span></div>
+<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+
+<a class="pc" href="https://github.com/rashmileema-BI/Executive-Strategic-Initiatives-Analytics-Platform">
+<div class="shot"><img src="images/pmo-platform.png" alt="Screenshot of the strategic initiatives dashboard" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Enterprise BI</span><h3>Executive Strategic Initiatives Platform</h3>
+<p>Tracks initiative health, budget burn and milestone slippage across five departments.</p>
+<p class="result">Automatically flags anything falling behind.</p>
+<div class="tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
+<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+
+<a class="pc" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project">
+<div class="shot"><img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" onerror="this.parentNode.style.display='none'"></div>
+<span class="chip"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Financial modelling</span><h3>Uber × Lyft Acquisition Model</h3>
+<p>A five-year DCF and sensitivity matrix testing the deal under different WACC and synergy assumptions.</p>
+<p class="result">Base case: enterprise value $18.2B, implied share price $48.27 vs $16.53 current, synergies worth $2.1B. Most sensitive to WACC and terminal growth.</p>
+<div class="tags"><span>Excel</span><span>DCF</span><span>Sensitivity analysis</span></div>
+<span class="more">View project<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></a>
+</div>
+
+<div class="code-card">
+<header><b><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>SQL sample · weighted risk scoring view</b><span>Fraud Hub</span></header>
+<pre><code><span class="c">-- Sum weighted rule hits per player, then band the score</span>
+<span class="k">WITH</span> f <span class="k">AS</span> (
+  <span class="k">SELECT</span> player_id, rule_code, <span class="f">MIN</span>(detail) <span class="k">AS</span> detail
+  <span class="k">FROM</span> core.risk_flags
+  <span class="k">GROUP BY</span> player_id, rule_code
+)
+<span class="k">SELECT</span> f.player_id, p.country,
+       <span class="f">SUM</span>(w.points) <span class="k">AS</span> risk_score,
+       <span class="k">CASE WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 60 <span class="k">THEN</span> 'High'
+            <span class="k">WHEN</span> <span class="f">SUM</span>(w.points) &gt;= 40 <span class="k">THEN</span> 'Medium'
+            <span class="k">ELSE</span> 'Low' <span class="k">END AS</span> risk_band,
+       <span class="f">STRING_AGG</span>(f.rule_code, '; ') <span class="k">WITHIN GROUP</span> (<span class="k">ORDER BY</span> f.rule_code) <span class="k">AS</span> rules
+<span class="k">FROM</span> f
+<span class="k">JOIN</span> core.rule_weights <span class="k">AS</span> w <span class="k">ON</span> w.rule_code = f.rule_code
+<span class="k">JOIN</span> core.players <span class="k">AS</span> p <span class="k">ON</span> p.player_id = f.player_id
+<span class="k">GROUP BY</span> f.player_id, p.country;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="band white" id="experience">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg>Career</span>
+  <h2>Experience</h2>
+</div>
+<div class="xp">
+<div class="job">
+<time><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>Jan 2024 to Jan 2026</time>
+<h3>Associate Business Analyst</h3>
+<div class="co"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>GTN Tech</div>
+<ul>
+<li>Built Excel VBA macros and automated workbooks that removed manual data consolidation, improved accuracy and standardized recurring Finance and Operations reports.</li>
+<li>Consolidated data from multiple sources into reporting ready datasets using Excel Power Query and Power Pivot, supported by Python and SQL Server - SSMS.</li>
+<li>Designed and built a multi client data cube in Excel, giving executives cross-asset visibility. It supported client acquisition for a major global fintech client.</li>
+<li>Defined functional specifications and workflow logic to extend Excel automation with Power Apps and Power Automate, cutting board meeting report preparation from 8 hours to 1.5 hours.</li>
+<li>Elicited business requirements across Finance, HR, Operations, and Middle Office in a regulated fintech environment; translated stakeholder needs into Business Requirements Documents (BRDs), and user stories to deliver enterprise Excel and Power BI dashboards.</li>
+<li>Mapped As-Is and To-Be business process flows to identify automation bottlenecks; designed test scenarios, led User Acceptance Testing (UAT) sessions with end users, and authored UAT documentation and user guides for production rollouts.</li>
+<li>Produced Excel-based trend and predictive analyses on trading activity, AUC and revenue drivers, and prepared strategic content for a CEO keynote at Money 20/20.</li>
+</ul></div>
+<div class="job">
+<time><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>Jan 2026 to Jun 2026</time>
+<h3>Revenue Planning Analyst - Executive</h3>
+<div class="co"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>SriLankan Airlines</div>
+<ul>
+<li>Built and maintained Excel analyses of monthly route and station performance, with recommendations to commercial management on demand and revenue drivers.</li>
+<li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
+<li>Prepared ad hoc costing analyses and reports for Senior Management planning purposes.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="band" id="education">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg>Academic</span>
+  <h2>Education</h2>
+  <p>Academic qualifications.</p>
+</div>
+<div class="edugrid">
+<div class="edc">
+<div class="ico"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg></div>
+<div>
+<time><svg class="i i-sm" aria-hidden="true"><use href="#i-calendar"/></svg>2020 to 2024</time>
+<h3>BSc (Hons) Finance &amp; Insurance</h3>
+<div class="co">University of Colombo</div>
+<p><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Second Class Upper</p>
+</div>
+</div>
+<!-- Add more qualifications by copying the .edc block above -->
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="band white" id="certificates">
+<div class="wrap">
+<div class="title">
+  <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Credentials</span>
+  <h2>Certificates</h2>
+  <p>Professional certifications and completed courses.</p>
+</div>
+<div class="certs">
+
+<div class="cert">
+<!-- Optional certificate preview image at images/certs/microsoft-business-analyst.png (hides itself if missing) -->
+<div class="shot"><img src="images/certs/microsoft-business-analyst.png" alt="Microsoft Business Analyst Professional Certificate" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+<div class="cert-top">
+  <div class="badge"><svg class="i" aria-hidden="true"><use href="#i-microsoft"/></svg></div>
+  <span class="chip ic success"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg>Verified · Coursera</span>
+</div>
+<h3>Microsoft Business Analyst</h3>
+<div class="co">Microsoft · Professional Certificate</div>
+<p>Business requirements gathering, process modelling, data analysis, Visio workflows, and enterprise reporting with the Microsoft ecosystem.</p>
+<a class="verify" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">Verify credential on Coursera<svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+</div>
+
+<!-- Copy the .cert block above for each new certificate -->
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="band dark" id="contact">
+<div class="wrap cta">
+<div class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>Available for opportunities</div>
+<h2>Open to Data Analyst roles.</h2>
+<p>If your team needs someone to automate reporting, build clean SQL layers and turn messy data into dashboards people trust, let's talk. Based in Colombo, Sri Lanka.</p>
+<div class="links">
+<a href="mailto:rashmi.kuru@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+<a href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
+<a href="https://www.linkedin.com/in/rashmi-leema"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+<a href="https://github.com/rashmileema-BI"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+</div>
+</div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <span>© Rashmi Leema</span>
+    <span>Built with SQL, Python &amp; Power BI case studies</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
+
+<script>
+(function(){
+  /* 0. Gallery tabs (pauses the video when you leave its tab) */
+  var tabs=document.querySelectorAll('.gtabs button'),panels=document.querySelectorAll('.gpanel'),vid=document.querySelector('.gpanel video');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      var target=t.getAttribute('aria-controls');
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false');});
+      panels.forEach(function(p){p.hidden=p.id!==target;});
+      if(vid&&target!=='g-app')vid.pause();
+    });
+  });
+
+  /* 1. Click-to-enlarge for dashboard and certificate images */
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+  function openLb(i){lbImg.src=i.currentSrc||i.src;lbImg.alt=i.alt;lb.classList.add('open');}
+  document.querySelectorAll('.feature .shot img,.gallery .shot img,.cert .shot img').forEach(function(i){
+    i.setAttribute('tabindex','0');i.setAttribute('role','button');
+    i.addEventListener('click',function(){openLb(i);});
+    i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);}});
+  });
+  lb.addEventListener('click',function(){lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+
+  /* 2. Sticky nav shadow + section highlight */
+  var bar=document.getElementById('topbar');
+  function onScroll(){bar.classList.toggle('scrolled',window.scrollY>10);}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  if('IntersectionObserver' in window){
+    var links={};
+    document.querySelectorAll('nav ul a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+    var spy=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        Object.keys(links).forEach(function(k){
+          var on=k===e.target.id;
+          links[k].classList.toggle('active',on);
+          if(on)links[k].setAttribute('aria-current','true');else links[k].removeAttribute('aria-current');
+        });
+      });
+    },{rootMargin:'-35% 0px -60% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){spy.observe(s);});
+
+    /* 3. Scroll reveal (skipped for reduced motion) */
+    if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+      document.documentElement.classList.add('js');
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+        });
+      },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+      document.querySelectorAll('.title,.sk,.also,.feature,.flow>div,.gallery,.pc,.job,.edc,.cert,.cta>*,.stat,.code-card,.about>*').forEach(function(el){
+        el.classList.add('reveal');
+        var i=Array.prototype.indexOf.call(el.parentNode.children,el);
+        el.style.setProperty('--d',(i%3)*0.08+'s');
+        io.observe(el);
+      });
+    }
+  }
+})();
+</script>
+</body>
+</html>
