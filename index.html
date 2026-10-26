@@ -361,59 +361,135 @@
       transform: translateY(-2px);
     }
 
-    /* Hero Visual Card (Iridescent Glass Card) */
-    .hero-visual-card {
+    /* Modern Executive Tech Console Card */
+    .hero-console-card {
       position: relative;
       background: var(--bg-surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 16px;
+      overflow: hidden;
       box-shadow: var(--card-shadow);
       backdrop-filter: blur(24px);
+      transition: var(--transition);
     }
-    .hero-visual-card::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: calc(var(--radius-lg) + 1px);
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(6, 182, 212, 0.4), rgba(236, 72, 153, 0.3));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
+    .hero-console-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-2px);
     }
-    .photo-container {
-      width: 100%;
-      height: 290px;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-    .photo-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      transition: transform 0.4s ease;
-    }
-    .hero-visual-card:hover .photo-container img {
-      transform: scale(1.03);
-    }
-    .card-footer-info {
+    .console-header {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .cf-row {
-      display: flex;
+      align-items: center;
       justify-content: space-between;
-      font-size: 13px;
+      padding: 12px 18px;
+      background: rgba(0, 0, 0, 0.35);
+      border-bottom: 1px solid var(--border);
+    }
+    .console-dots { display: flex; gap: 6px; }
+    .c-dot { width: 9px; height: 9px; border-radius: 50%; }
+    .c-dot.red { background: #EF4444; }
+    .c-dot.yellow { background: #F59E0B; }
+    .c-dot.green { background: #10B981; }
+    .console-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
       color: var(--text-muted);
     }
-    .cf-val {
+    .console-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--emerald);
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+    .console-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .console-avatar-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .avatar-ring {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--grad-main);
+      padding: 2px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+    }
+    .avatar-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .avatar-name {
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .avatar-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .console-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .c-metric-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+    }
+    .cm-lbl {
+      display: block;
+      font-size: 11px;
+      color: var(--text-subtle);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+    .cm-val {
+      font-size: 12.5px;
       font-weight: 700;
       color: var(--text);
+    }
+    .console-activity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      font-size: 12px;
+      color: var(--emerald);
+      font-weight: 600;
+    }
+    .ca-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
     }
 
     /* ==========================================================================
@@ -1083,7 +1159,7 @@
           <div class="hero-chips">
             <span class="chip">⚡ SQL (SSMS &amp; Stored Procs)</span>
             <span class="chip">📊 Power BI &amp; DAX</span>
-            <span class="chip">🐍 Python (Data Analysis)</span>
+            <span class="chip">🐍 Python Data Pipelines</span>
             <span class="chip">⚙️ Power Apps &amp; Automate</span>
             <span class="chip">📐 BPMN 2.0 Process Models</span>
             <span class="chip">🎯 BRD &amp; UAT Governance</span>
@@ -1105,45 +1181,72 @@
           </div>
         </div>
 
-        <!-- Iridescent Card -->
-        <div class="hero-visual-card">
-          <div class="photo-container">
-            <img src="images/Profile Photo.JPG" alt="Rashmi Leema Portrait">
+        <!-- Modern Executive Tech Console Card -->
+        <div class="hero-console-card">
+          <div class="console-header">
+            <div class="console-dots">
+              <span class="c-dot red"></span>
+              <span class="c-dot yellow"></span>
+              <span class="c-dot green"></span>
+            </div>
+            <span class="console-title">analytics-runtime.json</span>
+            <span class="console-status"><span class="pulse-dot"></span> ACTIVE</span>
           </div>
-          <div class="card-footer-info">
-            <div class="cf-row">
-              <span>Experience:</span>
-              <span class="cf-val">GTN Tech (Assoc. BA)</span>
+          <div class="console-body">
+            <div class="console-avatar-row">
+              <div class="avatar-ring">
+                <img src="images/Profile Photo.JPG" alt="Rashmi Leema">
+              </div>
+              <div>
+                <div class="avatar-name">Rashmi Leema</div>
+                <div class="avatar-sub">Revenue Planning &amp; Business Analyst • SriLankan Airlines &amp; GTN Tech Alumni</div>
+              </div>
             </div>
-            <div class="cf-row">
-              <span>Academics:</span>
-              <span class="cf-val">BSc (Hons) Uni of Colombo</span>
+
+            <div class="console-meta-grid">
+              <div class="c-metric-pill">
+                <span class="cm-lbl">Primary BI Tool</span>
+                <span class="cm-val" style="color: var(--cyan-glow);">Power BI &amp; DAX</span>
+              </div>
+              <div class="c-metric-pill">
+                <span class="cm-lbl">Data Engine</span>
+                <span class="cm-val" style="color: var(--primary-light);">SQL Server (SSMS)</span>
+              </div>
+              <div class="c-metric-pill">
+                <span class="cm-lbl">Automation</span>
+                <span class="cm-val">Power Apps &amp; Automate</span>
+              </div>
+              <div class="c-metric-pill">
+                <span class="cm-lbl">Governance</span>
+                <span class="cm-val">BPMN 2.0 &amp; UAT</span>
+              </div>
             </div>
-            <div class="cf-row">
-              <span>Status:</span>
-              <span class="cf-val" style="color: var(--emerald);">Available for Roles</span>
+
+            <div class="console-activity">
+              <div class="ca-dot"></div>
+              <span>Open to Full-Time Roles • Remote &amp; Relocation</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Impact Metrics -->
+      <!-- Real-World Career & Capability Milestones -->
       <div class="metrics-bar">
         <div class="m-box">
-          <span class="m-val">180,519</span>
-          <span class="m-lbl">Global Shipments Diagnosed</span>
+          <span class="m-val">2+ Years</span>
+          <span class="m-lbl">Enterprise Experience (Aviation &amp; FinTech)</span>
         </div>
         <div class="m-box">
-          <span class="m-val">$20.11M</span>
-          <span class="m-lbl">Revenue at Risk Isolated</span>
+          <span class="m-val">8h &rarr; 1.5h</span>
+          <span class="m-lbl">Board Report Preparation Cut (GTN Tech)</span>
         </div>
         <div class="m-box">
-          <span class="m-val">4 Mins</span>
-          <span class="m-lbl">ETL Latency (vs. 5 Days Manual)</span>
+          <span class="m-val">2nd Upper</span>
+          <span class="m-lbl">BSc (Hons) Finance &amp; Insurance (Colombo)</span>
         </div>
         <div class="m-box">
-          <span class="m-val">$18.4M</span>
-          <span class="m-lbl">CapEx Portfolio Governed</span>
+          <span class="m-val">End-to-End</span>
+          <span class="m-lbl">BRD, BPMN 2.0 Mapping &amp; UAT Delivery</span>
         </div>
       </div>
     </div>
@@ -1443,6 +1546,22 @@
         <div class="xp-panel">
           <h3>💼 Professional Experience</h3>
 
+          <!-- SriLankan Airlines -->
+          <div class="xp-entry">
+            <div class="xp-top-line">
+              <span class="xp-role">Revenue Planning Analyst — Executive</span>
+              <span class="xp-date">Jan 2026 — Jun 2026</span>
+            </div>
+            <div class="xp-corp">SriLankan Airlines • Commercial Aviation &amp; Revenue Planning</div>
+            <ul class="xp-list">
+              <li>Engineered and maintained monthly route and station performance models in Excel, delivering commercial management recommendations on passenger demand and yield drivers.</li>
+              <li>Conducted economic evaluations of proposed flight schedules to support global network capacity and fleet allocation decisions.</li>
+              <li>Prepared ad-hoc route profitability models, cost analyses, and executive board presentations for senior leadership strategic planning.</li>
+            </ul>
+          </div>
+
+          <div style="height: 1px; background: var(--border); margin: 24px 0;"></div>
+
           <div class="xp-entry">
             <div class="xp-top-line">
               <span class="xp-role">Associate Business Analyst</span>
@@ -1483,10 +1602,11 @@
             <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
               Specialization covering enterprise requirements elicitation, BPMN process modeling, Power Platform workflows, and data analysis.
             </p>
-          <a class="verify" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">
+              <a class="verify" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">
           Verify credential on Coursera
           <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
         </a>
+          </div>
         </div>
       </div>
     </div>
