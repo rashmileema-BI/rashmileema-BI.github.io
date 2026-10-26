@@ -1022,13 +1022,30 @@
       top: 4px;
     }
 
+    /* Verification link styling */
+    .verify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--cyan-glow);
+      transition: var(--transition);
+    }
+    .verify-btn:hover {
+      color: #FFFFFF;
+      transform: translateX(2px);
+    }
+
     /* ==========================================================================
-       VIBRANT FOOTER
+       VIBRANT FOOTER & CONTACT
        ========================================================================== */
     footer {
       border-top: 1px solid var(--border);
       padding: 70px 0 40px;
       background: rgba(0, 0, 0, 0.4);
+      scroll-margin-top: 20px;
     }
     .footer-box {
       display: flex;
@@ -1057,6 +1074,40 @@
       justify-content: space-between;
       color: var(--text-subtle);
       font-size: 13px;
+    }
+
+    /* Floating Copy Toast Notification */
+    .toast-notify {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-surface-hover);
+      color: #FFFFFF;
+      border: 1px solid var(--cyan-glow);
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 25px rgba(6, 182, 212, 0.35);
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 150;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .toast-notify.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    .toast-check {
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
     }
 
     /* ==========================================================================
@@ -1130,6 +1181,7 @@
         <li><a href="#work">Featured Work</a></li>
         <li><a href="#artifacts">BA Artifacts</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -1137,9 +1189,9 @@
           <svg class="icon icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="icon icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="mailto:rashmi.kuru@gmail.com" class="btn-say-hi">
+        <button type="button" class="btn-say-hi" id="sayHelloBtn" title="Get in touch / Copy Email">
           <span>Say Hello 👋</span>
-        </a>
+        </button>
       </div>
     </nav>
   </header>
@@ -1159,7 +1211,7 @@
           <div class="hero-chips">
             <span class="chip">⚡ SQL (SSMS &amp; Stored Procs)</span>
             <span class="chip">📊 Power BI &amp; DAX</span>
-            <span class="chip">🐍 Python Data Pipelines</span>
+            <span class="chip">📈 Excel VBA &amp; Power Query</span>
             <span class="chip">⚙️ Power Apps &amp; Automate</span>
             <span class="chip">📐 BPMN 2.0 Process Models</span>
             <span class="chip">🎯 BRD &amp; UAT Governance</span>
@@ -1189,7 +1241,7 @@
               <span class="c-dot yellow"></span>
               <span class="c-dot green"></span>
             </div>
-            <span class="console-title">analytics-runtime.json</span>
+            <span class="console-title">candidate-dossier.json</span>
             <span class="console-status"><span class="pulse-dot"></span> ACTIVE</span>
           </div>
           <div class="console-body">
@@ -1205,20 +1257,20 @@
 
             <div class="console-meta-grid">
               <div class="c-metric-pill">
-                <span class="cm-lbl">Primary BI Tool</span>
-                <span class="cm-val" style="color: var(--cyan-glow);">Power BI &amp; DAX</span>
+                <span class="cm-lbl">Domain Experience</span>
+                <span class="cm-val" style="color: var(--cyan-glow);">Aviation &amp; FinTech</span>
               </div>
               <div class="c-metric-pill">
-                <span class="cm-lbl">Data Engine</span>
-                <span class="cm-val" style="color: var(--primary-light);">SQL Server (SSMS)</span>
+                <span class="cm-lbl">Academic Focus</span>
+                <span class="cm-val" style="color: var(--primary-light);">Quantitative Finance</span>
               </div>
               <div class="c-metric-pill">
-                <span class="cm-lbl">Automation</span>
-                <span class="cm-val">Power Apps &amp; Automate</span>
+                <span class="cm-lbl">Methodology</span>
+                <span class="cm-val">Agile, BPMN &amp; UAT</span>
               </div>
               <div class="c-metric-pill">
-                <span class="cm-lbl">Governance</span>
-                <span class="cm-val">BPMN 2.0 &amp; UAT</span>
+                <span class="cm-lbl">Core Strength</span>
+                <span class="cm-val">Automating Manual Ops</span>
               </div>
             </div>
 
@@ -1241,11 +1293,11 @@
           <span class="m-lbl">Board Report Preparation Cut (GTN Tech)</span>
         </div>
         <div class="m-box">
-          <span class="m-val">2 Industries</span>
-          <span class="m-lbl">FinTech &amp; Aviation</span>
+          <span class="m-val">BSc (Hons)</span>
+          <span class="m-lbl">Finance &amp; Quantitative Analytics (Colombo)</span>
         </div>
         <div class="m-box">
-          <span class="m-val">Requirements</span>
+          <span class="m-val">Lifecycle BA</span>
           <span class="m-lbl">BRD, BPMN 2.0 Mapping &amp; UAT Delivery</span>
         </div>
       </div>
@@ -1514,7 +1566,7 @@
           </div>
           <span class="ba-pill-badge">📐 BPMN 2.0 Process Modeling</span>
           <h3>AS-IS vs. TO-BE Swimlane Analysis</h3>
-          <p>End-to-end operational swimlane diagram mapping handoffs across operations, middle office, and engineering to isolate bottlenecks and eliminate manual re-keying.</p>
+          <p>Cross-functional operational swimlane diagram mapping handoffs across operations, middle office, and engineering to isolate bottlenecks and eliminate manual re-keying.</p>
         </div>
 
         <div class="ba-card-vibrant" data-zoom="images/Stakeholder Matrix (RACI).png">
@@ -1584,13 +1636,19 @@
 
           <div class="xp-entry">
             <div class="xp-top-line">
-              <span class="xp-role">BSc (Hons) Finance &amp; Insurance</span>
+              <span class="xp-role">BSc (Hons) in Financial Risk Analytics &amp; Modeling</span>
               <span class="xp-date">2020 — 2024</span>
             </div>
-            <div class="xp-corp">University of Colombo • Second Class Upper</div>
-            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
-              Graduated with Second Class Upper division honors. Core emphasis on quantitative financial risk modeling, econometrics, and portfolio analytics.
+            <div class="xp-corp">University of Colombo • Faculty of Management &amp; Finance</div>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
+              Rigorous 4-year quantitative degree focused on statistical inference, time-series econometrics, corporate valuation, and stochastic risk analysis. Delivered empirical financial modeling projects leveraging mathematical optimization and regression diagnostics.
             </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;">
+              <span class="b-tag-item">Quantitative Finance</span>
+              <span class="b-tag-item">Econometric Forecasting</span>
+              <span class="b-tag-item">Stochastic Risk Models</span>
+              <span class="b-tag-item">Portfolio Valuation</span>
+            </div>
           </div>
 
           <div class="xp-entry" style="padding-top: 20px; border-top: 1px solid var(--border);">
@@ -1598,16 +1656,14 @@
               <span class="xp-role">Microsoft Power BI Data Analyst</span>
               <span class="xp-date">Verified Credential</span>
             </div>
-            <div class="xp-corp">Microsoft / Coursera Professional Certificate</div>
-            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
-              Specialization covering enterprise requirements elicitation, BPMN process modeling, Power Platform workflows, and data analysis.
+            <div class="xp-corp">Microsoft • Professional Certificate</div>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 14px;">
+              Specialization covering dimensional modeling (Kimball), advanced DAX measures, data transformation with Power Query, and executive dashboard design across the Microsoft enterprise ecosystem.
             </p>
-            <div>
-            </div>
-              <a class="verify" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">
-          Verify credential on Coursera
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
-        </a>
+            <a class="verify-btn" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">
+              Verify Credential on Coursera
+              <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1615,9 +1671,9 @@
   </section>
 
   <!-- ========================================================================
-       VIBRANT FOOTER
+       VIBRANT FOOTER & CONTACT
        ======================================================================== -->
-  <footer>
+  <footer id="contact">
     <div class="container">
       <div class="footer-box">
         <div>
@@ -1626,7 +1682,7 @@
         </div>
 
         <div class="f-buttons">
-          <a href="mailto:rashmi.kuru@gmail.com" class="btn-glow">
+          <a href="mailto:rashmi.kuru@gmail.com" class="btn-glow" id="emailContactBtn">
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             rashmi.kuru@gmail.com
           </a>
@@ -1645,6 +1701,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notify" id="toastNotify" role="status" aria-live="polite">
+    <span class="toast-check">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+    </span>
+    <span id="toastMsg">Email copied to clipboard! (rashmi.kuru@gmail.com)</span>
+  </div>
 
   <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media Preview">
@@ -1667,6 +1731,61 @@
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
     });
+
+    // Say Hello & Email Copy Helper with Toast Notification
+    const toast = document.getElementById('toastNotify');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimeout;
+
+    function showToast(msg) {
+      if (!toast) return;
+      if (toastMsg) toastMsg.textContent = msg;
+      toast.classList.add('active');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('active');
+      }, 3500);
+    }
+
+    function handleSayHello(e) {
+      if (e) e.preventDefault();
+      const email = 'rashmi.kuru@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('Copied rashmi.kuru@gmail.com to clipboard! 🚀');
+        }).catch(() => {
+          showToast('Contact: rashmi.kuru@gmail.com');
+        });
+      } else {
+        showToast('Contact: rashmi.kuru@gmail.com');
+      }
+
+      // Smooth scroll to contact footer
+      const contactSec = document.getElementById('contact');
+      if (contactSec) {
+        contactSec.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Fallback mailto launch
+      setTimeout(() => {
+        window.location.href = 'mailto:' + email;
+      }, 400);
+    }
+
+    const sayHelloBtn = document.getElementById('sayHelloBtn');
+    if (sayHelloBtn) {
+      sayHelloBtn.addEventListener('click', handleSayHello);
+    }
+
+    const emailContactBtn = document.getElementById('emailContactBtn');
+    if (emailContactBtn) {
+      emailContactBtn.addEventListener('click', () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText('rashmi.kuru@gmail.com');
+          showToast('Copied rashmi.kuru@gmail.com to clipboard! 🚀');
+        }
+      });
+    }
 
     // Project Filtering
     const filterButtons = document.querySelectorAll('.f-pill');
