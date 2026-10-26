@@ -1,2769 +1,1644 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rashmi Leema | Data & Business Analyst (SQL, Python, Power BI, BRD/UAT)</title>
-<meta name="description" content="Data & Business Analyst specializing in SQL, Python, Power BI, Excel automation, and BRD/UAT workflows. Analyzing 180K+ shipments, building financial star schemas, and cutting manual reporting by 80%.">
-<meta name="keywords" content="Data Analyst, Business Analyst, SQL, Python, Power BI, DAX, Supply Chain Analytics, DeliverIQ, Excel VBA, BRD, RTM, UAT, Financial Modeling">
-<meta name="author" content="Rashmi Leema">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rashmi Leema — Data &amp; Business Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Rashmi Leema — Data &amp; Business Analyst specializing in SQL, Power BI, Python, and enterprise workflow governance.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Open Graph / Social Sharing -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rashmi Leema | Data & Business Analyst Portfolio">
-<meta property="og:description" content="Data & Business Analyst specializing in SQL, Python, Power BI, Excel automation, and BRD/UAT workflows. 180K+ shipments analyzed, governed data layers, and automated reporting.">
-<meta property="og:image" content="images/deliveriq-overview.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rashmi Leema | Data & Business Analyst Portfolio">
-<meta name="twitter:description" content="Data & Business Analyst specializing in SQL, Python, Power BI, and Supply Chain Analytics.">
+  <style>
+    /* ==========================================================================
+       VIBRANT DESIGN SYSTEM (Godly / Awwwards Aesthetic)
+       ========================================================================== */
+    :root {
+      --bg: #070913;
+      --bg-surface: rgba(18, 22, 38, 0.7);
+      --bg-surface-hover: rgba(28, 34, 58, 0.85);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(124, 58, 237, 0.35);
+      --text: #FFFFFF;
+      --text-muted: #A3B3CC;
+      --text-subtle: #6D7F9E;
+      
+      /* Vibrant Palettes */
+      --primary: #6366F1;
+      --primary-light: #818CF8;
+      --cyan: #06B6D4;
+      --cyan-glow: #22D3EE;
+      --purple: #A855F7;
+      --fuchsia: #EC4899;
+      --emerald: #10B981;
+      --amber: #F59E0B;
+      
+      --grad-main: linear-gradient(135deg, #6366F1 0%, #06B6D4 50%, #10B981 100%);
+      --grad-accent: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%);
+      --grad-text: linear-gradient(135deg, #FFFFFF 20%, #A5B4FC 60%, #38BDF8 100%);
+      --grad-card: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      
+      --nav-bg: rgba(7, 9, 19, 0.82);
+      --card-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6), 0 0 30px -10px rgba(99, 102, 241, 0.15);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --radius-full: 999px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #F8FAFC;
-  --surface: #FFFFFF;
-  --surface-2: #F1F5F9;
-  --ink: #0F172A;
-  --text: #334155;
-  --soft: #64748B;
-  --line: #E2E8F0;
-  --brand: #4F46E5;
-  --brand-2: #06B6D4;
-  --brand-soft: rgba(79, 70, 229, 0.08);
-  --brand-border: rgba(79, 70, 229, 0.25);
-  --nav-bg: rgba(255, 255, 255, 0.86);
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 24px 48px -12px rgba(79, 70, 229, 0.16);
-  --spotlight: rgba(79, 70, 229, 0.08);
-  --code-bg: #0B1120;
-}
+    [data-theme="light"] {
+      --bg: #F5F7FC;
+      --bg-surface: rgba(255, 255, 255, 0.9);
+      --bg-surface-hover: #FFFFFF;
+      --border: rgba(99, 102, 241, 0.12);
+      --border-glow: rgba(99, 102, 241, 0.3);
+      --text: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #8292A8;
+      
+      --primary: #4F46E5;
+      --primary-light: #6366F1;
+      --cyan: #0284C7;
+      --cyan-glow: #0EA5E9;
+      --purple: #9333EA;
+      --fuchsia: #DB2777;
+      --emerald: #059669;
+      --amber: #D97706;
+      
+      --grad-text: linear-gradient(135deg, #0F172A 20%, #4F46E5 60%, #0284C7 100%);
+      --grad-card: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+      --nav-bg: rgba(245, 247, 252, 0.88);
+      --card-shadow: 0 16px 40px -10px rgba(79, 70, 229, 0.12), 0 1px 3px rgba(15, 23, 42, 0.05);
+    }
 
-[data-theme="dark"] {
-  --bg: #070B14;
-  --surface: #0F172A;
-  --surface-2: #1E293B;
-  --ink: #F8FAFC;
-  --text: #CBD5E1;
-  --soft: #94A3B8;
-  --line: #1E293B;
-  --brand: #818CF8;
-  --brand-2: #22D3EE;
-  --brand-soft: rgba(129, 140, 248, 0.12);
-  --brand-border: rgba(129, 140, 248, 0.3);
-  --nav-bg: rgba(15, 23, 42, 0.85);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.7);
-  --spotlight: rgba(129, 140, 248, 0.14);
-  --code-bg: #080D1A;
-}
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 15.5px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.18) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.18) 0px, transparent 45%),
+        radial-gradient(at 50% 75%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    }
 
-* { box-sizing: border-box; margin: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font: 16px/1.65 "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  transition: background .25s ease, color .25s ease;
-}
-h1, h2, h3, h4 { line-height: 1.18; letter-spacing: -0.025em; font-weight: 800; color: var(--ink); }
-a { color: inherit; }
-:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
-.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    [data-theme="light"] body {
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.1) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.1) 0px, transparent 45%),
+        radial-gradient(at 50% 75%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
+        linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    }
 
-/* Icons */
-.i { width: 19px; height: 19px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.i-sm { width: 15px; height: 15px; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    img, video { max-width: 100%; display: block; }
 
-/* Floating Pill Navigation */
-.top {
-  position: sticky;
-  top: 14px;
-  z-index: 60;
-  padding: 0 16px;
-  margin-top: 14px;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 8px 14px;
-  background: var(--nav-bg);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  box-shadow: var(--shadow-md);
-}
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 15.5px;
-  text-decoration: none;
-  color: var(--ink);
-  padding-left: 6px;
-  white-space: nowrap;
-}
-.logo-mark {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4F46E5, #06B6D4);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
-}
-nav ul { display: flex; gap: 2px; list-style: none; padding: 0; align-items: center; }
-nav ul a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--soft);
-  transition: all .2s;
-}
-nav ul a:hover { color: var(--ink); background: var(--surface-2); }
-nav ul a.active {
-  background: var(--brand-soft);
-  color: var(--brand);
-  box-shadow: inset 0 0 0 1px var(--brand-border);
-}
-.theme-btn {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink);
-  cursor: pointer;
-  flex: none;
-  transition: transform .2s, border-color .2s;
-}
-.theme-btn:hover { transform: rotate(12deg); border-color: var(--brand); }
-[data-theme="light"] .moon { display: block; }
-[data-theme="light"] .sun { display: none; }
-[data-theme="dark"] .moon { display: none; }
-[data-theme="dark"] .sun { display: block; }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-/* Sections & Bands */
-.band { padding: 84px 0; position: relative; }
-.band.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    /* ==========================================================================
+       Vibrant Pill Header
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 16px;
+      z-index: 60;
+      padding: 0 16px;
+      margin-bottom: 20px;
+    }
+    .nav-bar {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+    }
+    .brand-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--grad-main);
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--emerald);
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
 
-/* Hero Section */
-.hero-band {
-  margin-top: -68px;
-  padding: 136px 0 88px;
-  background-color: #060913;
-  background-image:
-    radial-gradient(at 80% 10%, rgba(79, 70, 229, 0.34) 0px, transparent 48%),
-    radial-gradient(at 15% 85%, rgba(6, 182, 212, 0.24) 0px, transparent 48%),
-    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.hero {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 56px;
-  align-items: center;
-}
-.hero-top-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: #E2E8F0;
-  font-size: 12.5px;
-  font-weight: 600;
-}
-.pulse {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #10B981;
-  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+    }
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+    }
 
-/* Role Lens Switcher */
-.role-switch {
-  display: inline-flex;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(129, 140, 248, 0.35);
-  border-radius: 999px;
-  padding: 3px;
-  gap: 3px;
-}
-.role-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: none;
-  background: transparent;
-  color: #94A3B8;
-  font: 700 12px "Plus Jakarta Sans", sans-serif;
-  padding: 5px 13px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all .2s;
-}
-.role-btn .i { width: 13px; height: 13px; }
-.role-btn:hover { color: #fff; }
-.role-btn.active {
-  background: linear-gradient(135deg, #4F46E5, #0891B2);
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.45);
-}
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-theme {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .btn-theme:hover { transform: rotate(15deg); border-color: var(--cyan); }
+    [data-theme="dark"] .icon-sun { display: block; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun { display: none; }
+    [data-theme="light"] .icon-moon { display: block; }
 
-.hero h1 {
-  font-size: clamp(32px, 4.3vw, 49px);
-  color: #FFFFFF;
-  line-height: 1.12;
-  transition: opacity .2s ease;
-}
-.grad-text {
-  background: linear-gradient(135deg, #A5B4FC 0%, #38BDF8 55%, #34D399 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.hero p {
-  margin: 18px 0 26px;
-  color: #94A3B8;
-  font-size: 17px;
-  max-width: 64ch;
-  line-height: 1.6;
-}
-.stack { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
-.stack span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #F1F5F9;
-  padding: 6px 13px;
-  border-radius: 8px;
-  font-size: 12.5px;
-  font-weight: 600;
-  transition: border-color .2s, transform .2s;
-}
-.stack span:hover { border-color: #38BDF8; transform: translateY(-1px); }
-.stack span .i { width: 14px; height: 14px; color: #38BDF8; }
+    .btn-say-hi {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: var(--grad-main);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+      transition: var(--transition);
+    }
+    .btn-say-hi:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+    }
 
-.btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 22px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #4F46E5, #0891B2);
-  color: #fff;
-  font-weight: 700;
-  font-size: 14.5px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 10px 25px -6px rgba(79, 70, 229, 0.55);
-  transition: transform .2s, box-shadow .2s;
-}
-.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -6px rgba(79, 70, 229, 0.7); }
-.hero .btn.primary { background: #FFFFFF; color: #0F172A; box-shadow: 0 12px 28px -6px rgba(255,255,255,0.2); }
-.hero .btn.primary:hover { background: #E0E7FF; }
-.hero .btn.alt {
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: none;
-}
-.hero .btn.alt:hover { background: rgba(255, 255, 255, 0.12); }
+    /* ==========================================================================
+       HERO: Radiant, Charismatic, High Energy
+       ========================================================================== */
+    .hero {
+      padding: 60px 0 50px;
+    }
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; }
+    }
 
-.quick {
-  margin-top: 22px;
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  font-size: 14px;
-}
-.quick a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #94A3B8;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color .2s;
-}
-.quick a:hover { color: #38BDF8; }
-.quick a .i { width: 15px; height: 15px; color: #818CF8; }
+    .hero-sparkle-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: var(--cyan-glow);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+    }
+    .grad-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-p {
+      color: var(--text-muted);
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 34px;
+    }
+    .chip {
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+    .chip:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+      color: var(--cyan-glow);
+    }
 
-.photo-card {
-  position: relative;
-  padding: 10px;
-  border-radius: 28px;
-  background: linear-gradient(145deg, rgba(129, 140, 248, 0.35), rgba(6, 182, 212, 0.1));
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
-}
-.photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 22px;
-  background: #1E293B center/cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-.photo-badge {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  background: #0F172A;
-  border: 1px solid rgba(129, 140, 248, 0.4);
-  color: #E2E8F0;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-.photo-badge .i { width: 13px; height: 13px; color: #38BDF8; }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-md);
+      background: var(--grad-main);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.45);
+      transition: var(--transition);
+    }
+    .btn-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(99, 102, 241, 0.65);
+    }
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 15px;
+      transition: var(--transition);
+    }
+    .btn-glass:hover {
+      border-color: var(--primary-light);
+      background: var(--bg-surface-hover);
+      transform: translateY(-2px);
+    }
 
-/* Floating Bento KPI Strip */
-.stats-wrap { margin-top: -38px; position: relative; z-index: 10; }
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.stat {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: var(--shadow-md);
-}
-.stat-ico {
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--brand-soft);
-  color: var(--brand);
-  flex: none;
-}
-.stat b {
-  display: block;
-  font-size: clamp(21px, 2.5vw, 29px);
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1.1;
-}
-.stat span { display: block; margin-top: 3px; font-size: 13px; color: var(--soft); font-weight: 500; }
+    /* Hero Visual Card (Iridescent Glass Card) */
+    .hero-visual-card {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--card-shadow);
+      backdrop-filter: blur(24px);
+    }
+    .hero-visual-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: calc(var(--radius-lg) + 1px);
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(6, 182, 212, 0.4), rgba(236, 72, 153, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .photo-container {
+      width: 100%;
+      height: 290px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+    .hero-visual-card:hover .photo-container img {
+      transform: scale(1.03);
+    }
+    .card-footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cf-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .cf-val {
+      font-weight: 700;
+      color: var(--text);
+    }
 
-/* Section Headers */
-.title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 34px;
-}
-.title { margin-bottom: 34px; }
-.title-row .title { margin-bottom: 0; }
-.sec-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  color: var(--brand);
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin-bottom: 10px;
-}
-.sec-badge .i { width: 14px; height: 14px; }
-.title h2 { font-size: clamp(26px, 3.4vw, 36px); }
-.title p { color: var(--soft); margin-top: 6px; max-width: 64ch; }
+    /* ==========================================================================
+       Vibrant Impact Metrics Grid
+       ========================================================================== */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+    @media (max-width: 800px) {
+      .metrics-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+    .m-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transition: var(--transition);
+    }
+    .m-box:hover {
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 35px rgba(6, 182, 212, 0.15);
+    }
+    .m-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 800;
+      background: var(--grad-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .m-lbl {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-/* Interactive Filter Pills */
-.pf-filters {
-  display: inline-flex;
-  gap: 6px;
-  padding: 5px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  flex-wrap: wrap;
-}
-.pf-btn {
-  font: 700 13px "Plus Jakarta Sans", sans-serif;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  color: var(--soft);
-  cursor: pointer;
-  transition: all .2s;
-}
-.pf-btn:hover { color: var(--ink); }
-.pf-btn.active {
-  background: var(--brand);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-}
+    /* ==========================================================================
+       Interactive Work Section
+       ========================================================================== */
+    section { padding: 80px 0; }
+    .sec-header {
+      margin-bottom: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .sec-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--cyan-glow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .sec-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
 
-/* Spotlight Card Mixin */
-.spot-card {
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.spot-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), var(--spotlight), transparent 40%);
-  opacity: 0;
-  transition: opacity .3s;
-  pointer-events: none;
-}
-.spot-card:hover::before { opacity: 1; }
-.spot-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--brand-border);
-}
+    /* Project Filter Pills */
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .f-pill {
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .f-pill:hover { color: var(--text); border-color: var(--primary-light); }
+    .f-pill.active {
+      color: #FFFFFF;
+      background: var(--primary);
+      border-color: var(--primary-light);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    }
 
-/* Core Skills */
-.core { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
-.sk { padding: 28px; display: flex; flex-direction: column; }
-.sk .ico {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--brand-soft), rgba(6, 182, 212, 0.1));
-  border: 1px solid var(--brand-border);
-  color: var(--brand);
-  margin-bottom: 18px;
-}
-.sk h3 { font-size: 20px; margin-bottom: 8px; }
-.sk p { color: var(--text); font-size: 15px; flex: 1; }
-.sk .where {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px dashed var(--line);
-  font-size: 13.5px;
-  color: var(--soft);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.sk .where .i { width: 15px; height: 15px; color: var(--brand); }
-.sk .where b { color: var(--ink); }
+    /* ==========================================================================
+       FLAGSHIP SHOWCASE CARD (DELIVERIQ)
+       ========================================================================== */
+    .flagship-showcase {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 50px;
+      backdrop-filter: blur(24px);
+      transition: var(--transition);
+    }
+    .flagship-showcase:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 25px 60px -10px rgba(99, 102, 241, 0.25);
+    }
 
-.also {
-  margin-top: 22px;
-  padding: 16px 20px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  font-size: 14px;
-}
-.also b { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); }
-.also b .i { width: 16px; height: 16px; color: var(--brand); }
+    /* Vibrant Theater Topbar */
+    .theater-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .theater-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .th-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+    .th-btn:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.12); }
+    .th-btn.active {
+      color: #FFFFFF;
+      background: var(--grad-main);
+      border-color: transparent;
+      box-shadow: 0 2px 12px rgba(6, 182, 212, 0.4);
+    }
+    .th-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: var(--cyan-glow);
+    }
 
-.tags { display: flex; gap: 7px; flex-wrap: wrap; }
-.tags span {
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  padding: 4px 11px;
-  border-radius: 7px;
-  font-size: 12.5px;
-  font-weight: 700;
-}
+    /* Screen Stage */
+    .theater-stage {
+      min-height: 480px;
+      background: #030408;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: zoom-in;
+    }
+    .th-img {
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .th-video {
+      width: 100%;
+      max-height: 560px;
+      display: none;
+      background: #000;
+      outline: none;
+    }
 
-/* About Section */
-.about { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
-.about-text p { color: var(--text); margin-bottom: 16px; font-size: 16.5px; }
-.offer {
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: var(--shadow-sm);
-}
-.offer h3 { display: flex; align-items: center; gap: 10px; font-size: 18px; margin-bottom: 18px; }
-.offer h3 .i { color: var(--brand); }
-.offer ul { list-style: none; padding: 0; display: grid; gap: 14px; font-size: 14.5px; }
-.offer li { display: flex; gap: 12px; align-items: center; }
-.offer li .i {
-  color: var(--brand);
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  padding: 5px;
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-}
+    /* Details Grid */
+    .flagship-body {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .flagship-body { grid-template-columns: 1fr; padding: 26px; }
+    }
+    .flagship-body h3 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .flagship-desc {
+      color: var(--text-muted);
+      font-size: 15.5px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .flagship-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .f-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: var(--primary-light);
+      font-weight: 600;
+    }
 
-/* Before vs After Transformation Card */
-.ba-compare {
-  margin-top: 36px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 28px;
-  box-shadow: var(--shadow-sm);
-}
-.ba-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 22px;
-}
-.ba-head h3 { font-size: 19px; display: flex; align-items: center; gap: 10px; }
-.ba-head h3 .i { color: var(--brand); }
-.ba-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 18px;
-  align-items: stretch;
-}
-.ba-col {
-  border-radius: 14px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-}
-.ba-col.before { border-top: 4px solid #EF4444; }
-.ba-col.after { border-top: 4px solid #10B981; box-shadow: var(--shadow-md); }
-.ba-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font: 800 12px "JetBrains Mono", monospace;
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 14px;
-}
-.ba-col.before .ba-tag { background: rgba(239, 68, 68, 0.1); color: #EF4444; }
-.ba-col.after .ba-tag { background: rgba(16, 185, 129, 0.12); color: #10B981; }
-.ba-steps {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 11px;
-  font-size: 14px;
-}
-.ba-steps li {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  color: var(--text);
-}
-.ba-steps li .i { width: 16px; height: 16px; margin-top: 2px; }
-.ba-col.before .ba-steps li .i { color: #EF4444; }
-.ba-col.after .ba-steps li .i { color: #10B981; }
-.ba-arrow {
-  display: grid;
-  place-items: center;
-}
-.ba-arrow span {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4F46E5, #06B6D4);
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
-}
+    /* Flagship Metrics Box */
+    .flagship-side {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .fs-kpi {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .fs-kpi:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .fs-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--cyan-glow);
+      display: block;
+    }
+    .fs-lbl {
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 500;
+      margin-top: 2px;
+      display: block;
+    }
+    .btn-repo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    .btn-repo:hover {
+      border-color: var(--cyan);
+      background: var(--bg-surface-hover);
+      color: var(--cyan-glow);
+    }
 
-/* 4-Step Delivery Playbook */
-.playbook-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.pb-card {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-}
-.pb-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.pb-num {
-  font: 800 13px "JetBrains Mono", monospace;
-  color: var(--brand);
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  padding: 4px 10px;
-  border-radius: 8px;
-}
-.pb-ico {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--surface-2);
-  display: grid;
-  place-items: center;
-  color: var(--brand);
-}
-.pb-card h3 { font-size: 18px; margin-bottom: 8px; }
-.pb-card p { font-size: 14px; color: var(--soft); flex: 1; margin-bottom: 14px; }
-.pb-out {
-  padding-top: 12px;
-  border-top: 1px dashed var(--line);
-  font-size: 12.5px;
-  color: var(--ink);
-  font-weight: 700;
-}
-.pb-out span { color: var(--brand); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+    /* ==========================================================================
+       VIBRANT PROJECT BENTO GRID
+       ========================================================================== */
+    .bento-showcase {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    @media (max-width: 860px) {
+      .bento-showcase { grid-template-columns: 1fr; }
+    }
 
-/* =====================================================================
-   DEDICATED INTERACTIVE BI & SOLUTIONS SHOWCASE (SCREENSHOTS + RECORDINGS)
-   ===================================================================== */
-.showcase-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 30px;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 36px;
-}
-.showcase-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 22px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--line);
-}
-.showcase-header h3 {
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.showcase-header h3 .i { color: var(--brand); }
+    .b-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(24px);
+      transition: var(--transition);
+    }
+    .b-item:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px -10px rgba(6, 182, 212, 0.2);
+    }
 
-/* Project selector pills */
-.sc-proj-pills {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  padding: 6px;
-  background: var(--surface-2);
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  margin-bottom: 20px;
-}
-.sc-proj-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 16px;
-  border-radius: 9px;
-  border: none;
-  background: transparent;
-  color: var(--soft);
-  font: 700 13px "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
-  transition: all .2s ease;
-}
-.sc-proj-btn:hover { color: var(--ink); }
-.sc-proj-btn.active {
-  background: var(--surface);
-  color: var(--brand);
-  box-shadow: var(--shadow-sm);
-}
+    .b-top-stage {
+      background: #020408;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .b-tabs-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: rgba(0, 0, 0, 0.35);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .b-pills { display: flex; gap: 6px; }
+    .bp-btn {
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      transition: var(--transition);
+    }
+    .bp-btn:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.12); }
+    .bp-btn.active {
+      color: #FFFFFF;
+      background: var(--grad-main);
+      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+    }
 
-/* Sub-view switcher bar */
-.sc-view-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-.sc-subtabs {
-  display: inline-flex;
-  gap: 4px;
-  padding: 4px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  flex-wrap: wrap;
-}
-.sc-tab-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 13px;
-  border-radius: 7px;
-  border: none;
-  background: transparent;
-  color: var(--soft);
-  font: 700 12.5px "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
-  transition: all .2s;
-}
-.sc-tab-btn:hover { color: var(--ink); }
-.sc-tab-btn.active {
-  background: var(--brand);
-  color: #fff;
-}
-.sc-meta-tag {
-  font: 600 12px "JetBrains Mono", monospace;
-  color: var(--brand);
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  padding: 4px 10px;
-  border-radius: 6px;
-}
+    .b-media-viewport {
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+      background: #04060A;
+      overflow: hidden;
+    }
+    .b-media-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+      transition: transform 0.3s;
+    }
+    .b-media-viewport:hover img { transform: scale(1.02); }
+    .b-media-viewport video {
+      width: 100%;
+      height: 100%;
+      display: none;
+      background: #000;
+    }
 
-/* Stage Window */
-.sc-stage {
-  position: relative;
-  background: #060913;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sc-stage img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain;
-  background: #060913;
-  cursor: zoom-in;
-  transition: transform .3s ease;
-}
-.sc-stage img:hover { transform: scale(1.01); }
-.sc-stage video {
-  display: block;
-  width: 100%;
-  max-height: 600px;
-  background: #060913;
-}
-.sc-caption {
-  margin-top: 14px;
-  padding: 14px 18px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 14px;
-  color: var(--text);
-}
-.sc-caption p { margin: 0; max-width: 78ch; }
-.sc-caption .zoom-hint {
-  font: 700 12px "JetBrains Mono", monospace;
-  color: var(--soft);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
+    .b-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .b-content h4 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      margin-bottom: 10px;
+    }
+    .b-content p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .b-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .b-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .b-tag-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--cyan-glow);
+    }
+    .b-view-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-light);
+      transition: color 0.2s;
+    }
+    .b-view-link:hover { color: var(--cyan-glow); }
 
-/* =====================================================================
-   UNIFIED 2-COLUMN PROJECT BENTO GRID (ALL CARDS SAME FORMAT)
-   ===================================================================== */
-.proj { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.pc {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  border-radius: 20px;
-  position: relative;
-}
-.pc[hidden] { display: none; }
+    /* ==========================================================================
+       BA ARTIFACTS GALLERY
+       ========================================================================== */
+    .ba-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 768px) {
+      .ba-gallery { grid-template-columns: 1fr; }
+    }
+    .ba-card-vibrant {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      cursor: zoom-in;
+      transition: var(--transition);
+      backdrop-filter: blur(24px);
+    }
+    .ba-card-vibrant:hover {
+      border-color: var(--purple);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(168, 85, 247, 0.2);
+    }
+    .ba-frame {
+      width: 100%;
+      height: 230px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      padding: 10px;
+    }
+    .ba-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .ba-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      color: #C084FC;
+      font-size: 11.5px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 10px;
+    }
+    .ba-card-vibrant h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .ba-card-vibrant p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-/* Uniform Window Mockup Header */
-.pc-window {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: #0B1120;
-  margin-bottom: 20px;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-.pc-win-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  background: #111827;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font: 600 11.5px "JetBrains Mono", monospace;
-  color: #94A3B8;
-}
-.pc-win-dots { display: inline-flex; gap: 5px; align-items: center; }
-.pc-win-dots span { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-.pc-win-dots span:nth-child(1) { background: #EF4444; }
-.pc-win-dots span:nth-child(2) { background: #F59E0B; }
-.pc-win-dots span:nth-child(3) { background: #10B981; }
+    /* ==========================================================================
+       EXPERIENCE & CREDENTIALS
+       ========================================================================== */
+    .xp-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+    }
+    @media (max-width: 860px) {
+      .xp-wrapper { grid-template-columns: 1fr; }
+    }
+    .xp-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--card-shadow);
+      backdrop-filter: blur(24px);
+    }
+    .xp-panel h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .xp-entry {
+      margin-bottom: 24px;
+    }
+    .xp-entry:last-child { margin-bottom: 0; }
+    .xp-top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .xp-role { font-weight: 800; font-size: 17px; color: var(--text); }
+    .xp-date { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--cyan-glow); font-weight: 600; }
+    .xp-corp { color: var(--text-muted); font-size: 14px; margin-bottom: 12px; font-weight: 500; }
+    .xp-list {
+      list-style: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .xp-list li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 16px;
+    }
+    .xp-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-size: 10px;
+      top: 4px;
+    }
 
-.pc-win-img {
-  width: 100%;
-  height: 195px;
-  overflow: hidden;
-  position: relative;
-  background: #0F172A;
-}
-.pc-win-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  cursor: zoom-in;
-  transition: transform .35s ease;
-}
-.pc:hover .pc-win-img img { transform: scale(1.04); }
+    /* ==========================================================================
+       VIBRANT FOOTER
+       ========================================================================== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 70px 0 40px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .f-title {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .f-sub { color: var(--text-muted); font-size: 15px; }
+    .f-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .f-bottom-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-subtle);
+      font-size: 13px;
+    }
 
-.pc-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
-.pc-num {
-  font: 800 11.5px "JetBrains Mono", monospace;
-  color: var(--soft);
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  padding: 3px 9px;
-  border-radius: 6px;
-}
-.pc h3 { font-size: 20.5px; margin: 4px 0 8px; }
-.pc h3 a { text-decoration: none; }
-.pc h3 a:hover { color: var(--brand); }
-.pc p.pc-desc { color: var(--text); font-size: 14.5px; line-height: 1.6; margin-bottom: 14px; flex: none; }
+    /* ==========================================================================
+       FULLSCREEN LIGHTBOX MODAL
+       ========================================================================== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-img {
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255, 255, 255, 0.35); }
 
-/* 3-Column Uniform KPI Block */
-.pc-kpis {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-bottom: 16px;
-  padding: 12px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-.pc-kpis div { text-align: center; }
-.pc-kpis b {
-  display: block;
-  font-size: 15.5px;
-  font-weight: 800;
-  color: var(--brand);
-  line-height: 1.2;
-}
-.pc-kpis span {
-  display: block;
-  font-size: 11.5px;
-  color: var(--soft);
-  font-weight: 600;
-  margin-top: 2px;
-}
-
-/* Bullet Points */
-.pc-specs {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 16px;
-  display: grid;
-  gap: 9px;
-  font-size: 13.5px;
-  color: var(--soft);
-  flex: 1;
-}
-.pc-specs li { display: flex; gap: 8px; align-items: flex-start; }
-.pc-specs li .i { width: 15px; height: 15px; color: var(--brand); margin-top: 3px; flex: none; }
-.pc-specs li b { color: var(--ink); }
-
-.pc-foot {
-  margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.pc-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.show-jump-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 13px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--brand), #0891B2);
-  color: #fff;
-  font: 700 12.5px "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
-  border: none;
-  transition: all .2s;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-}
-.show-jump-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4); }
-
-.peek-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--brand-border);
-  background: var(--brand-soft);
-  color: var(--brand);
-  font: 700 12.5px "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
-  transition: all .2s;
-}
-.peek-btn:hover { background: var(--brand); color: #fff; }
-.pc .more {
-  font-weight: 700;
-  color: var(--ink);
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-}
-.pc .more:hover { color: var(--brand); }
-
-/* BA Deliverables & Documentation Vault */
-.vault-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.v-card {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-}
-.v-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
-}
-.v-ico {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  color: var(--brand);
-  display: grid;
-  place-items: center;
-}
-.v-card h3 { font-size: 17.5px; margin-bottom: 8px; }
-.v-card p { font-size: 14px; color: var(--soft); flex: 1; margin-bottom: 16px; }
-.v-meta {
-  font: 600 11.5px "JetBrains Mono", monospace;
-  color: var(--soft);
-  margin-bottom: 14px;
-  padding: 6px 10px;
-  background: var(--bg);
-  border-radius: 6px;
-  border: 1px solid var(--line);
-}
-
-/* Upgraded Multi-Tab macOS IDE Code Window */
-.code-card {
-  margin-top: 32px;
-  background: var(--code-bg);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #1E293B;
-  box-shadow: var(--shadow-md);
-}
-.code-card header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 10px 18px;
-  background: #131C31;
-  border-bottom: 1px solid #1E293B;
-  color: #94A3B8;
-  font-size: 13px;
-}
-.code-nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.win-dots { display: inline-flex; gap: 6px; align-items: center; margin-right: 8px; }
-.win-dots i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-.win-dots i:nth-child(1) { background: #EF4444; }
-.win-dots i:nth-child(2) { background: #F59E0B; }
-.win-dots i:nth-child(3) { background: #10B981; }
-
-.sql-tabs { display: inline-flex; gap: 4px; background: rgba(15, 23, 42, 0.6); padding: 3px; border-radius: 8px; }
-.sql-tab-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 11px;
-  border-radius: 6px;
-  border: none;
-  background: transparent;
-  color: #94A3B8;
-  font: 600 12px "JetBrains Mono", monospace;
-  cursor: pointer;
-  transition: all .2s;
-}
-.sql-tab-btn:hover { color: #fff; }
-.sql-tab-btn.active {
-  background: #1E293B;
-  color: #38BDF8;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-}
-
-.copy-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.14);
-  color: #E2E8F0;
-  padding: 5px 12px;
-  border-radius: 7px;
-  font: 600 12px "Plus Jakarta Sans", sans-serif;
-  cursor: pointer;
-  transition: background .2s;
-}
-.copy-btn:hover { background: rgba(255,255,255,0.15); }
-.code-card pre {
-  margin: 0;
-  padding: 22px;
-  overflow-x: auto;
-  font: 13.5px/1.75 "JetBrains Mono", ui-monospace, monospace;
-  color: #E2E8F0;
-}
-.code-card .k { color: #818CF8; font-weight: 600; }
-.code-card .f { color: #38BDF8; }
-.code-card .c { color: #64748B; font-style: italic; }
-.code-card .s { color: #34D399; }
-
-/* Experience Timeline */
-.xp {
-  position: relative;
-  display: grid;
-  gap: 24px;
-  padding-left: 28px;
-  border-left: 2px solid var(--line);
-}
-.job { position: relative; padding: 28px; }
-.job::after {
-  content: "";
-  position: absolute;
-  left: -36px;
-  top: 32px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--brand);
-  border: 3px solid var(--surface);
-  box-shadow: 0 0 0 2px var(--brand);
-}
-.job-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
-.job time {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--brand);
-  font-size: 13px;
-  font-weight: 700;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  padding: 4px 11px;
-  border-radius: 999px;
-}
-.job time .i { width: 13px; height: 13px; }
-.job h3 { font-size: 21px; }
-.job .co {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--soft);
-  font-weight: 700;
-  margin: 4px 0 16px;
-  font-size: 15px;
-}
-.job .co .i { width: 16px; height: 16px; color: var(--brand); }
-.job ul { padding-left: 20px; display: grid; gap: 10px; color: var(--text); font-size: 15px; }
-.job ul li::marker { color: var(--brand); }
-
-/* Education & Certificates */
-.edugrid, .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
-.edc { display: flex; gap: 18px; align-items: flex-start; padding: 26px; }
-.edc .ico {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  color: var(--brand);
-}
-.edc time { display: inline-flex; align-items: center; gap: 5px; color: var(--soft); font-size: 13px; font-weight: 700; }
-.edc h3 { font-size: 20px; margin: 6px 0 2px; }
-.edc .co { color: var(--brand); font-weight: 700; }
-.edc p {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--ink);
-  font-size: 14px;
-  margin-top: 12px;
-  background: var(--surface-2);
-  padding: 4px 11px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  font-weight: 700;
-}
-.edc p .i { width: 15px; height: 15px; color: var(--brand); }
-
-.cert { display: flex; flex-direction: column; padding: 26px; }
-.cert-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.cert .badge {
-  display: grid;
-  place-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  background: var(--brand-soft);
-  border: 1px solid var(--brand-border);
-  color: var(--brand);
-}
-.cert h3 { font-size: 20px; margin-bottom: 2px; }
-.cert .co { color: var(--brand); font-weight: 700; font-size: 14.5px; }
-.cert p { color: var(--soft); font-size: 14.5px; margin: 10px 0 18px; flex: 1; }
-.cert .verify {
-  padding: 11px 16px;
-  border-radius: 10px;
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--ink);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  transition: all .2s;
-}
-.cert .verify:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
-
-/* Contact CTA Banner */
-.cta-band {
-  background-color: #060913;
-  background-image:
-    radial-gradient(at 20% 20%, rgba(79, 70, 229, 0.35) 0px, transparent 50%),
-    radial-gradient(at 85% 80%, rgba(6, 182, 212, 0.25) 0px, transparent 50%);
-  color: #fff;
-  padding: 88px 0;
-}
-.cta h2 { font-size: clamp(28px, 4vw, 44px); max-width: 24ch; color: #fff; margin-top: 12px; }
-.cta p { margin: 14px 0 30px; color: #94A3B8; max-width: 58ch; font-size: 17.5px; }
-.links { display: flex; gap: 12px; flex-wrap: wrap; }
-.links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 22px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  color: #fff;
-  transition: all .2s;
-}
-.links a:first-child {
-  background: linear-gradient(135deg, #4F46E5, #06B6D4);
-  border-color: transparent;
-  box-shadow: 0 10px 25px -6px rgba(6, 182, 212, 0.5);
-}
-.links a:hover { background: #fff; color: #0F172A; transform: translateY(-2px); }
-
-footer {
-  background: #04070F;
-  color: #64748B;
-  padding: 26px 0;
-  font-size: 13.5px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-
-/* Lightbox */
-.lb {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(6, 9, 19, 0.94);
-  backdrop-filter: blur(8px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  cursor: zoom-out;
-}
-.lb.open { display: flex; }
-.lb img { max-width: 95%; max-height: 92vh; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); }
-
-/* Interactive Architecture & BA Artefact Drawer Modal */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 95;
-  background: rgba(6, 9, 19, 0.84);
-  backdrop-filter: blur(8px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.modal-backdrop.open { display: flex; }
-.modal-box {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  max-width: 840px;
-  width: 100%;
-  max-height: 88vh;
-  overflow-y: auto;
-  box-shadow: var(--shadow-lg);
-  padding: 32px;
-  position: relative;
-  animation: rise .25s ease;
-}
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--surface-2);
-  color: var(--ink);
-  font-weight: 800;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: all .2s;
-}
-.modal-close:hover { background: var(--brand); color: #fff; }
-.m-sec {
-  margin-top: 18px;
-  padding: 18px;
-  border-radius: 12px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-}
-.m-sec h4 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--brand);
-  margin-bottom: 8px;
-}
-.m-sec p, .m-sec li { font-size: 14.5px; color: var(--text); }
-.m-sec table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 10px 0;
-  font-size: 13.5px;
-}
-.m-sec th, .m-sec td {
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  text-align: left;
-}
-.m-sec th { background: var(--surface-2); font-weight: 700; color: var(--ink); }
-.m-sec pre {
-  margin-top: 8px;
-  padding: 14px;
-  background: #0B1120;
-  color: #E2E8F0;
-  border-radius: 10px;
-  overflow-x: auto;
-  font: 12.5px/1.65 "JetBrains Mono", monospace;
-}
-.m-sec img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  margin-top: 10px;
-  cursor: zoom-in;
-}
-
-/* Scroll Reveal */
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-.js .reveal { opacity: 0; }
-.js .reveal.in { opacity: 1; animation: rise .6s ease backwards; animation-delay: var(--d, 0s); }
-
-@media (max-width: 980px) {
-  .playbook-grid, .vault-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .ba-grid { grid-template-columns: 1fr; }
-  .ba-arrow { transform: rotate(90deg); margin: 4px 0; }
-  .proj { grid-template-columns: 1fr; }
-}
-@media (max-width: 760px) {
-  .band { padding: 56px 0; }
-  nav { border-radius: 18px; padding: 10px 14px; flex-wrap: wrap; }
-  nav ul { overflow-x: auto; width: 100%; order: 3; scrollbar-width: none; padding-top: 4px; }
-  nav ul::-webkit-scrollbar { display: none; }
-  nav ul a { white-space: nowrap; font-size: 13px; padding: 6px 10px; }
-  .hero { grid-template-columns: 1fr; gap: 32px; }
-  .photo-card { justify-self: start; }
-  .photo { width: 150px; height: 150px; }
-  .about, .proj, .stats-grid, .playbook-grid, .vault-grid { grid-template-columns: 1fr; }
-  .xp { padding-left: 18px; }
-  .job::after { left: -26px; }
-  .sc-stage { min-height: 280px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .spot-card, .btn { transition: none; }
-  .js .reveal { opacity: 1; }
-  .js .reveal.in { animation: none; }
-}
-</style>
+    /* SVG Icons */
+    .icon {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
 </head>
 <body>
 
-<!-- SVG Icon Sprite -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
-  <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
-  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
-  <symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
-  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></symbol>
-  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M3 5h4"/></symbol>
-  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
-  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
-  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
-  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
-  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
-  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></symbol>
-  <symbol id="i-building" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
-  <symbol id="i-trending-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
-  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></symbol>
-  <symbol id="i-video" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></symbol>
-  <symbol id="i-microsoft" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
-  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
-  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-  <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
-  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
-  <symbol id="i-x-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
-</svg>
-
-<!-- Floating Navigation -->
-<header class="top" id="topbar">
-  <nav aria-label="Main">
-    <a class="logo" href="#top">
-      <span class="logo-mark"><svg class="i i-sm" aria-hidden="true"><use href="#i-chart"/></svg></span>
-      Rashmi Leema
-    </a>
-    <ul>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#playbook">Playbook</a></li>
-      <li><a href="#showcase">Showcase</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#vault">BA Vault</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle colour theme" title="Toggle Dark/Light Mode">
-      <svg class="i i-sm moon" aria-hidden="true"><use href="#i-moon"/></svg>
-      <svg class="i i-sm sun" aria-hidden="true"><use href="#i-sun"/></svg>
-    </button>
-  </nav>
-</header>
-
-<main>
-
-<!-- HERO WITH ROLE LENS SWITCHER -->
-<div class="hero-band" id="top">
-  <div class="wrap hero">
-    <div>
-      <div class="hero-top-bar">
-        <div class="status-pill">
-          <span class="pulse"></span>
-          Available for Data &amp; Business Analyst Roles · Colombo
+  <!-- Floating Pill Header -->
+  <header>
+    <nav class="nav-bar">
+      <div class="brand">
+        <div class="brand-avatar">
+          <img src="images/Profile Photo.JPG" alt="Rashmi Leema">
         </div>
-        <div class="role-switch" role="group" aria-label="Switch portfolio lens">
-          <button type="button" class="role-btn active" data-lens="da">
-            <svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Data Analyst Lens
-          </button>
-          <button type="button" class="role-btn" data-lens="ba">
-            <svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Business Analyst Lens
-          </button>
-        </div>
+        <span>Rashmi Leema</span>
+        <span class="brand-badge"><span class="pulse-dot"></span> Open to Roles</span>
       </div>
 
-      <h1 id="heroTitle">Data Analyst who automates reporting with <span class="grad-text">SQL, Python &amp; Power BI.</span></h1>
-      <p id="heroDesc">Two-plus years engineering end-to-end analytics pipelines, SQL data models, and executive dashboards across Supply Chain, Finance, HR, and Operations. Analyzed 180K+ shipments and cut recurring reporting prep by 80% through governance and automation.</p>
-      
-      <div class="stack">
-        <span><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>SQL Server &amp; SQLite</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-code"/></svg>Python (Pandas)</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Power BI &amp; DAX</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-truck"/></svg>Supply Chain Analytics</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Excel VBA &amp; Power Query</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg>Power Apps &amp; Automate</span>
-        <span><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>BRD · RTM · UAT</span>
-      </div>
-      <div class="btns">
-        <a class="btn primary" href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
-        <a class="btn alt" href="#showcase"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg>Interactive BI Showcase</a>
-        <a class="btn alt" href="#projects">All Projects (6)<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-      </div>
-      <div class="quick">
-        <a href="mailto:rashmi.kuru@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>rashmi.kuru@gmail.com</a>
-        <a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
-        <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
-      </div>
-    </div>
+      <ul class="nav-links">
+        <li><a href="#work">Featured Work</a></li>
+        <li><a href="#artifacts">BA Artifacts</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
 
-    <div class="photo-card">
-      <div class="photo" role="img" aria-label="Portrait of Rashmi Leema" style="background-image:url('images/Profile%20Photo.JPG')"></div>
-      <span class="photo-badge" id="heroBadge"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg>Microsoft Certified BA</span>
-    </div>
-  </div>
-</div>
-
-<!-- FLOATING KPI BENTO STRIP -->
-<div class="wrap stats-wrap">
-  <div class="stats-grid">
-    <div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-trending-down"/></svg></div><div><b>80%</b><span>less recurring reporting prep</span></div></div>
-    <div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-truck"/></svg></div><div><b>180K+</b><span>shipments &amp; records analyzed</span></div></div>
-    <div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></div><div><b>4</b><span>domains: Supply Chain, Fin, Ops, MO</span></div></div>
-    <div class="stat"><div class="stat-ico"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg></div><div><b>6</b><span>production-grade projects on GitHub</span></div></div>
-  </div>
-</div>
-
-<!-- CORE SKILLS -->
-<section class="band" id="skills">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Capabilities</span>
-      <h2>Core skills</h2>
-      <p>The tools and methodologies I deploy to turn complex, high-volume datasets into governed intelligence.</p>
-    </div>
-    <div class="core">
-      <div class="sk spot-card">
-        <div class="ico"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></div>
-        <h3>SQL</h3>
-        <p>Staging and core layers, star schemas, stored procedures, CTEs, and partitioned window functions that transform millions of raw records into query-ready schemas.</p>
-        <p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> DeliverIQ, Variance Platform, Fraud Hub</p>
-      </div>
-      <div class="sk spot-card">
-        <div class="ico"><svg class="i" aria-hidden="true"><use href="#i-code"/></svg></div>
-        <h3>Python</h3>
-        <p>Automated ETL ingestion pipelines, data cleaning, synthetic data generation, and risk-scoring algorithms that replace brittle spreadsheet tasks.</p>
-        <p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> DeliverIQ (180K ETL), Fraud Hub, Exception Tracker</p>
-      </div>
-      <div class="sk spot-card">
-        <div class="ico"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></div>
-        <h3>Power BI &amp; DAX</h3>
-        <p>Multi-page executive dashboards designed with custom Figma UI systems, dynamic DAX measures, SLA tracking, and cent-level financial reconciliation.</p>
-        <p class="where"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg><b>Used in:</b> DeliverIQ, Variance Platform, PMO Suite</p>
-      </div>
-    </div>
-    <div class="also">
-      <b><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg>Also proficient in:</b>
-      <div class="tags">
-        <span>Supply Chain &amp; Logistics Analytics</span>
-        <span>Excel VBA &amp; Power Query</span>
-        <span>Power Apps &amp; Automate</span>
-        <span>SLA &amp; Carrier Optimization</span>
-        <span>Financial &amp; M&amp;A DCF Modelling</span>
-        <span>Figma Dashboard UI Tokens</span>
-        <span>BRD, RTM &amp; UAT Sign-Off</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT + BEFORE VS AFTER TRANSFORMATION COMPARISON -->
-<section class="band alt" id="about">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-user"/></svg>Profile</span>
-      <h2>About me</h2>
-    </div>
-    <div class="about">
-      <div class="about-text">
-        <p>I'm a data and business analyst who bridges the gap between commercial stakeholders and technical architectures. I start by diagnosing the exact business bottleneck—whether it's supply chain delivery failures, messy multi-entity financial consolidation, or operational compliance risks.</p>
-        <p>I build the Python ingestion scripts, relational SQL databases, and star schemas behind the scenes, and deliver intuitive Power BI suites that drive executive decisions. My background in finance and insurance gives me high sensitivity to data governance, audit trails, and financial reconciliation.</p>
-      </div>
-      <div class="offer">
-        <h3><svg class="i" aria-hidden="true"><use href="#i-target"/></svg>What I bring to your team</h3>
-        <ul>
-          <li><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Automate multi-source data ingestion and ETL end to end</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Architect clean SQL data layers, star schemas, and stored procedures</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Design executive Power BI dashboards with rigorous DAX measures</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-truck"/></svg>Diagnose supply chain &amp; operational SLA bottlenecks with data</li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Author enterprise BRDs, RTMs, and lead rigorous UAT testing</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- BEFORE VS AFTER AUTOMATION COMPARISON -->
-    <div class="ba-compare">
-      <div class="ba-head">
-        <h3><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>How I Cut Recurring Reporting Prep by 80%</h3>
-        <span class="chip success"><svg class="i" aria-hidden="true"><use href="#i-trending-down"/></svg>8 Hours → 1.5 Hours per Cycle</span>
-      </div>
-      <div class="ba-grid">
-        <div class="ba-col before">
-          <span class="ba-tag">BEFORE · MANUAL SPREADSHEET WORKFLOW (8.0 HRS)</span>
-          <ul class="ba-steps">
-            <li><svg class="i" aria-hidden="true"><use href="#i-x-circle"/></svg><span><b>Fragmented Exports:</b> Pulling 12+ raw CSVs manually across Finance, HR, and Operations portals.</span></li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-x-circle"/></svg><span><b>Fragile Formulas:</b> Nested VLOOKUPs and manual copy-pasting prone to silent formula breaks.</span></li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-x-circle"/></svg><span><b>Unlogged Approvals:</b> Chasing exception sign-offs over email threads with zero audit trail.</span></li>
-          </ul>
-        </div>
-        <div class="ba-arrow" aria-hidden="true">
-          <span><svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-        </div>
-        <div class="ba-col after">
-          <span class="ba-tag">AFTER · GOVERNED SQL + POWER PLATFORM (1.5 HRS)</span>
-          <ul class="ba-steps">
-            <li><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg><span><b>Automated Ingestion:</b> Power Query &amp; SQL Server staging scripts validate types and keys on load.</span></li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg><span><b>Star Schema &amp; VBA Cube:</b> Stored procedures and one-click macros reconcile actuals vs. budget to the cent.</span></li>
-            <li><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg><span><b>Governed Workflows:</b> Power Apps + Power Automate route approvals with SLA timers and SQL logs.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- END-TO-END DELIVERY PLAYBOOK -->
-<section class="band" id="playbook">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Methodology</span>
-      <h2>My end-to-end delivery playbook</h2>
-      <p>How I bridge the gap between ambiguous stakeholder requirements and production-ready analytics.</p>
-    </div>
-    <div class="playbook-grid">
-      <div class="pb-card spot-card">
-        <div class="pb-top">
-          <span class="pb-num">STEP 01</span>
-          <div class="pb-ico"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></div>
-        </div>
-        <h3>Discover &amp; Elicit</h3>
-        <p>Interview Finance, Ops, and Supply Chain leads, map As-Is/To-Be process flows, and lock down SLA &amp; KPI definitions before writing code.</p>
-        <div class="pb-out"><span>Key Deliverable</span>BRD, User Stories &amp; Process Maps</div>
-      </div>
-
-      <div class="pb-card spot-card">
-        <div class="pb-top">
-          <span class="pb-num">STEP 02</span>
-          <div class="pb-ico"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg></div>
-        </div>
-        <h3>Model &amp; Engineer</h3>
-        <p>Design untyped SQL staging tables, engineer Python ETL pipelines, structure relational star schemas, and write partitioned window queries.</p>
-        <div class="pb-out"><span>Key Deliverable</span>Star Schema, Python ETL &amp; Stored Procs</div>
-      </div>
-
-      <div class="pb-card spot-card">
-        <div class="pb-top">
-          <span class="pb-num">STEP 03</span>
-          <div class="pb-ico"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg></div>
-        </div>
-        <h3>Automate &amp; Govern</h3>
-        <p>Connect Power BI DAX models with Figma design tokens, build automated Excel cubes, and implement SLA escalation flows in Power Platform.</p>
-        <div class="pb-out"><span>Key Deliverable</span>Executive BI Suite &amp; Automated Flows</div>
-      </div>
-
-      <div class="pb-card spot-card">
-        <div class="pb-top">
-          <span class="pb-num">STEP 04</span>
-          <div class="pb-ico"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg></div>
-        </div>
-        <h3>Validate &amp; Handover</h3>
-        <p>Trace every requirement via an RTM, conduct cent-level reconciliation tests, lead UAT sessions with end users, and publish runbooks.</p>
-        <div class="pb-out"><span>Key Deliverable</span>RTM, UAT Sign-Off &amp; Runbooks</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     DEDICATED INTERACTIVE BI & SOLUTIONS SHOWCASE (SCREENSHOTS + RECORDINGS)
-     ===================================================================== -->
-<section class="band alt" id="showcase">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-video"/></svg>Interactive Media Showcase</span>
-      <h2>Interactive BI &amp; solutions showcase</h2>
-      <p>Explore full multi-page Power BI reports, executive dashboards, and live video recordings separately across each project.</p>
-    </div>
-
-    <div class="showcase-card">
-      <div class="showcase-header">
-        <h3><svg class="i" aria-hidden="true"><use href="#i-sparkles"/></svg><span id="scHeaderTitle">DeliverIQ: Supply Chain Delivery Performance &amp; Shipping Optimization</span></h3>
-        <span class="sec-badge" id="scHeaderTag">Supply Chain · Power BI</span>
-      </div>
-
-      <!-- Project Selector Pills -->
-      <div class="sc-proj-pills" role="tablist" aria-label="Select project to inspect">
-        <button type="button" class="sc-proj-btn active" data-proj="deliveriq">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-truck"/></svg>DeliverIQ Supply Chain
+      <div class="nav-actions">
+        <button class="btn-theme" id="themeBtn" aria-label="Toggle Theme" title="Toggle Theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button type="button" class="sc-proj-btn" data-proj="variance">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-database"/></svg>Financial Variance Cube
-        </button>
-        <button type="button" class="sc-proj-btn" data-proj="pmo">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-chart"/></svg>Enterprise PMO Suite
-        </button>
-        <button type="button" class="sc-proj-btn" data-proj="fraud">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-shield"/></svg>iGaming Fraud Hub
-        </button>
-        <button type="button" class="sc-proj-btn" data-proj="tracker">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-workflow"/></svg>Exception Tracker Portal
-        </button>
-        <button type="button" class="sc-proj-btn" data-proj="uberlyft">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-file-text"/></svg>Uber × Lyft Valuation
-        </button>
-      </div>
-
-      <!-- Sub-view switcher bar for active project -->
-      <div class="sc-view-bar">
-        <div class="sc-subtabs" id="scSubtabs" role="tablist" aria-label="Project views">
-          <!-- Populated dynamically via JavaScript -->
-        </div>
-        <span class="sc-meta-tag" id="scMetaTag">180.5K Orders · 3-Page Suite</span>
-      </div>
-
-      <!-- Stage Window (renders Image or HTML5 Video) -->
-      <div class="sc-stage" id="scStage">
-        <img id="scImg" src="images/deliveriq-overview.png" alt="DeliverIQ Executive Delivery Performance Dashboard" loading="lazy">
-        <video id="scVideo" controls muted playsinline preload="metadata" style="display:none"></video>
-      </div>
-
-      <!-- Caption with Context & Zoom hint -->
-      <div class="sc-caption" id="scCaption">
-        <p id="scDesc"><strong>Page 1: Executive Delivery Overview</strong> — Provides high-level leadership with instant visibility into fulfillment reliability, monthly seasonality, order volume vs late delivery rate trends, and market customer segment exposure.</p>
-        <span class="zoom-hint"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Click image to enlarge</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =====================================================================
-     UNIFIED 2-COLUMN PROJECT BENTO GRID (ALL CARDS SAME FORMAT)
-     ===================================================================== -->
-<section class="band" id="projects">
-  <div class="wrap">
-    <div class="title-row">
-      <div class="title">
-        <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg>Portfolio</span>
-        <h2>Selected projects</h2>
-        <p>End-to-end systems combining data engineering, business analysis, and executive BI. All cards follow the same executive structure.</p>
-      </div>
-      <div class="pf-filters" role="group" aria-label="Filter projects by category">
-        <button type="button" class="pf-btn active" data-filter="all">All Projects (6)</button>
-        <button type="button" class="pf-btn" data-filter="sql">SQL &amp; Data Layers</button>
-        <button type="button" class="pf-btn" data-filter="bi">Power BI &amp; DAX</button>
-        <button type="button" class="pf-btn" data-filter="ops">Supply Chain &amp; Ops</button>
-        <button type="button" class="pf-btn" data-filter="finance">Finance &amp; Governance</button>
-      </div>
-    </div>
-
-    <!-- 2x3 UNIFIED PROJECT BENTO GRID (01 - 06) -->
-    <div class="proj" id="projGrid">
-
-      <!-- Case 01: DeliverIQ Supply Chain Analytics -->
-      <article class="pc spot-card" data-cat="sql bi ops">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-truck"/></svg>Power BI 3-Page Executive Suite</span>
-            <span>01 / LOG-BI</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/deliveriq-overview.png" alt="DeliverIQ Supply Chain Executive Delivery Overview Dashboard" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-truck"/></svg>Supply Chain &amp; SLA Optimization</span>
-          <span class="pc-num">CASE 01</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/DeliverIQ-Supply-Chain-Delivery-Performance-Shipping-Optimization" target="_blank" rel="noopener">DeliverIQ: Supply Chain Delivery Performance &amp; Shipping Optimization</a></h3>
-        <p class="pc-desc">Enterprise supply chain delivery diagnostics on 180,519 global shipments ($36.78M gross sales). Built with an automated Python ETL pipeline, relational SQL schema (CTEs &amp; Window Functions), and a 3-page executive Power BI suite designed in Figma.</p>
-        <div class="pc-kpis">
-          <div><b>180,519</b><span>Shipments</span></div>
-          <div><b>54.70%</b><span>Late Rate</span></div>
-          <div><b>$20.11M</b><span>At Risk</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><b>The Expedited Paradox:</b> Uncovered a 100% late rate on First Class orders—fulfillment centers require 2 days to dispatch, making 1-day promises impossible without SLA recalibration.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-database"/></svg><span><b>Advanced SQL Analytics:</b> Partitioned window functions and CTEs rank delayed categories across global markets (Golf equipment 67.2% delay; LATAM &amp; Europe $20.7M volume exposure).</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>Python</span><span>SQLite / ANSI SQL</span><span>Window Functions</span><span>Power BI</span><span>DAX</span><span>Figma</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="deliveriq"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase &amp; Video</button>
-            <button type="button" class="peek-btn" data-peek="p-deliveriq"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/DeliverIQ-Supply-Chain-Delivery-Performance-Shipping-Optimization" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 02: iGaming Fraud Hub -->
-      <article class="pc spot-card" data-cat="sql bi ops">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-shield"/></svg>Power BI Risk Queue &amp; Reconciliation</span>
-            <span>02 / RISK-OPS</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/fraud-risk.png" alt="iGaming Fraud Hub Risk Scoring Queue" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Risk Operations &amp; Fraud Detection</span>
-          <span class="pc-num">CASE 02</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub" target="_blank" rel="noopener">iGaming Fraud &amp; Risk Operations Hub</a></h3>
-        <p class="pc-desc">Automated risk-scoring and payment gateway reconciliation engine replacing manual spreadsheet investigations. Evaluates 50,652 transactions with SQL Server staging, six weighted risk rules, and a Power Apps resolution portal.</p>
-        <div class="pc-kpis">
-          <div><b>50,652</b><span>Transactions</span></div>
-          <div><b>100%</b><span>Recall (0.4s)</span></div>
-          <div><b>334</b><span>PSP Exceptions</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span><b>Scoring Engine:</b> Flags velocity spikes, shared card hashes, and bonus abuse, automatically assigning High (4h SLA) and Medium (24h SLA) investigation queues.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-database"/></svg><span><b>Gateway Reconciliation:</b> Matches internal transactional ledgers against PSP settlement files, detecting missing records, fee discrepancies, and duplicates.</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>Python</span><span>SQL Server</span><span>Power BI</span><span>Power Apps</span><span>Power Query</span><span>VBA</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="fraud"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase &amp; Video</button>
-            <button type="button" class="peek-btn" data-peek="p1"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/iGaming-Fraud-Risk-Hub" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 03: Financial BI Cube (UPDATED TO REDONE DASHBOARD) -->
-      <article class="pc spot-card" data-cat="sql bi finance">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-database"/></svg>Power BI Variance Matrix &amp; Consolidation</span>
-            <span>03 / FIN-BI</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/variance-dashboard.png" alt="Multi-Entity Financial Variance Executive Dashboard" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-database"/></svg>Corporate FP&amp;A · Multi-Entity</span>
-          <span class="pc-num">CASE 03</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/Automated-Financial-BI-Cube" target="_blank" rel="noopener">Multi-Entity Financial Variance &amp; Consolidation Analytics Platform</a></h3>
-        <p class="pc-desc">Multi-entity corporate FP&amp;A reporting platform for Americas, APAC, and EMEA operations. Replaced 5-day spreadsheet consolidation with an automated, ACID-compliant SQL Server data mart and executive Power BI cube with dynamic PoP comparison logic.</p>
-        <div class="pc-kpis">
-          <div><b>10,983</b><span>Transactions</span></div>
-          <div><b>&lt; 1 sec</b><span>Consolidation</span></div>
-          <div><b>$0.00</b><span>Zero-Cent Delta</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg><span><b>Latency Reduction:</b> Month-end financial consolidation latency reduced from 5 business days to &lt; 1 second post-GL close with persistent <code>dbo.LoadLog</code> governance.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg><span><b>Zero-Cent Integrity:</b> Automated zero-cent variance reconciliation stored procedure (<code>sp_Consolidate_Financial_Cube</code>) balancing granular GL actuals vs budget.</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>SQL Server</span><span>T-SQL Stored Procs</span><span>Star Schema</span><span>Power BI</span><span>Period-over-Period DAX</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="variance"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase</button>
-            <button type="button" class="peek-btn" data-peek="p2"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/Automated-Financial-BI-Cube" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 04: Operations Exception Tracker -->
-      <article class="pc spot-card" data-cat="sql ops finance">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-workflow"/></svg>Power Apps Governance Portal</span>
-            <span>04 / OPS-FLOW</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/exception-tracker.png" alt="Power Apps browse screen showing total, open, high-risk and overdue requests" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg>Workflow Automation</span>
-          <span class="pc-num">CASE 04</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">Operations Exception &amp; Approval Tracker</a></h3>
-        <p class="pc-desc">A governed Power Apps operational exception portal backed by SQL Server for logging, searching, and resolving incidents—replacing ad-hoc email threads with a structured Power Automate approval and SLA escalation flow.</p>
-        <div class="pc-kpis">
-          <div><b>2,000</b><span>Test Exceptions</span></div>
-          <div><b>100%</b><span>Auto-Routed</span></div>
-          <div><b>SLA</b><span>Escalation Engine</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg><span><b>Workflow Logic:</b> High-severity exceptions route automatically to line managers with one-click email approve/reject actions.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg><span><b>Governance:</b> Unresolved overdue tickets trigger automated escalation alerts and write full audit trails to SQL Server.</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>Power Apps</span><span>Power Automate</span><span>SQL Server</span><span>Python</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="tracker"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase</button>
-            <button type="button" class="peek-btn" data-peek="p3"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 05: PMO Governance Platform -->
-      <article class="pc spot-card" data-cat="sql bi finance">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-chart"/></svg>Power BI Executive PMO Suite</span>
-            <span>05 / EXEC-PMO</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/pmo-platform.png" alt="Executive PMO Governance Dashboard" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg>Enterprise BI &amp; BA Documentation</span>
-          <span class="pc-num">CASE 05</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/Executive-Governance-Analytics-Platform" target="_blank" rel="noopener">Executive Strategic Initiatives &amp; Operational Risk Analytics Platform</a></h3>
-        <p class="pc-desc">Full-lifecycle PMO and operational risk analytics suite monitoring strategic initiative health, budget burn rates, and milestone slippage across five departments, supported by complete Business Analyst documentation.</p>
-        <div class="pc-kpis">
-          <div><b>5 Depts</b><span>Cross-Functional</span></div>
-          <div><b>BRD + RTM</b><span>BA Deliverables</span></div>
-          <div><b>Auto-Flag</b><span>Slippage Alerts</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg><span><b>BA Artefacts:</b> Includes formal Business Requirements Document (BRD), Requirements Traceability Matrix (RTM), and relational star schema.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-target"/></svg><span><b>Executive Visibility:</b> DAX measures dynamically flag capex/opex budget overruns and delayed critical-path milestones.</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>Power BI</span><span>DAX</span><span>SQL Star Schema</span><span>BRD &amp; RTM</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="pmo"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase &amp; Video</button>
-            <button type="button" class="peek-btn" data-peek="p4"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/Executive-Governance-Analytics-Platform" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 06: Uber x Lyft Valuation Model -->
-      <article class="pc spot-card" data-cat="finance">
-        <div class="pc-window">
-          <div class="pc-win-top">
-            <span class="pc-win-dots"><span></span><span></span><span></span></span>
-            <span><svg class="i i-sm" aria-hidden="true"><use href="#i-file-text"/></svg>Excel M&amp;A Executive Model</span>
-            <span>06 / CORP-FIN</span>
-          </div>
-          <div class="pc-win-img">
-            <img src="images/uber-lyft.png" alt="Excel executive dashboard for the Uber and Lyft valuation model" loading="lazy">
-          </div>
-        </div>
-        <div class="pc-head">
-          <span class="chip"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Financial Modelling · M&amp;A</span>
-          <span class="pc-num">CASE 06</span>
-        </div>
-        <h3><a href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">Uber × Lyft Strategic Acquisition Valuation Model</a></h3>
-        <p class="pc-desc">Multi-scenario 5-year Discounted Cash Flow (DCF) and M&amp;A valuation model evaluating a hypothetical acquisition under dynamic WACC, terminal growth, and operational cost-synergy assumptions.</p>
-        <div class="pc-kpis">
-          <div><b>$18.2B</b><span>Enterprise Value</span></div>
-          <div><b>$48.27</b><span>Implied Share Price</span></div>
-          <div><b>$2.1B</b><span>Synergy Value</span></div>
-        </div>
-        <ul class="pc-specs">
-          <li><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg><span><b>Valuation Rigour:</b> Models standalone vs combined free cash flows, comparing $48.27 implied equity value against $16.53 market baseline.</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg><span><b>Sensitivity Matrix:</b> Two-dimensional stress testing across discount rates (WACC) and terminal growth multiples.</span></li>
-        </ul>
-        <div class="pc-foot">
-          <div class="tags"><span>Excel</span><span>5-Yr DCF</span><span>Sensitivity Analysis</span><span>M&amp;A</span></div>
-          <div class="pc-actions">
-            <button type="button" class="show-jump-btn" data-jump="uberlyft"><svg class="i i-sm" aria-hidden="true"><use href="#i-play"/></svg>View in Showcase</button>
-            <button type="button" class="peek-btn" data-peek="p5"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Architecture</button>
-            <a class="more" href="https://github.com/rashmileema-BI/Uber-Lyft-Valuation-Project" target="_blank" rel="noopener">GitHub<svg class="i" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- UPGRADED MULTI-TAB macOS SQL CODE SHOWCASE -->
-    <div class="code-card">
-      <header>
-        <div class="code-nav">
-          <span class="win-dots"><i></i><i></i><i></i></span>
-          <div class="sql-tabs" role="tablist" aria-label="Select SQL code snippet">
-            <button type="button" class="sql-tab-btn active" data-sql="deliveriq">
-              <svg class="i i-sm" aria-hidden="true"><use href="#i-truck"/></svg>deliveriq_analytics.sql (CTEs &amp; Windows)
-            </button>
-            <button type="button" class="sql-tab-btn" data-sql="fraud">
-              <svg class="i i-sm" aria-hidden="true"><use href="#i-shield"/></svg>vw_player_risk_scores.sql (Fraud Hub)
-            </button>
-            <button type="button" class="sql-tab-btn" data-sql="finance">
-              <svg class="i i-sm" aria-hidden="true"><use href="#i-database"/></svg>sp_Consolidate_Financial_Cube.sql (T-SQL)
-            </button>
-          </div>
-        </div>
-        <button class="copy-btn" id="copySql" type="button">
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-copy"/></svg>
-          <span>Copy SQL</span>
-        </button>
-      </header>
-<pre id="sqlBlock"><code><span class="c">-- Top 3 Worst Delayed Product Categories per Market (CTEs &amp; Window Functions)</span>
-<span class="k">WITH</span> category_delays <span class="k">AS</span> (
-  <span class="k">SELECT</span> 
-    market,
-    category_name,
-    <span class="f">COUNT</span>(*) <span class="k">AS</span> total_orders,
-    <span class="f">ROUND</span>(<span class="f">AVG</span>(shipping_delay_days), 2) <span class="k">AS</span> avg_delay_days,
-    <span class="f">ROUND</span>(<span class="f">AVG</span>(late_delivery_risk) * 100.0, 2) <span class="k">AS</span> late_risk_pct,
-    <span class="f">ROW_NUMBER</span>() <span class="k">OVER</span> (
-      <span class="k">PARTITION BY</span> market 
-      <span class="k">ORDER BY</span> <span class="f">AVG</span>(late_delivery_risk) <span class="k">DESC</span>
-    ) <span class="k">AS</span> rank_in_market
-  <span class="k">FROM</span> orders
-  <span class="k">GROUP BY</span> market, category_name
-  <span class="k">HAVING</span> <span class="f">COUNT</span>(*) &gt;= 100
-)
-<span class="k">SELECT</span> market, category_name, total_orders, avg_delay_days, late_risk_pct
-<span class="k">FROM</span> category_delays
-<span class="k">WHERE</span> rank_in_market &lt;= 3
-<span class="k">ORDER BY</span> market, rank_in_market;</code></pre>
-    </div>
-  </div>
-</section>
-
-<!-- BA DELIVERABLES & DOCUMENTATION VAULT -->
-<section class="band alt" id="vault">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg>Business Analysis Governance</span>
-      <h2>BA deliverables &amp; documentation vault</h2>
-      <p>Clean specifications, traceability matrices, process maps, and UAT test plans that ensure technical builds match stakeholder intent.</p>
-    </div>
-    <div class="vault-grid">
-      <div class="v-card spot-card">
-        <div class="v-head">
-          <div class="v-ico"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg></div>
-          <span class="chip">BRD &amp; RACI</span>
-        </div>
-        <h3>Business Requirements Document</h3>
-        <p>Formal scope, stakeholder RACI register, functional rules, and non-functional SLAs for enterprise financial and PMO platforms.</p>
-        <div class="v-meta">FR-01 to FR-18 · Stakeholder Matrix</div>
-        <button type="button" class="peek-btn" data-peek="v-brd"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Inspect BRD &amp; RACI</button>
-      </div>
-
-      <div class="v-card spot-card">
-        <div class="v-head">
-          <div class="v-ico"><svg class="i" aria-hidden="true"><use href="#i-layers"/></svg></div>
-          <span class="chip">RTM</span>
-        </div>
-        <h3>Requirements Traceability Matrix</h3>
-        <p>End-to-end mapping linking every business objective to its SQL stored procedure, DAX measure, and UAT test script.</p>
-        <div class="v-meta">100% Requirement Coverage</div>
-        <button type="button" class="peek-btn" data-peek="v-rtm"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Inspect RTM Table</button>
-      </div>
-
-      <div class="v-card spot-card">
-        <div class="v-head">
-          <div class="v-ico"><svg class="i" aria-hidden="true"><use href="#i-workflow"/></svg></div>
-          <span class="chip">Process Flow</span>
-        </div>
-        <h3>As-Is vs. To-Be Process Models</h3>
-        <p>Swimlane workflow diagrams pinpointing manual spreadsheet bottlenecks and replacing them with automated Power Platform routing.</p>
-        <div class="v-meta">Draw.io Swimlanes · SLA Timers</div>
-        <button type="button" class="peek-btn" data-peek="v-flow"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Inspect Process Flow</button>
-      </div>
-
-      <div class="v-card spot-card">
-        <div class="v-head">
-          <div class="v-ico"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg></div>
-          <span class="chip">UAT Plan</span>
-        </div>
-        <h3>UAT Test Scenarios &amp; Sign-Off</h3>
-        <p>Structured test cases covering cent-level financial reconciliation, boundary conditions, and user acceptance criteria.</p>
-        <div class="v-meta">Pass/Fail Criteria &amp; Runbooks</div>
-        <button type="button" class="peek-btn" data-peek="v-uat"><svg class="i i-sm" aria-hidden="true"><use href="#i-eye"/></svg>Inspect UAT Script</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="band" id="experience">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-briefcase"/></svg>Career</span>
-      <h2>Experience</h2>
-    </div>
-    <div class="xp">
-      <div class="job spot-card">
-        <div class="job-meta">
-          <h3>Associate Business Analyst</h3>
-          <time><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>Jan 2024 to Jan 2026</time>
-        </div>
-        <div class="co"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>GTN Tech</div>
-        <ul>
-          <li>Built Excel VBA macros and automated workbooks that removed manual data consolidation, improved accuracy, and standardized recurring Finance and Operations reports.</li>
-          <li>Consolidated data from multiple sources into reporting-ready datasets using Excel Power Query and Power Pivot, supported by Python and SQL Server (SSMS).</li>
-          <li>Designed and built a multi-client data cube in Excel, giving executives cross-asset visibility. It supported client acquisition for a major global fintech client.</li>
-          <li>Defined functional specifications and workflow logic to extend Excel automation with Power Apps and Power Automate, cutting board meeting report preparation from 8 hours to 1.5 hours.</li>
-          <li>Elicited business requirements across Finance, HR, Operations, and Middle Office in a regulated fintech environment; translated stakeholder needs into Business Requirements Documents (BRDs) and user stories to deliver enterprise Excel and Power BI dashboards.</li>
-          <li>Mapped As-Is and To-Be business process flows to identify automation bottlenecks; designed test scenarios, led User Acceptance Testing (UAT) sessions with end users, and authored UAT documentation and user guides for production rollouts.</li>
-          <li>Produced Excel-based trend and predictive analyses on trading activity, AUC, and revenue drivers, and prepared strategic content for a CEO keynote at Money 20/20.</li>
-        </ul>
-      </div>
-
-      <div class="job spot-card">
-        <div class="job-meta">
-          <h3>Revenue Planning Analyst - Executive</h3>
-          <time><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg>Jan 2026 to Jun 2026</time>
-        </div>
-        <div class="co"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>SriLankan Airlines</div>
-        <ul>
-          <li>Built and maintained Excel analyses of monthly route and station performance, with recommendations to commercial management on demand and revenue drivers.</li>
-          <li>Conducted economic evaluation of proposed flight schedules to support network and capacity decisions.</li>
-          <li>Prepared ad hoc costing analyses and reports for Senior Management planning purposes.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="band alt" id="education">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg>Academic</span>
-      <h2>Education</h2>
-      <p>Academic qualifications.</p>
-    </div>
-    <div class="edugrid">
-      <div class="edc spot-card">
-        <div class="ico"><svg class="i" aria-hidden="true"><use href="#i-graduation-cap"/></svg></div>
-        <div>
-          <time><svg class="i i-sm" aria-hidden="true"><use href="#i-calendar"/></svg>2020 to 2024</time>
-          <h3>BSc (Hons) Finance &amp; Insurance</h3>
-          <div class="co">University of Colombo</div>
-          <p><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Second Class Upper</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATES -->
-<section class="band" id="certificates">
-  <div class="wrap">
-    <div class="title">
-      <span class="sec-badge"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg>Credentials</span>
-      <h2>Certificates</h2>
-      <p>Professional certifications and completed credentials.</p>
-    </div>
-    <div class="certs">
-      <div class="cert spot-card">
-        <div class="cert-top">
-          <div class="badge"><svg class="i" aria-hidden="true"><use href="#i-microsoft"/></svg></div>
-          <span class="chip success"><svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg>Verified · Coursera</span>
-        </div>
-        <h3>Microsoft Business Analyst</h3>
-        <div class="co">Microsoft · Professional Certificate</div>
-        <p>Requirements gathering, process modelling, data analysis, and reporting across the Microsoft enterprise stack.</p>
-        <a class="verify" href="https://coursera.org/share/9d99385211145e08c02d596cf9713fd5" target="_blank" rel="noopener noreferrer">
-          Verify credential on Coursera
-          <svg class="i i-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+        <a href="mailto:rashmi.kuru@gmail.com" class="btn-say-hi">
+          <span>Say Hello 👋</span>
         </a>
       </div>
+    </nav>
+  </header>
+
+  <!-- Radiant Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-layout">
+        <!-- Main Copy -->
+        <div>
+          <span class="hero-sparkle-tag">✨ Data &amp; Business Analyst</span>
+          <h1>Transforming complex data into <span class="grad-text">high-impact BI &amp; automated systems</span>.</h1>
+          <p class="hero-p">
+            I bridge commercial strategy and technical data architecture. Specializing in high-performance SQL pipelines, Kimball Star Schemas in Power BI, and automated business workflows that replace manual reporting.
+          </p>
+
+          <div class="hero-chips">
+            <span class="chip">⚡ SQL (SSMS &amp; Stored Procs)</span>
+            <span class="chip">📊 Power BI &amp; DAX</span>
+            <span class="chip">🐍 Python Data Pipelines</span>
+            <span class="chip">⚙️ Power Apps &amp; Automate</span>
+            <span class="chip">📐 BPMN 2.0 Process Models</span>
+            <span class="chip">🎯 BRD &amp; UAT Governance</span>
+          </div>
+
+          <div class="hero-btns">
+            <a href="#work" class="btn-glow">
+              Explore Featured Projects
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener noreferrer" class="btn-glass">
+              LinkedIn
+              <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener noreferrer" class="btn-glass">
+              GitHub
+              <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Iridescent Card -->
+        <div class="hero-visual-card">
+          <div class="photo-container">
+            <img src="images/Profile Photo.JPG" alt="Rashmi Leema Portrait">
+          </div>
+          <div class="card-footer-info">
+            <div class="cf-row">
+              <span>Experience:</span>
+              <span class="cf-val">GTN Tech (Assoc. BA)</span>
+            </div>
+            <div class="cf-row">
+              <span>Academics:</span>
+              <span class="cf-val">BSc (Hons) Uni of Colombo</span>
+            </div>
+            <div class="cf-row">
+              <span>Status:</span>
+              <span class="cf-val" style="color: var(--emerald);">Available for Roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Metrics -->
+      <div class="metrics-bar">
+        <div class="m-box">
+          <span class="m-val">180,519</span>
+          <span class="m-lbl">Global Shipments Diagnosed</span>
+        </div>
+        <div class="m-box">
+          <span class="m-val">$20.11M</span>
+          <span class="m-lbl">Revenue at Risk Isolated</span>
+        </div>
+        <div class="m-box">
+          <span class="m-val">4 Mins</span>
+          <span class="m-lbl">ETL Latency (vs. 5 Days Manual)</span>
+        </div>
+        <div class="m-box">
+          <span class="m-val">$18.4M</span>
+          <span class="m-lbl">CapEx Portfolio Governed</span>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT CTA BANNER -->
-<section class="cta-band" id="contact">
-  <div class="wrap cta">
-    <div class="status-pill"><span class="pulse"></span>Available for immediate impact</div>
-    <h2 id="ctaTitle">Open to Data &amp; Business Analyst roles.</h2>
-    <p id="ctaDesc">If your team needs someone to elicit requirements, diagnose supply chain &amp; operational bottlenecks, build clean SQL layers, and turn complex data into executive dashboards, let's talk. Based in Colombo, Sri Lanka.</p>
-    <div class="links">
-      <a href="mailto:rashmi.kuru@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
-      <a href="cv/Rashmi-Leema-CV.pdf" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
-      <a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
-      <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+  <!-- ========================================================================
+       WORK SHOWCASE
+       ======================================================================== -->
+  <section id="work">
+    <div class="container">
+      <div class="sec-header">
+        <div>
+          <span class="sec-tag">Portfolio Showcase</span>
+          <h2 class="sec-title">Featured Projects</h2>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="filter-pills" role="tablist">
+          <button type="button" class="f-pill active" data-filter="all">All Projects</button>
+          <button type="button" class="f-pill" data-filter="pbi">Power BI &amp; SQL</button>
+          <button type="button" class="f-pill" data-filter="auto">Automation &amp; Apps</button>
+          <button type="button" class="f-pill" data-filter="fin">Finance &amp; Strategy</button>
+        </div>
+      </div>
+
+      <!-- FLAGSHIP PROJECT (DeliverIQ) -->
+      <article class="flagship-showcase" data-category="pbi">
+        <div class="theater-bar">
+          <div class="theater-pills" role="tablist">
+            <button type="button" class="th-btn active" data-src="images/deliveriq-overview.png" data-type="img">📊 Page 1: Executive Overview</button>
+            <button type="button" class="th-btn" data-src="images/deliveriq-shipping.png" data-type="img">🚚 Page 2: Carrier SLA</button>
+            <button type="button" class="th-btn" data-src="images/deliveriq-geo.png" data-type="img">🗺️ Page 3: Geographic Hotspots</button>
+            <button type="button" class="th-btn" data-src="images/deliveriq-demo.mp4" data-type="video">🎥 Live Video Walkthrough</button>
+          </div>
+          <span class="th-badge">180K+ Orders • Click to Enlarge</span>
+        </div>
+
+        <div class="theater-stage">
+          <img class="th-img" src="images/deliveriq-overview.png" alt="DeliverIQ Supply Chain Analytics Dashboard">
+          <video class="th-video" controls playsinline muted></video>
+        </div>
+
+        <div class="flagship-body">
+          <div>
+            <h3>DeliverIQ — Supply Chain Performance &amp; Shipping Optimization</h3>
+            <p class="flagship-desc">
+              Logistics performance diagnostic across 180,519 global shipments ($36.78M gross sales). Built a SQL transformation pipeline with window functions (CTEs, DENSE_RANK, cumulative latency sums) feeding a 3-page executive Power BI suite. Pinpointed carrier SLA violations and localized critical margin leakage.
+            </p>
+            <div class="flagship-tags">
+              <span class="f-tag">SQL Server</span>
+              <span class="f-tag">Power BI</span>
+              <span class="f-tag">DAX Modeling</span>
+              <span class="f-tag">Star Schema</span>
+              <span class="f-tag">Supply Chain Analytics</span>
+            </div>
+          </div>
+
+          <div class="flagship-side">
+            <div class="fs-kpi">
+              <span class="fs-num">180,519</span>
+              <span class="fs-lbl">Total Shipments Diagnosed</span>
+            </div>
+            <div class="fs-kpi">
+              <span class="fs-num">54.7%</span>
+              <span class="fs-lbl">Late Delivery Baseline Pinpointed</span>
+            </div>
+            <div class="fs-kpi">
+              <span class="fs-num">$20.11M</span>
+              <span class="fs-lbl">Revenue at Risk Isolated</span>
+            </div>
+            <a href="https://github.com/rashmileema-BI/DeliverIQ-Supply-Chain-Delivery-Performance-Shipping-Optimization" target="_blank" rel="noopener noreferrer" class="btn-repo">
+              View Repository on GitHub
+              <svg class="icon" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- VIBRANT 2-COLUMN BENTO GRID -->
+      <div class="bento-showcase">
+
+        <!-- Card 1: Financial Variance BI Cube (REDONE DASHBOARD) -->
+        <article class="b-item" data-category="fin pbi">
+          <div class="b-top-stage">
+            <div class="b-tabs-bar">
+              <div class="b-pills">
+                <button type="button" class="bp-btn active" data-src="images/variance-dashboard.png" data-type="img">Executive Dashboard</button>
+              </div>
+              <span style="font-size: 11px; color: var(--text-muted);">Redone 2026</span>
+            </div>
+            <div class="b-media-viewport">
+              <img src="images/variance-dashboard.png" alt="Automated Financial Variance Dashboard">
+              <video controls playsinline muted></video>
+            </div>
+          </div>
+          <div class="b-content">
+            <div>
+              <h4>Automated Financial BI Cube &amp; Month-End Variance Platform</h4>
+              <p>Redesigned FP&amp;A platform consolidating general ledger data across 14 cost centers. Replaced 5 days of manual spreadsheets with an automated SQL stored procedure refreshing in 4 minutes into a Kimball Star Schema.</p>
+            </div>
+            <div class="b-footer-row">
+              <div class="b-tags">
+                <span class="b-tag-item">T-SQL Stored Procs</span>
+                <span class="b-tag-item">Star Schema</span>
+                <span class="b-tag-item">Power BI</span>
+              </div>
+              <a href="https://github.com/rashmileema-BI/Automated-Financial-BI-Cube" target="_blank" rel="noopener noreferrer" class="b-view-link">
+                GitHub <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Enterprise PMO Suite -->
+        <article class="b-item" data-category="pbi">
+          <div class="b-top-stage">
+            <div class="b-tabs-bar">
+              <div class="b-pills">
+                <button type="button" class="bp-btn active" data-src="images/pmo-platform.png" data-type="img">Portfolio</button>
+                <button type="button" class="bp-btn" data-src="images/pmo-risk.png" data-type="img">Risk Watchlist</button>
+                <button type="button" class="bp-btn" data-src="images/pmo-approver.png" data-type="img">Approver SLA</button>
+                <button type="button" class="bp-btn" data-src="images/pmo-demo.mp4" data-type="video">▶ Video</button>
+              </div>
+            </div>
+            <div class="b-media-viewport">
+              <img src="images/pmo-platform.png" alt="Enterprise PMO Governance Suite">
+              <video controls playsinline muted></video>
+            </div>
+          </div>
+          <div class="b-content">
+            <div>
+              <h4>Enterprise PMO Portfolio &amp; Capital Governance Suite</h4>
+              <p>Capital expenditure tracking platform monitoring 42 active initiatives ($18.4M CapEx). Standardized milestone health, budget slippage heatmaps, and approval cycle turnaround times.</p>
+            </div>
+            <div class="b-footer-row">
+              <div class="b-tags">
+                <span class="b-tag-item">Power BI</span>
+                <span class="b-tag-item">DAX Measures</span>
+                <span class="b-tag-item">CapEx Governance</span>
+              </div>
+              <a href="https://github.com/rashmileema-BI/Automated-action-and-dependency-governance" target="_blank" rel="noopener noreferrer" class="b-view-link">
+                GitHub <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: PSP Payment Integrity & Fraud Hub -->
+        <article class="b-item" data-category="auto pbi">
+          <div class="b-top-stage">
+            <div class="b-tabs-bar">
+              <div class="b-pills">
+                <button type="button" class="bp-btn active" data-src="images/fraud-overview.png" data-type="img">Overview</button>
+                <button type="button" class="bp-btn" data-src="images/fraud-risk.png" data-type="img">Risk Queue</button>
+                <button type="button" class="bp-btn" data-src="images/fraud-reconciliation.png" data-type="img">PSP Settlement</button>
+                <button type="button" class="bp-btn" data-src="images/fraud-app-demo.mp4" data-type="video">▶ Video</button>
+              </div>
+            </div>
+            <div class="b-media-viewport">
+              <img src="images/fraud-overview.png" alt="Fraud Detection and PSP Reconciliation Hub">
+              <video controls playsinline muted></video>
+            </div>
+          </div>
+          <div class="b-content">
+            <div>
+              <h4>PSP Payment Integrity &amp; Fraud Anomaly Detection Hub</h4>
+              <p>Settlement reconciliation and fraud prevention engine monitoring 14,280 daily transactions. Rule-based SQL risk scoring paired with an integrated Power Apps interface for instant manual review.</p>
+            </div>
+            <div class="b-footer-row">
+              <div class="b-tags">
+                <span class="b-tag-item">SQL Anomaly Scoring</span>
+                <span class="b-tag-item">Power BI</span>
+                <span class="b-tag-item">Power Apps</span>
+              </div>
+              <a href="https://github.com/rashmileema-BI/iGaming-psp-fraud-intelligence" target="_blank" rel="noopener noreferrer" class="b-view-link">
+                GitHub <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Operations Exception Tracker -->
+        <article class="b-item" data-category="auto">
+          <div class="b-top-stage">
+            <div class="b-tabs-bar">
+              <div class="b-pills">
+                <button type="button" class="bp-btn active" data-src="images/exception-tracker.png" data-type="img">Canvas Interface</button>
+                <button type="button" class="bp-btn" data-src="images/exception-flow.png" data-type="img">Automate Flow</button>
+              </div>
+            </div>
+            <div class="b-media-viewport">
+              <img src="images/exception-tracker.png" alt="Operations Exception Tracker Application">
+              <video controls playsinline muted></video>
+            </div>
+          </div>
+          <div class="b-content">
+            <div>
+              <h4>Operations Exception Tracker &amp; Automated Escalations</h4>
+              <p>Governed operational ticketing application built on Power Apps and Power Automate. Replaced ad-hoc email inquiries with a standardized triage portal, multi-tier approvals, and SLA breach countdowns.</p>
+            </div>
+            <div class="b-footer-row">
+              <div class="b-tags">
+                <span class="b-tag-item">Power Apps</span>
+                <span class="b-tag-item">Power Automate</span>
+                <span class="b-tag-item">SLA Governance</span>
+              </div>
+              <a href="https://github.com/rashmileema-BI/Operations-Exception-Tracker" target="_blank" rel="noopener noreferrer" class="b-view-link">
+                GitHub <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Uber vs. Lyft Valuation -->
+        <article class="b-item" data-category="fin">
+          <div class="b-top-stage">
+            <div class="b-tabs-bar">
+              <div class="b-pills">
+                <button type="button" class="bp-btn active" data-src="images/uber-lyft.png" data-type="img">Valuation Model</button>
+              </div>
+            </div>
+            <div class="b-media-viewport">
+              <img src="images/uber-lyft.png" alt="Uber vs Lyft Strategic Valuation Model">
+              <video controls playsinline muted></video>
+            </div>
+          </div>
+          <div class="b-content">
+            <div>
+              <h4>Uber vs. Lyft Strategic Valuation &amp; Unit Economics</h4>
+              <p>Institutional financial valuation model comparing ride-hailing economics. Built a dynamic 3-statement model, Discounted Cash Flow (DCF) engine, and take-rate sensitivity matrix to evaluate driver margins.</p>
+            </div>
+            <div class="b-footer-row">
+              <div class="b-tags">
+                <span class="b-tag-item">Financial Modeling</span>
+                <span class="b-tag-item">DCF Valuation</span>
+                <span class="b-tag-item">Advanced Excel</span>
+              </div>
+              <a href="https://github.com/rashmileema-BI/Uber-vs-Lyft-Strategic-Valuation-Financial-Model" target="_blank" rel="noopener noreferrer" class="b-view-link">
+                GitHub <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
+  </section>
+
+  <!-- ========================================================================
+       BUSINESS ANALYSIS ARTIFACTS
+       ======================================================================== -->
+  <section id="artifacts" style="background: rgba(0, 0, 0, 0.2);">
+    <div class="container">
+      <div class="sec-header">
+        <div>
+          <span class="sec-tag">Enterprise Governance</span>
+          <h2 class="sec-title">Business Analysis Artifacts</h2>
+        </div>
+      </div>
+
+      <div class="ba-gallery">
+        <div class="ba-card-vibrant" data-zoom="images/AS-IS vs TO-BE.drawio.png">
+          <div class="ba-frame">
+            <img src="images/AS-IS vs TO-BE.drawio.png" alt="AS-IS vs TO-BE Swimlane Process Model">
+          </div>
+          <span class="ba-pill-badge">📐 BPMN 2.0 Process Modeling</span>
+          <h3>AS-IS vs. TO-BE Swimlane Analysis</h3>
+          <p>End-to-end operational swimlane diagram mapping handoffs across operations, middle office, and engineering to isolate bottlenecks and eliminate manual re-keying.</p>
+        </div>
+
+        <div class="ba-card-vibrant" data-zoom="images/Stakeholder Matrix (RACI).png">
+          <div class="ba-frame">
+            <img src="images/Stakeholder Matrix (RACI).png" alt="Stakeholder RACI Governance Matrix">
+          </div>
+          <span class="ba-pill-badge">🎯 Stakeholder Governance</span>
+          <h3>RACI Governance Matrix</h3>
+          <p>Accountability framework defining Responsible, Accountable, Consulted, and Informed stakeholders across requirements elicitation, architectural sign-off, and UAT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EXPERIENCE & EDUCATION
+       ======================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="sec-header">
+        <div>
+          <span class="sec-tag">Proven Track Record</span>
+          <h2 class="sec-title">Experience &amp; Education</h2>
+        </div>
+      </div>
+
+      <div class="xp-wrapper">
+        <!-- Work History -->
+        <div class="xp-panel">
+          <h3>💼 Professional Experience</h3>
+
+          <div class="xp-entry">
+            <div class="xp-top-line">
+              <span class="xp-role">Associate Business Analyst</span>
+              <span class="xp-date">Jan 2024 — Jan 2026</span>
+            </div>
+            <div class="xp-corp">GTN Tech • Financial Technology</div>
+            <ul class="xp-list">
+              <li>Engineered Excel VBA macros and automated workbooks that removed manual data consolidation and standardized recurring Finance and Operations reports.</li>
+              <li>Consolidated multi-source transactional data into reporting-ready datasets via Excel Power Query and Power Pivot, supported by SQL Server (SSMS) and Python.</li>
+              <li>Built a multi-client analytical cube in Excel supporting executive cross-asset visibility and client acquisition for a major global fintech client.</li>
+              <li>Authored functional specifications and workflow logic to extend Excel automation into Power Apps and Power Automate, reducing board report prep time from 8 hours to 1.5 hours.</li>
+              <li>Elicited business requirements across Finance, HR, Operations, and Middle Office in a regulated fintech environment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Academic & Certifications -->
+        <div class="xp-panel">
+          <h3>🎓 Education &amp; Credentials</h3>
+
+          <div class="xp-entry">
+            <div class="xp-top-line">
+              <span class="xp-role">BSc (Hons) Finance &amp; Insurance</span>
+              <span class="xp-date">2020 — 2024</span>
+            </div>
+            <div class="xp-corp">University of Colombo • Second Class Upper</div>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
+              Graduated with Second Class Upper division honors. Core emphasis on quantitative financial risk modeling, econometrics, and portfolio analytics.
+            </p>
+          </div>
+
+          <div class="xp-entry" style="padding-top: 20px; border-top: 1px solid var(--border);">
+            <div class="xp-top-line">
+              <span class="xp-role">Microsoft Business Analyst</span>
+              <span class="xp-date">Verified Credential</span>
+            </div>
+            <div class="xp-corp">Microsoft / Coursera Professional Certificate</div>
+            <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">
+              Specialization covering enterprise requirements elicitation, BPMN process modeling, Power Platform workflows, and data analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VIBRANT FOOTER
+       ======================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-box">
+        <div>
+          <h2 class="f-title">Let's Build Something Great 🚀</h2>
+          <p class="f-sub">Open to full-time Data Analyst &amp; Business Analyst opportunities.</p>
+        </div>
+
+        <div class="f-buttons">
+          <a href="mailto:rashmi.kuru@gmail.com" class="btn-glow">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            rashmi.kuru@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/rashmi-leema" target="_blank" rel="noopener noreferrer" class="btn-glass">
+            LinkedIn
+          </a>
+          <a href="https://github.com/rashmileema-BI" target="_blank" rel="noopener noreferrer" class="btn-glass">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="f-bottom-row">
+        <span>© 2026 Rashmi Leema. Built with high-performance HTML &amp; CSS.</span>
+        <span>Colombo, Sri Lanka • Open to Remote &amp; Relocation</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media Preview">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Preview">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged Preview">
   </div>
-</section>
 
-</main>
+  <!-- JavaScript -->
+  <script>
+    // Theme Switcher (Dark / Light)
+    const themeBtn = document.getElementById('themeBtn');
+    const root = document.documentElement;
 
-<footer>
-  <div class="wrap">
-    <span>© Rashmi Leema</span>
-    <span>Engineered with SQL, Python, Power BI, DAX &amp; Power Platform</span>
-  </div>
-</footer>
+    const saved = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', saved);
 
-<!-- Image Lightbox -->
-<div class="lb" id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
-
-<!-- Quick Peek Architecture & BA Artefact Modal -->
-<div class="modal-backdrop" id="peekModal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-  <div class="modal-box">
-    <button type="button" class="modal-close" id="mClose" aria-label="Close modal">✕</button>
-    <span class="chip" id="mTag">Architecture Blueprint</span>
-    <h3 id="mTitle" style="font-size:24px;margin-top:10px">Project Title</h3>
-    <div id="mBody"></div>
-  </div>
-</div>
-
-<script>
-(function(){
-  /* 0. Theme Toggle (Light / Dark Mode with Persistence) */
-  var root = document.documentElement;
-  var themeBtn = document.getElementById('themeBtn');
-  var savedTheme = localStorage.getItem('rl-theme');
-  if (savedTheme) {
-    root.setAttribute('data-theme', savedTheme);
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function(){
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    themeBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
-      localStorage.setItem('rl-theme', next);
-    });
-  }
-
-  /* 1. Role Lens Switcher (Data Analyst <-> Business Analyst) */
-  var lensData = {
-    da: {
-      title: 'Data Analyst who automates reporting with <span class="grad-text">SQL, Python &amp; Power BI.</span>',
-      desc: 'Two-plus years engineering end-to-end analytics pipelines, SQL data models, and executive dashboards across Supply Chain, Finance, HR, and Operations. Analyzed 180K+ shipments and cut recurring reporting prep by 80% through governance and automation.',
-      badge: 'SQL · Python · Power BI',
-      ctaTitle: 'Open to Data Analyst & BI roles.',
-      ctaDesc: 'If your team needs someone to automate reporting, build clean SQL layers, optimize supply chain SLAs, and turn messy data into dashboards people trust, let\'s talk. Based in Colombo, Sri Lanka.'
-    },
-    ba: {
-      title: 'Business Analyst bridging <span class="grad-text">BRD specs, SQL &amp; Power BI.</span>',
-      desc: 'Two-plus years eliciting requirements across Supply Chain, Finance, HR, Operations and Middle Office, authoring BRDs/RTMs, leading UAT, and delivering governed Power Platform & SQL solutions that cut manual prep by 80%.',
-      badge: 'Microsoft Certified BA',
-      ctaTitle: 'Open to Business Analyst & BI roles.',
-      ctaDesc: 'If your team needs an analytical BA who writes clear BRDs, maps As-Is/To-Be workflows, leads UAT, and builds the SQL & Power BI behind them, let\'s talk. Based in Colombo, Sri Lanka.'
-    }
-  };
-  var roleBtns = document.querySelectorAll('.role-btn');
-  var heroTitle = document.getElementById('heroTitle');
-  var heroDesc = document.getElementById('heroDesc');
-  var heroBadge = document.getElementById('heroBadge');
-  var ctaTitle = document.getElementById('ctaTitle');
-  var ctaDesc = document.getElementById('ctaDesc');
-  roleBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var k = btn.getAttribute('data-lens');
-      var d = lensData[k];
-      if (!d) return;
-      roleBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-      if (heroTitle) heroTitle.innerHTML = d.title;
-      if (heroDesc) heroDesc.textContent = d.desc;
-      if (heroBadge) heroBadge.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-badge-check"/></svg>' + d.badge;
-      if (ctaTitle) ctaTitle.textContent = d.ctaTitle;
-      if (ctaDesc) ctaDesc.textContent = d.ctaDesc;
-    });
-  });
-
-  /* =====================================================================
-     2. DEDICATED SHOWCASE DATA ENGINE (SCREENSHOTS + VIDEO RECORDINGS)
-     ===================================================================== */
-  var showcaseData = {
-    deliveriq: {
-      headerTitle: 'DeliverIQ: Supply Chain Delivery Performance & Shipping Optimization',
-      headerTag: 'Supply Chain · Power BI · Python · SQLite',
-      metaTag: '180,519 Shipments · 3-Page Suite + Walkthrough',
-      views: [
-        {
-          id: 'v-p1',
-          name: 'Executive Overview',
-          type: 'image',
-          src: 'images/deliveriq-overview.png',
-          desc: '<strong>Page 1: Executive Delivery Overview</strong> — Instant high-level visibility into fulfillment reliability, monthly seasonality, and late delivery rate trends. Shows 54.70% overall late rate across $36.78M gross sales.'
-        },
-        {
-          id: 'v-p2',
-          name: 'Carrier SLA Optimization',
-          type: 'image',
-          src: 'images/deliveriq-shipping.png',
-          desc: '<strong>Page 2: Shipping Mode & Carrier Optimization</strong> — Exposes the "Expedited Shipping Paradox": 100% late delivery rate on First Class and 79.73% on Second Class due to 2-day fulfillment staging lead times.'
-        },
-        {
-          id: 'v-p3',
-          name: 'Geographic Risk Intelligence',
-          type: 'image',
-          src: 'images/deliveriq-geo.png',
-          desc: '<strong>Page 3: Geographic & Risk Intelligence</strong> — Interactive spatial and category risk intelligence mapping delay hotspots across LATAM ($10.5M sales, 54.5% late) and Europe ($10.2M sales, 55.0% late).'
-        },
-        {
-          id: 'v-video',
-          name: '🎬 Live Video Walkthrough',
-          type: 'video',
-          src: 'images/deliveriq-demo.mp4',
-          desc: '<strong>Live Video Demonstration</strong> — Full walkthrough of the DeliverIQ 3-page interactive Power BI dashboard, showing dynamic cross-filtering, carrier drill-downs, and SLA metrics.'
-        }
-      ]
-    },
-    variance: {
-      headerTitle: 'Multi-Entity Financial Variance & Consolidation Analytics Platform',
-      headerTag: 'Corporate FP&A · Power BI · SQL Server · ACID',
-      metaTag: 'Americas, APAC, EMEA · Zero-Cent Delta',
-      views: [
-        {
-          id: 'v-v1',
-          name: 'Executive Variance Matrix (Redone)',
-          type: 'image',
-          src: 'images/variance-dashboard.png',
-          desc: '<strong>Executive Financial Dashboard (Redone)</strong> — Corporate FP&A reporting solution for Americas, APAC, and EMEA operations. Replaces 5-day manual consolidation with &lt; 1s refresh, dynamic Period-over-Period (PoP) comparison logic, and zero-cent verification.'
-        }
-      ]
-    },
-    pmo: {
-      headerTitle: 'Executive Strategic Initiatives & Operational Risk Platform',
-      headerTag: 'Enterprise PMO · Power BI · DAX · Star Schema',
-      metaTag: '5 Departments · 3 Pages + Walkthrough',
-      views: [
-        {
-          id: 'v-pmo1',
-          name: 'Executive Portfolio Health',
-          type: 'image',
-          src: 'images/pmo-platform.png',
-          desc: '<strong>Page 1: Executive Portfolio Overview</strong> — High-level governance dashboard tracking strategic initiative progress, capex/opex burn rates, and automated critical-path milestone slippage flags across 5 departments.'
-        },
-        {
-          id: 'v-pmo2',
-          name: 'Risk & Watchlist Matrix',
-          type: 'image',
-          src: 'images/pmo-risk.png',
-          desc: '<strong>Page 2: Operational Risk Watchlist</strong> — Department-level risk registry scoring likelihood vs impact, tracking open mitigations, and highlighting at-risk capital projects.'
-        },
-        {
-          id: 'v-pmo3',
-          name: 'Approver Function Analysis',
-          type: 'image',
-          src: 'images/pmo-approver.png',
-          desc: '<strong>Page 3: Approver Function & Governance Analysis</strong> — Analytics tracking department approval bottlenecks, lead times, and SLA compliance.'
-        },
-        {
-          id: 'v-pmovideo',
-          name: '🎬 Live Video Walkthrough',
-          type: 'video',
-          src: 'images/pmo-demo.mp4',
-          desc: '<strong>Live Video Demonstration</strong> — Screen recording showcasing the Enterprise PMO Analytics Platform, interactive department slicers, and dynamic DAX variance measures.'
-        }
-      ]
-    },
-    fraud: {
-      headerTitle: 'iGaming Fraud & Risk Operations Hub',
-      headerTag: 'Risk Operations · Power BI · Power Apps · SQL',
-      metaTag: '50,652 Transactions · Scored Queues',
-      views: [
-        {
-          id: 'v-f1',
-          name: 'Risk Queue & Scoring',
-          type: 'image',
-          src: 'images/fraud-risk.png',
-          desc: '<strong>Page 1: Risk Queue & Rule Scoring</strong> — Ranks players by weighted risk points, tracking velocity spikes, card-sharing hashes, and bonus abuse. Surfaced 17 High and 57 Medium risk accounts.'
-        },
-        {
-          id: 'v-f2',
-          name: 'PSP Reconciliation',
-          type: 'image',
-          src: 'images/fraud-reconciliation.png',
-          desc: '<strong>Page 2: Gateway Settlement Reconciliation</strong> — Matches internal transaction ledgers against external payment gateway feeds, identifying 334 discrepancy exceptions (missing transactions, fee mismatches, duplicates).'
-        },
-        {
-          id: 'v-f3',
-          name: 'Transaction Overview',
-          type: 'image',
-          src: 'images/fraud-overview.png',
-          desc: '<strong>Page 3: Portfolio Transaction Overview</strong> — Visualizes transaction volumes, failure rate distributions by payment method, and deposit vs withdrawal velocity.'
-        },
-        {
-          id: 'v-fvideo',
-          name: '🎬 Power Apps Video Demo',
-          type: 'video',
-          src: 'images/fraud-app-demo.mp4',
-          desc: '<strong>Live App Demo</strong> — Screen recording of the Power Apps case resolution portal for risk analysts to investigate, flag, and resolve high-risk accounts with SLA timers.'
-        }
-      ]
-    },
-    tracker: {
-      headerTitle: 'Operations Exception & Approval Tracker',
-      headerTag: 'Workflow Automation · Power Apps · SQL',
-      metaTag: '2,000 Synthetic Cases · SLA Escalations',
-      views: [
-        {
-          id: 'v-t1',
-          name: 'Power Apps Incident Portal',
-          type: 'image',
-          src: 'images/exception-tracker.png',
-          desc: '<strong>Operational Exception Browse Screen</strong> — Governed portal for logging, filtering, and tracking operational exceptions with real-time status and priority badges.'
-        },
-        {
-          id: 'v-t2',
-          name: 'Power Automate Approval Flow',
-          type: 'image',
-          src: 'images/exception-flow.png',
-          desc: '<strong>Automated Approval Workflow</strong> — Visual map of the Power Automate routing logic: triggers email action cards to line managers and logs audit trails to SQL Server.'
-        }
-      ]
-    },
-    uberlyft: {
-      headerTitle: 'Uber × Lyft Strategic Acquisition Valuation Model',
-      headerTag: 'Corporate Finance · 5-Yr DCF · M&A',
-      metaTag: '$18.2B EV · $2.1B Synergy Value',
-      views: [
-        {
-          id: 'v-u1',
-          name: 'Executive M&A Dashboard',
-          type: 'image',
-          src: 'images/uber-lyft.png',
-          desc: '<strong>Executive DCF Valuation Dashboard</strong> — Comprehensive 5-year multi-scenario Discounted Cash Flow model evaluating standalone vs combined pro-forma cash flows with two-dimensional WACC sensitivity tables.'
-        }
-      ]
-    }
-  };
-
-  var scHeaderTitle = document.getElementById('scHeaderTitle'),
-      scHeaderTag = document.getElementById('scHeaderTag'),
-      scMetaTag = document.getElementById('scMetaTag'),
-      scSubtabs = document.getElementById('scSubtabs'),
-      scImg = document.getElementById('scImg'),
-      scVideo = document.getElementById('scVideo'),
-      scDesc = document.getElementById('scDesc'),
-      currentProjKey = 'deliveriq',
-      currentViewIdx = 0;
-
-  function renderShowcaseView(projKey, viewIdx) {
-    var p = showcaseData[projKey];
-    if (!p) return;
-    var v = p.views[viewIdx] || p.views[0];
-    currentViewIdx = viewIdx;
-
-    // Header info
-    scHeaderTitle.textContent = p.headerTitle;
-    scHeaderTag.textContent = p.headerTag;
-    scMetaTag.textContent = p.metaTag;
-    scDesc.innerHTML = v.desc;
-
-    // Subtabs
-    scSubtabs.innerHTML = '';
-    p.views.forEach(function(view, idx){
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'sc-tab-btn' + (idx === viewIdx ? ' active' : '');
-      btn.textContent = view.name;
-      btn.addEventListener('click', function(){
-        renderShowcaseView(projKey, idx);
-      });
-      scSubtabs.appendChild(btn);
+      localStorage.setItem('theme', next);
     });
 
-    // Pause any playing video when switching
-    if (scVideo) {
-      scVideo.pause();
-      scVideo.style.display = 'none';
-    }
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.f-pill');
+    const projectCards = document.querySelectorAll('.flagship-showcase, .b-item');
 
-    if (v.type === 'video') {
-      scImg.style.display = 'none';
-      scVideo.style.display = 'block';
-      scVideo.src = v.src;
-      scVideo.load();
-    } else {
-      scVideo.style.display = 'none';
-      scImg.style.display = 'block';
-      scImg.src = v.src;
-      scImg.alt = v.name + ' - ' + p.headerTitle;
-    }
-  }
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-  // Project selector buttons
-  var scProjBtns = document.querySelectorAll('.sc-proj-btn');
-  scProjBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var key = btn.getAttribute('data-proj');
-      if (!showcaseData[key]) return;
-      currentProjKey = key;
-      scProjBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-      renderShowcaseView(key, 0);
-    });
-  });
-
-  // Initial render of showcase
-  renderShowcaseView('deliveriq', 0);
-
-  // Jump buttons from Project Cards down to Showcase
-  document.querySelectorAll('[data-jump]').forEach(function(btn){
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      var key = btn.getAttribute('data-jump');
-      if (!showcaseData[key]) return;
-      currentProjKey = key;
-      scProjBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-proj') === key); });
-      renderShowcaseView(key, 0);
-
-      var scEl = document.getElementById('showcase');
-      if (scEl) {
-        scEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  /* 3. Quick Peek Architecture Modal Data (with Visual BA Artefacts) */
-  var peekContent = {
-    'p-deliveriq': {
-      tag: 'Case 01 · Supply Chain & Analytics Architecture',
-      title: 'DeliverIQ: Supply Chain Delivery Performance & Shipping Optimization',
-      html: '<div class="m-sec"><h4>End-to-End Pipeline & Data Flow</h4><pre>Raw Data Ingestion (180,519 Orders CSV)\n  --> Python Pipeline (Data Hygiene & Feature Engineering in Pandas)\n  --> Relational DB (SQLite / ANSI SQL with Star Schema & Indices)\n  --> Analytical Layer (CTEs & Partitioned Window Functions)\n  --> Power BI Engine (Advanced Dynamic DAX Measures & SLA Modeling)\n  --> Figma Design System (#F4F6F9 canvas, custom containers & alert semantics)\n  --> 3-Page Executive Interactive Dashboard Suite</pre></div>' +
-            '<div class="m-sec"><h4>Core Analytical Diagnosis: The Expedited Shipping Paradox</h4>' +
-            '<table><thead><tr><th>Shipping Mode</th><th>Orders</th><th>Promised SLA</th><th>Actual Transit</th><th>Delay Variance</th><th>Late Delivery Rate</th></tr></thead>' +
-            '<tbody>' +
-            '<tr><td><b>First Class</b></td><td>27,814</td><td>1.0 Day</td><td>2.00 Days</td><td>+1.00 Day</td><td style="color:#EF4444;font-weight:700">100.00% (Critical)</td></tr>' +
-            '<tr><td><b>Second Class</b></td><td>35,216</td><td>2.0 Days</td><td>3.99 Days</td><td>+1.99 Days</td><td style="color:#EF4444;font-weight:700">79.73% (High)</td></tr>' +
-            '<tr><td><b>Standard Class</b></td><td>107,752</td><td>4.0 Days</td><td>4.00 Days</td><td>0.00 Days</td><td style="color:#10B981;font-weight:700">39.77% (Stable)</td></tr>' +
-            '<tr><td><b>Same Day</b></td><td>9,737</td><td>0.0 Days</td><td>0.48 Days</td><td>+0.48 Days</td><td style="color:#F59E0B;font-weight:700">45.74% (Moderate)</td></tr>' +
-            '</tbody></table>' +
-            '<p style="margin-top:8px"><b>Root Cause:</b> Fulfillment centers require ~2 days to pick, pack, and stage orders. Promising 1-day or 2-day delivery guarantees failure, angering customers who paid premium fees for expedited transit.</p></div>' +
-            '<div class="m-sec"><h4>Strategic Leadership Recommendations</h4>' +
-            '<ul style="padding-left:18px;display:grid;gap:6px">' +
-            '<li><b>Recalibrate Customer SLAs:</b> Increase First Class website promise to 2-3 business days and Second Class to 3-4 business days. Eliminates &gt;70% of customer dissatisfaction with $0 logistics spend.</li>' +
-            '<li><b>Forward-Fulfillment Hubs:</b> Over $20.7M in gross revenue flows through Europe and LATAM where delay rates exceed 54.5%. Establishing regional forward inventory hubs cuts transit by 1.5 to 2.0 days.</li>' +
-            '<li><b>Dedicated Bulky Item Protocols:</b> Golf bags (67.21% late) and Cameras (60.64% late) suffer non-conveyable sorting delays and require specialized carrier lanes.</li>' +
-            '</ul></div>'
-    },
-    p1: {
-      tag: 'Case 02 · End-to-End Risk Architecture',
-      title: 'iGaming Fraud & Risk Operations Hub',
-      html: '<div class="m-sec"><h4>Star Schema & Staging Layer</h4><pre>stg.raw_players / stg.raw_payments  -->  core.players / core.payments\ncore.rule_weights (6 weighted rules) -->  core.risk_flags --> vw_player_risk_scores</pre></div>' +
-            '<div class="m-sec"><h4>Scoring & Operational SLA Logic</h4><p>Evaluates velocity spikes, shared card hashes, bonus abuse, and PSP reconciliation mismatches. Automatically opens investigation cases in Power Apps with High (4h SLA) and Medium (24h SLA) queues.</p></div>' +
-            '<div class="m-sec"><h4>Verified Output</h4><p>100% recall across 235 planted fraud accounts out of 2,000 players and 50,652 transactions in 0.4 seconds.</p></div>'
-    },
-    p2: {
-      tag: 'Case 03 · Financial Consolidation Star Schema (Redone)',
-      title: 'Multi-Entity Financial Variance & Consolidation Analytics Platform',
-      html: '<div class="m-sec"><h4>Relational Star Schema & Ingestion Flow</h4><pre>FactFinancialTransactions (10,983 daily line items)\n  |-- DimDate (Fiscal Calendar Master)\n  |-- DimLegalEntity (Americas, EMEA, APAC mapped to local currencies)\n  |-- DimGeneralLedger (Revenue, Cost of Sales, OPEX, CAPEX)\n  --> Stored Procedure: sp_Consolidate_Financial_Cube\n  --> FactMonthlyFinancialSummary (Materialized Cube)\n  --> dbo.LoadLog (Audit Trail with error traps)</pre></div>' +
-            '<div class="m-sec"><h4>ACID Reconciliation Integrity Verification</h4>' +
-            '<pre>FactActual: $10,545,297.00 | SummaryActual: $10,545,297.00 | Delta: $0.00\nFactBudget: $10,518,300.00 | SummaryBudget: $10,518,300.00 | Delta: $0.00\nReconciliationStatus: PASSED: 100% RECONCILED TO THE CENT</pre>' +
-            '<p style="margin-top:8px">Month-end financial consolidation latency reduced from <b>5 business days to &lt; 1 second</b> post-GL close.</p></div>'
-    },
-    p3: {
-      tag: 'Case 04 · Governed Workflow Architecture',
-      title: 'Operations Exception & Approval Tracker',
-      html: '<div class="m-sec"><h4>System Flow</h4><pre>Power Apps Canvas Form --> SQL Server (dbo.Exception_Requests)\n  --> Power Automate Approval Trigger --> Line Manager Email Action\n  --> SLA Timer Check --> Escalation Alert & Audit Trail Update</pre></div>' +
-            '<div class="m-sec"><h4>Operational Impact</h4><p>Replaces unlogged email approvals with mandatory field validation, role-based views, and automated overdue escalations tested across 2,000 synthetic operational records.</p></div>'
-    },
-    p4: {
-      tag: 'Case 05 · Enterprise PMO & BA Suite',
-      title: 'Executive Strategic Initiatives & Operational Risk Platform',
-      html: '<div class="m-sec"><h4>BA & Data Architecture</h4><pre>BRD (18 Functional Reqs) + RTM  -->  SQL Server PMO Star Schema\nDim_Department (5) | Dim_Initiative | Fact_Milestone | Fact_Risk_Register</pre></div>' +
-            '<div class="m-sec"><h4>Executive Decision Support</h4><p>DAX measures compute real-time budget burn variance, critical-path milestone slippage days, and weighted operational risk exposure across 5 departments.</p></div>'
-    },
-    p5: {
-      tag: 'Case 06 · Corporate Finance & M&A Modelling',
-      title: 'Uber × Lyft Strategic Acquisition Valuation Model',
-      html: '<div class="m-sec"><h4>Model Architecture</h4><pre>Historical 3-Statement Inputs --> 5-Year Standalone FCF Projections\n  --> $2.1B Synergy Phase-In Schedule --> WACC & Terminal Growth DCF Matrix</pre></div>' +
-            '<div class="m-sec"><h4>Key Valuation Output</h4><p>Base case Enterprise Value of $18.2B ($48.27 implied share price vs. $16.53 baseline), stress-tested across two-way WACC and terminal multiple sensitivity tables.</p></div>'
-    },
-    'v-brd': {
-      tag: 'BA Deliverable · BRD Excerpt & RACI Matrix',
-      title: 'Business Requirements Document (BRD) & Stakeholder Matrix',
-      html: '<div class="m-sec"><h4>1. Executive Summary & Business Driver</h4><p>Eliminate manual monthly spreadsheet consolidation across regional entities and establish a single source of truth with sub-second SQL refresh and zero-cent auditability.</p></div>' +
-            '<div class="m-sec"><h4>2. Stakeholder Governance & RACI Matrix</h4><p>Maps Responsible, Accountable, Consulted, and Informed project roles across executive sponsors, finance managers, and technical leads.</p><img src="images/Stakeholder Matrix (RACI).png" alt="Stakeholder RACI Matrix"></div>'
-    },
-    'v-rtm': {
-      tag: 'BA Deliverable · Traceability Matrix',
-      title: 'Requirements Traceability Matrix (RTM) Excerpt',
-      html: '<div class="m-sec"><h4>End-to-End Requirement Mapping</h4><pre>Req ID | Business Need               | Technical Object                 | UAT Case\n-------+-----------------------------+----------------------------------+---------\nFR-01  | Multi-entity consolidation  | sp_Consolidate_Financial_Cube    | UAT-01\nFR-02  | Cent-level reconciliation   | dbo.LoadLog ($0.00 delta)        | UAT-02\nFR-03  | High-risk SLA auto-routing  | flow_Exception_Manager_Approval  | UAT-03\nFR-04  | Milestone slippage flagging | DAX: [Milestone_Slippage_Flag]   | UAT-04</pre></div>'
-    },
-    'v-flow': {
-      tag: 'BA Deliverable · Process Mapping',
-      title: 'As-Is vs. To-Be Operational Workflow Model',
-      html: '<div class="m-sec"><h4>As-Is vs To-Be Swimlane Process Diagram</h4><p>Detailed process flow mapping manual spreadsheet bottlenecks, approval drift, and replacement automated workflow logic with audit timers.</p><img src="images/AS-IS vs TO-BE.drawio.png" alt="As-Is vs To-Be Process Flow Diagram"></div>'
-    },
-    'v-uat': {
-      tag: 'BA Deliverable · Quality Assurance',
-      title: 'User Acceptance Testing (UAT) Script Excerpt',
-      html: '<div class="m-sec"><h4>Sample Test Execution Log</h4><pre>Test ID : UAT-02 (Financial Cent-Level Reconciliation)\nPre-Req : Load 10,983 transactions across Americas, EMEA, APAC.\nAction  : Execute sp_Consolidate_Financial_Cube and refresh Power BI.\nExpected: Materialized cube equals raw ledger total ($0.00 variance).\nActual  : $0.00 discrepancy; execution logged in &lt; 0.20s in dbo.LoadLog.\nStatus  : PASSED (Signed off by Corporate Controller)</pre></div>'
-    }
-  };
-
-  var peekModal = document.getElementById('peekModal'),
-      mTag = document.getElementById('mTag'),
-      mTitle = document.getElementById('mTitle'),
-      mBody = document.getElementById('mBody'),
-      mClose = document.getElementById('mClose');
-
-  document.querySelectorAll('[data-peek]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var key = btn.getAttribute('data-peek');
-      var item = peekContent[key];
-      if (!item) return;
-      mTag.textContent = item.tag;
-      mTitle.textContent = item.title;
-      mBody.innerHTML = item.html;
-      peekModal.classList.add('open');
-    });
-  });
-  if (mClose) mClose.addEventListener('click', function(){ peekModal.classList.remove('open'); });
-  if (peekModal) peekModal.addEventListener('click', function(e){ if (e.target === peekModal) peekModal.classList.remove('open'); });
-
-  /* 4. Interactive Cursor Spotlight on Bento Cards */
-  document.querySelectorAll('.spot-card').forEach(function(card){
-    card.addEventListener('mousemove', function(e){
-      var r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-  });
-
-  /* 5. Interactive Project Category Filter */
-  var filterBtns = document.querySelectorAll('.pf-btn');
-  var projCards = document.querySelectorAll('#projGrid .pc');
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var cat = btn.getAttribute('data-filter');
-      filterBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
-      projCards.forEach(function(card){
-        var cardCats = card.getAttribute('data-cat') || '';
-        card.hidden = (cat !== 'all' && cardCats.indexOf(cat) === -1);
-      });
-    });
-  });
-
-  /* 6. Upgraded Multi-Tab SQL Code Showcase */
-  var sqlSnippets = {
-    deliveriq: '-- Top 3 Worst Delayed Product Categories per Market (CTEs & Window Functions)\nWITH category_delays AS (\n  SELECT \n    market,\n    category_name,\n    COUNT(*) AS total_orders,\n    ROUND(AVG(shipping_delay_days), 2) AS avg_delay_days,\n    ROUND(AVG(late_delivery_risk) * 100.0, 2) AS late_risk_pct,\n    ROW_NUMBER() OVER (\n      PARTITION BY market \n      ORDER BY AVG(late_delivery_risk) DESC\n    ) AS rank_in_market\n  FROM orders\n  GROUP BY market, category_name\n  HAVING COUNT(*) >= 100\n)\nSELECT market, category_name, total_orders, avg_delay_days, late_risk_pct\nFROM category_delays\nWHERE rank_in_market <= 3\nORDER BY market, rank_in_market;',
-    fraud: '-- Sum weighted rule hits per player, then band the score (Fraud Hub)\nWITH f AS (\n  SELECT player_id, rule_code, MIN(detail) AS detail\n  FROM core.risk_flags\n  GROUP BY player_id, rule_code\n)\nSELECT f.player_id, p.country,\n       SUM(w.points) AS risk_score,\n       CASE WHEN SUM(w.points) >= 60 THEN \'High\'\n            WHEN SUM(w.points) >= 40 THEN \'Medium\'\n            ELSE \'Low\' END AS risk_band,\n       STRING_AGG(f.rule_code, \'; \') WITHIN GROUP (ORDER BY f.rule_code) AS rules\nFROM f\nJOIN core.rule_weights AS w ON w.rule_code = f.rule_code\nJOIN core.players AS p ON p.player_id = f.player_id\nGROUP BY f.player_id, p.country;',
-    finance: '-- Multi-Entity Financial Consolidation & Zero-Cent Audit Stored Procedure\nCREATE PROCEDURE dbo.sp_Consolidate_Financial_Cube\n    @FiscalYear INT = 2025\nAS\nBEGIN\n    SET NOCOUNT ON;\n    BEGIN TRANSACTION;\n    BEGIN TRY\n        -- 1. Refresh materialized monthly analytical cube\n        DELETE FROM dbo.FactMonthlyFinancialSummary WHERE FiscalYear = @FiscalYear;\n        \n        INSERT INTO dbo.FactMonthlyFinancialSummary (LegalEntityKey, DateKey, GLAccountKey, ActualAmount, BudgetAmount)\n        SELECT \n            t.LegalEntityKey,\n            t.DateKey,\n            t.GLAccountKey,\n            SUM(t.ActualAmount),\n            SUM(t.BudgetAmount)\n        FROM dbo.FactFinancialTransactions t\n        JOIN dbo.DimDate d ON t.DateKey = d.DateKey\n        WHERE d.FiscalYear = @FiscalYear\n        GROUP BY t.LegalEntityKey, t.DateKey, t.GLAccountKey;\n\n        -- 2. Audit Trail: Verify Zero-Cent Delta\n        INSERT INTO dbo.LoadLog (ExecutionTimestamp, ProcedureName, RowsLoaded, StatusDescription)\n        VALUES (GETDATE(), \'sp_Consolidate_Financial_Cube\', @@ROWCOUNT, \'SUCCESS: Zero-cent delta verified\');\n        \n        COMMIT TRANSACTION;\n    END TRY\n    BEGIN CATCH\n        ROLLBACK TRANSACTION;\n        INSERT INTO dbo.LoadLog (ExecutionTimestamp, ProcedureName, RowsLoaded, StatusDescription)\n        VALUES (GETDATE(), \'sp_Consolidate_Financial_Cube\', 0, ERROR_MESSAGE());\n    END CATCH\nEND;'
-  };
-
-  function highlightSql(code) {
-    return code
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/(--.*$)/gm, '<span class="c">$1</span>')
-      .replace(/\b(WITH|AS|SELECT|FROM|GROUP BY|HAVING|ORDER BY|WHERE|PARTITION BY|OVER|DESC|ASC|JOIN|LEFT JOIN|ON|CASE|WHEN|THEN|ELSE|END|CREATE|PROCEDURE|BEGIN|TRANSACTION|TRY|CATCH|COMMIT|ROLLBACK|INSERT|INTO|VALUES|DELETE|SET|NOCOUNT|INT|NULLIF)\b/g, '<span class="k">$1</span>')
-      .replace(/\b(COUNT|ROUND|AVG|ROW_NUMBER|SUM|MIN|STRING_AGG|WITHIN GROUP|GETDATE|ERROR_MESSAGE)\b/g, '<span class="f">$1</span>')
-      .replace(/('([^'\\]|\\.)*')/g, '<span class="s">$1</span>');
-  }
-
-  var sqlBlock = document.getElementById('sqlBlock');
-  var sqlTabBtns = document.querySelectorAll('.sql-tab-btn');
-  var currentSqlKey = 'deliveriq';
-
-  sqlTabBtns.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      var key = tab.getAttribute('data-sql');
-      if (!sqlSnippets[key]) return;
-      currentSqlKey = key;
-      sqlTabBtns.forEach(function(b){ b.classList.toggle('active', b === tab); });
-      sqlBlock.innerHTML = '<code>' + highlightSql(sqlSnippets[key]) + '</code>';
-    });
-  });
-
-  /* Copy SQL Button */
-  var copyBtn = document.getElementById('copySql');
-  if (copyBtn && sqlBlock) {
-    copyBtn.addEventListener('click', function(){
-      var rawCode = sqlSnippets[currentSqlKey] || sqlBlock.innerText;
-      navigator.clipboard.writeText(rawCode).then(function(){
-        var label = copyBtn.querySelector('span');
-        label.textContent = 'Copied!';
-        setTimeout(function(){ label.textContent = 'Copy SQL'; }, 1800);
-      });
-    });
-  }
-
-  /* 7. Click-to-enlarge Lightbox */
-  var lb = document.getElementById('lb'), lbImg = lb ? lb.querySelector('img') : null;
-  function openLb(i){
-    if (!lb || !lbImg) return;
-    lbImg.src = i.currentSrc || i.src;
-    lbImg.alt = i.alt || 'Enlarged view';
-    lb.classList.add('open');
-  }
-  document.querySelectorAll('.pc-win-img img, .sc-stage img, .m-sec img').forEach(function(i){
-    i.setAttribute('tabindex', '0');
-    i.setAttribute('role', 'button');
-    i.addEventListener('click', function(){ openLb(i); });
-    i.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); } });
-  });
-  if (lb) lb.addEventListener('click', function(){ lb.classList.remove('open'); });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') {
-      if (lb) lb.classList.remove('open');
-      if (peekModal) peekModal.classList.remove('open');
-    }
-  });
-
-  /* 8. Scroll Spy & Reveal */
-  if ('IntersectionObserver' in window) {
-    var links = {};
-    document.querySelectorAll('nav ul a').forEach(function(a){
-      var h = a.getAttribute('href');
-      if (h && h.startsWith('#')) links[h.slice(1)] = a;
-    });
-    var spy = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (!e.isIntersecting) return;
-        Object.keys(links).forEach(function(k){
-          var on = k === e.target.id;
-          links[k].classList.toggle('active', on);
-          if (on) links[k].setAttribute('aria-current', 'true');
-          else links[k].removeAttribute('aria-current');
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
         });
       });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-    document.querySelectorAll('main section[id], main div[id="top"]').forEach(function(s){ spy.observe(s); });
+    });
 
-    if (!matchMedia('(prefers-reduced-motion:reduce)').matches) {
-      document.documentElement.classList.add('js');
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    // Media Switcher Setup (Images and Videos)
+    function setupMediaSwitcher(containerSelector, pillSelector, imgSelector, videoSelector) {
+      document.querySelectorAll(containerSelector).forEach(card => {
+        const pills = card.querySelectorAll(pillSelector);
+        const img = card.querySelector(imgSelector);
+        const video = card.querySelector(videoSelector);
+
+        pills.forEach(pill => {
+          pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            const src = pill.getAttribute('data-src');
+            const type = pill.getAttribute('data-type');
+
+            if (type === 'video') {
+              img.style.display = 'none';
+              video.style.display = 'block';
+              video.src = src;
+              video.load();
+              video.play().catch(() => {});
+            } else {
+              if (video) {
+                video.pause();
+                video.style.display = 'none';
+              }
+              img.style.display = 'block';
+              img.src = src;
+            }
+          });
         });
-      }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.title, .sk, .also, .flow>div, .pc, .job, .edc, .cert, .cta>*, .stat, .code-card, .about>*, .ba-compare, .pb-card, .v-card, .showcase-card').forEach(function(el){
-        el.classList.add('reveal');
-        var i = Array.prototype.indexOf.call(el.parentNode.children, el);
-        el.style.setProperty('--d', (i % 3) * 0.08 + 's');
-        io.observe(el);
+
+        if (img) {
+          img.addEventListener('click', () => {
+            openLightbox(img.src);
+          });
+        }
       });
     }
-  }
-})();
-</script>
+
+    setupMediaSwitcher('.flagship-showcase', '.th-btn', '.th-img', '.th-video');
+    setupMediaSwitcher('.b-item', '.bp-btn', '.b-media-viewport img', '.b-media-viewport video');
+
+    // Artifacts Lightbox
+    document.querySelectorAll('.ba-card-vibrant').forEach(card => {
+      card.addEventListener('click', () => {
+        const zoom = card.getAttribute('data-zoom');
+        if (zoom) openLightbox(zoom);
+      });
+    });
+
+    // Lightbox Controls
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+  </script>
 </body>
 </html>
